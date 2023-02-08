@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统键盘和安全键盘切换演示</title>
+    <style type="text/css">
+        /*input:focus {
+            background-color: #FF6;
+        }*/
+    </style>
+    <link rel="stylesheet" href="common.css">
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="./plugin/vconsole.min.js"></script>
+    <script type="text/javascript">
+        var vConsole = new VConsole();
+
+        //tmf_showSysKeyboard调用需要在tmf JSAPI初始化完成后
+        tmf_ready(function () {
+            tmf_showSysKeyboard();
+            document.getElementById('userName').onfocus = function () {
+                //显示系统键盘
+                tmf_showSysKeyboard();
+            }
+        });
+
+        //监听Native事件
+        function pageOnload() {
+            //注册输入事件监听
+            document.addEventListener("tmf_sk_inputOneChar", tmf_inputOneChar, false);
+            //注册删除事件监听
+            document.addEventListener("tmf_sk_deleteOneChar", tmf_deleteOneChar, false);
+            //注册确定事件监听
+            document.addEventListener("tmf_sk_complete", tmf_complete, false);
+            //注册重新布局事件监听
+            document.addEventListener("tmf_sk_reLayout", tmf_reLayout, false);
+            // 关闭安全键盘事件监听
+            document.addEventListener("tmf_sk_close", tmf_close, false);
+        }
+
+        /**
+         * 显示系统键盘
+         */
+        function tmf_showSysKeyboard() {
+            TMFJSBridge.invoke('JSApiShowSysKeyboard', {}, function (res) {
+                tmf_logObject(res, 1);
+            });
+        }
+
+        /**
+         * 隐藏系统键盘
+         */
+        function tmf_closeSysKeyboard() {
+            TMFJSBridge.invoke('JSApiCloseSysKeyboard', {}, function (res) {
+                tmf_logObject(res, 1);
+            });
+        }
+
+        var firstInputContext = null ;
+        var secondInputContext = null ;
+
+        /**
+         * 输入一个字符
+         * @param data
+         */
+        function tmf_inputOneChar(data) {
+            var id = data.tmf.id;
+            var content = data.tmf.content;
+            tmf_log(id + ": " + content, 1);
+
+            //首次密码输入
+            if(id == "input_password"){
+                firstInputContext = data.tmf.context;
+            }else if(id == "confirm_password"){
+                secondInputContext = data.tmf.context;
+            }
+
+            var cardIdInput = document.getElementById(id);
+            cardIdInput.value += content;
+        }
+
+        /**
+         * 删除一个字符
+         * @param data
+         */
+        function tmf_deleteOneChar(data) {
+            var id = data.tmf.id;
+            var cardIdInput = document.getElementById(id);
+            var length = cardIdInput.value.length;
+            if (length > 0) {
+                cardIdInput.value = cardIdInput.value.substring(0, length - 1);
+            }
+        }
+
+          /**
+         * 解密
+         * @param id 输入框id
+         */
+        function onclickDecryption(mContext,id) {
+            var idInput = document.getElementById(id);
+            var length = idInput.value.length;
+            if (length > 0) {
+                //解密JS
+                TMFJSBridge.invoke('JSSendSharkSafeKeyboard', {
+                    inputText: idInput.value , context: mContext
+                }, function (res) {
+                    var decPassword = res.decryption ;
+                    if(decPassword != null){
+                        tmf_log("解密后的密码: "+res.decryption, 2);
+                    }else{
+                        tmf_log("回调异常: error "+res.err + "errorDescription " + res.errorDescription, 2);
+                    }
+                });
+            }
+        }
+
+         /**
+         * 确定
+         * @param data
+         */
+        function tmf_complete(data) {
+            var id = data.tmf.id;
+            var mContext = data.tmf.context;
+            tmf_log(id + ": " + mContext, 1);
+            if( null != mContext){
+                onclickDecryption(mContext,id);
+            }
+        }
+
+          /**
+         * 关闭
+         * @param data
+         */
+        function tmf_close(data) {
+            var id = data.tmf.id;
+            tmf_log(id , 1);
+        }
+
+          /**
+         * 重新布局
+         * 回调时机: 1. 加载当前H5页面Native层的H5容器所在的Activity 重新创建时 即每次打开页面时
+         *          2.  用户在当前页面停留时间超过安全键盘所设置的会话时长时
+         * 注意: 当前方法回调时 需要把H5页面的所有密码输入框内的内容清空,让用户重新输入,因为键值映射数据已改变
+         * @param data
+         */
+        function tmf_reLayout(data) {
+            var id = data.tmf.id;
+            var passwordInput = document.getElementById(id);
+            if(passwordInput.length > 0){
+                passwordInput.value = "";
+            }
+            tmf_log(id, 1);
+        }
+
+           /**
+         * 密码强度检测
+         * @param id 按钮id
+         */
+        function onclickStrength(id) {
+            //1.关闭系统键盘
+            tmf_closeSysKeyboard();
+            //获取 输入密码框 输入
+            var input = document.getElementById("input_password");
+            var strength = document.getElementById("input_strength");
+            var repeatNum = document.getElementById("input_repeatNum");
+
+            //2.安全键盘密码强度检测
+            TMFJSBridge.invoke('safeKeyboardWeakCheck', {
+                text: input.value , context: firstInputContext , strength: strength.value , repeatNum : repeatNum.value
+            }, function (res) {
+                if(res.isPass == 1 && res.errorCode == 0){
+                    tmf_log("通过 !",2);
+                }else{
+                    tmf_log("未通过 isPass = " +  res.isPass + " errorCode = " + res.errorCode ,2);
+                }
+            });
+        }
+
+
+          /**
+         * 两次输入一致性检测/密码强度检测
+         * @param id 按钮id
+         */
+        function onclickRepeatNum(id) {
+            //1.关闭系统键盘
+            tmf_closeSysKeyboard();
+
+            //获取 输入密码框 输入
+            var input = document.getElementById("input_password");
+            //获取 确认密码框 输入
+            var confirm = document.getElementById("confirm_password");
+            var strength = document.getElementById("input_strength");
+            var repeatNum = document.getElementById("input_repeatNum");
+
+            //2.安全键盘两次输入一致性检测
+            TMFJSBridge.invoke('safeKeyboardDoubleCheck', {
+                text1: { text : input.value , context : firstInputContext} , text2 : { text : confirm.value , context : secondInputContext } , strength: strength.value , repeatNum : repeatNum.value
+            }, function (res) {
+                if(res.isPass == 1 && res.errorCode == 0){
+                    tmf_log("通过 !",2);
+                }else{
+                    tmf_log("未通过 isPass = " +  res.isPass + " errorCode = " + res.errorCode,2);
+                }
+            });
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        /**
+         * 银行卡输入框获取焦点
+         * @param id 输入框id
+         */
+        function onclickCardId(id) {
+            //1.失去焦点禁止系统键盘弹出
+            //document.getElementById(id).blur();
+            //document.activeElement.blur();
+            //显示系统键盘
+            tmf_showSysKeyboard();
+        }
+
+        /**
+         * 密码输入框获取焦点
+         * @param id 输入框id
+         */
+        function onclickPassword(id) {
+            //1.关闭系统键盘
+            tmf_closeSysKeyboard();
+            //2.显示安全键盘
+            TMFJSBridge.invoke('showSafeKeyboard', {
+                id: id , inputType: 0
+            }, function (res) {
+
+            });
+        }
+    </script>
+</head>
+<body onload="pageOnload()">
+<table>
+    <tr>
+        <td>
+            输入姓名:
+        </td>
+        <td>
+            <input id="userName" style="width: 200px;height: 25px;" autofocus="autofocus"
+                   placeholder="自动获取焦点并显示系统键盘"><br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            输入银行卡:
+        </td>
+        <td>
+            <!--自定义键盘必须输入id"-->
+            <input id="input_cardId" style="width: 200px;height: 25px;"
+                   onclick="onclickCardId(this.id)"
+                   placeholder="系统键盘">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            输入密码:
+        </td>
+        <td>
+            <!--自定义键盘必须输入id"-->
+            <input id="input_password" type="password" style="width: 200px;height: 25px;"
+                   onclick="onclickPassword(this.id)"
+                   placeholder="安全键盘">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            确认密码:
+        </td>
+        <td>
+            <!--自定义键盘必须输入id"-->
+            <input id="confirm_password" type="password" style="width: 200px;height: 25px;"
+                   onclick="onclickPassword(this.id)"
+                   placeholder="安全键盘">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            检测强度:
+        </td>
+        <td>
+            <input id="input_strength" type="number" style="width: 200px;height: 25px;"
+                   onclick="onclickCardId(this.id)"
+                   placeholder="请输入检测强度(0~4)">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            重复位数:
+        </td>
+        <td>
+            <input id="input_repeatNum" type="number" style="width: 200px;height: 25px;"
+                   onclick="onclickCardId(this.id)"
+                   placeholder="请输入重复位数">
+        </td>
+    </tr>
+
+
+</table>
+
+<div id="container">
+    <button class="jsapi-button" onclick="onclickStrength(this.id)">密码强度检测(0~4)</button>
+    <button class="jsapi-button" onclick="onclickRepeatNum(this.id)">两次输入一致性检测</button>
+</div>
+
+</body>
+</html>

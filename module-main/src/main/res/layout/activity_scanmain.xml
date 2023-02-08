@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/autotextview"
+            style="@style/edittext_border"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:completionThreshold="1"
+            android:dropDownHorizontalOffset="0dp"
+            android:hint="@string/module_main_0"
+            android:text="" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnOpen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/autotextview"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="@string/module_main_1"
+            app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/scanQrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnOpen"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="@string/module_main_2"
+            app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_app_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scanQrcode"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="@string/module_main_3"
+            app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_app_info"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="@string/module_main_4"
+            app:qmui_radius="4dp" />
+
+        <TextView
+            android:id="@+id/text_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnMore"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_output"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/module_main_5"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>

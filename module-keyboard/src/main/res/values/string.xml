@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="custom_keyboard_activity_title">自定义键盘样式</string>
+    <string name="custom_keyboard_activity_brand_name">TMF安全键盘</string>
+
+    <string name="custom_keyboard_activity_setting_border">键位边框</string>
+    <string name="custom_keyboard_activity_setting_padding">键位间距</string>
+    <string name="custom_keyboard_activity_setting_fill">键位填充</string>
+    <string name="custom_keyboard_activity_setting_text">键位文字</string>
+    <string name="custom_keyboard_activity_setting_shadow">键位阴影</string>
+    <string name="custom_keyboard_activity_setting_other">其他配置</string>
+
+    <string name="keyboard_demo_activity">安全键盘</string>
+    <string name="keyboard_demo_activity_input_content">键盘输入内容为：%s</string>
+    <string name="keyboard_demo_activity_recover_content_success">后台还原键值成功， 还原后输入内容为：%s</string>
+    <string name="keyboard_demo_activity_recover_content_failed">后台还原键值失败， 错误码为：%s errorDomain: %s</string>
+    <string name="keyboard_demo_activity_sm4_ecb_encrypt">SM4_ECB_加密成功........</string>
+    <string name="keyboard_demo_activity_sm4_ecb_encrypt_result_0">加密后字符串:%s</string>
+    <string name="keyboard_demo_activity_sm4_ecb_encrypt_result_1">转16进制字符串 :%s</string>
+    <string name="keyboard_demo_activity_sm4_ecb_decrypt_success">SM4_ECB_解密成功， 解密后字符串为：%1$s  ，是否与输入明文匹配：%2$s</string>
+    <string name="keyboard_demo_activity_sm4_ecb_encrypt_failed">SM4_ECB_解密失败， 错误原因：%s</string>
+    <string name="keyboard_demo_activity_sm4_ecb_encrypt_failed_0">SM4_ECB_加密失败， 错误原因：%s</string>
+
+    <string name="keyboard_demo_activity_sm4_cbc_encrypt">SM4_CBC_加密成功........</string>
+    <string name="keyboard_demo_activity_sm4_cbc_encrypt_result_0">加密后字符串:%s</string>
+    <string name="keyboard_demo_activity_sm4_cbc_encrypt_result_1">转16进制字符串 :%s</string>
+    <string name="keyboard_demo_activity_sm4_cbc_decrypt_success">SM4_CBC_解密成功， 解密后字符串为：%1$s  ，是否与输入明文匹配：%2$s</string>
+    <string name="keyboard_demo_activity_sm4_cbc_encrypt_failed">SM4_CBC_解密失败， 错误原因：%s</string>
+    <string name="keyboard_demo_activity_sm4_cbc_encrypt_failed_0">SM4_CBC_加密失败， 错误原因：%s</string>
+
+    <string name="keyboard_demo_activity_sm2_cbc_encrypt">SM2_加密成功........</string>
+    <string name="keyboard_demo_activity_sm2_cbc_encrypt_head">【sm2加密输出】</string>
+    <string name="keyboard_demo_activity_sm2_cbc_decrypt_success">SM2_解密成功， 解密后字符串为：%1$s  ，是否与输入明文匹配：%2$s</string>
+    <string name="keyboard_demo_activity_sm2_cbc_encrypt_failed">SM2_解密失败， 错误原因：%s</string>
+    <string name="keyboard_demo_activity_sm2_cbc_encrypt_failed_0">SM2_加密失败， 错误原因：%s</string>
+
+    <string name="keyboard_demo_activity_tips">出于业务安全的需要，建议隐藏明文输入，不回显输入内容！</string>
+    <string name="keyboard_demo_activity_tips_not_change_color">文字间隔>0设置才生效</string>
+    <string name="keyboard_demo_activity_sm_error_1">非法密钥</string>
+    <string name="keyboard_demo_activity_sm_error_2">非法参数</string>
+    <string name="keyboard_demo_activity_sm_error_3">发生异常</string>
+    <string name="keyboard_demo_activity_sm_error_4">未知错误</string>
+    <string name="keyboard_demo_activity_item_1">清除输入框及日志内容</string>
+    <string name="keyboard_demo_activity_item_2">体验键盘自定义设置</string>
+    <string name="keyboard_demo_activity_item_3">体验键盘密码检查演示</string>
+    <string name="pass_check_activity_title">密码检查演示</string>
+
+    <string name="pass_check_activity_pass">通过!</string>
+    <string name="pass_check_activity_not_pass">不通过!,返回码:</string>
+
+    <string name="module_keyboard_0">点击单选框选择需要隐藏圆角的边：</string>
+    <string name="module_keyboard_1">无</string>
+    <string name="module_keyboard_2">顶边</string>
+    <string name="module_keyboard_3">左边</string>
+    <string name="module_keyboard_4">左边</string>
+    <string name="module_keyboard_5">底边</string>
+    <string name="module_keyboard_6">自定义边框厚度：</string>
+    <string name="module_keyboard_7">自定义边框圆角：</string>
+    <string name="module_keyboard_8">自定义边框默认颜色：</string>
+    <string name="module_keyboard_9">起始色(透明)</string>
+    <string name="module_keyboard_10">目标色</string>
+    <string name="module_keyboard_11">自定义边框按下颜色：</string>
+    <string name="module_keyboard_12">自定义普通键位默认填充样式：</string>
+    <string name="module_keyboard_13">起始色</string>
+    <string name="module_keyboard_14">目标色</string>
+    <string name="module_keyboard_15">自定义普通键位按下填充样式：</string>
+    <string name="module_keyboard_16">自定义普通键位按下填充样式：</string>
+    <string name="module_keyboard_17">自定义功能键位按下填充样式：</string>
+    <string name="module_keyboard_18">*Enter键也支持上述自定义配置</string>
+    <string name="module_keyboard_19">*键位的填充同时支持Drawable</string>
+    <string name="module_keyboard_20">自定义水平方向键位间距：</string>
+    <string name="module_keyboard_21">自定义垂直方向键位间距：</string>
+    <string name="module_keyboard_22">*不同类型键位之间的特殊间隔值可以在键位布局中设置！</string>
+    <string name="module_keyboard_23">*不同类型键位之间的特殊间隔值可以在键位布局中设置！</string>
+    <string name="module_keyboard_24">自定义键位阴影按下状态下的高度：</string>
+    <string name="module_keyboard_25">自定义键位阴影的颜色：</string>
+    <string name="module_keyboard_26">起始色</string>
+    <string name="module_keyboard_27">目标色</string>
+    <string name="module_keyboard_28">*支持自定义键位布局（任意样式以及顺序）</string>
+    <string name="module_keyboard_29">*支持自定义键位数量和内容的配置</string>
+    <string name="module_keyboard_30">*支持自定义键位值的混淆</string>
+    <string name="module_keyboard_31">*支持配置显示的键盘类型</string>
+    <string name="module_keyboard_32">*支持自定义键位预览</string>
+    <string name="module_keyboard_33">*支持将键位文字配置为任意图标</string>
+    <string name="module_keyboard_34">*支持键盘整个背景色的自定义</string>
+    <string name="module_keyboard_35">*支持键盘标题、图标的自定义</string>
+    <string name="module_keyboard_36">自定义键位文字大小：</string>
+    <string name="module_keyboard_37">自定义键位文字默认状态下颜色：</string>
+    <string name="module_keyboard_38">自定义键位文字按下状态下颜色：</string>
+    <string name="module_keyboard_39">禁止截图/录屏</string>
+    <string name="module_keyboard_40">隐藏边框</string>
+    <string name="module_keyboard_41">显示明文</string>
+    <string name="module_keyboard_42">仅使用数字键盘</string>
+    <string name="module_keyboard_43">边框</string>
+    <string name="module_keyboard_44">选中边框</string>
+    <string name="module_keyboard_45">区域</string>
+    <string name="module_keyboard_46">选中区域</string>
+    <string name="module_keyboard_47">自定义边框颜色：起始色</string>
+    <string name="module_keyboard_48">自定义边框宽度：1px</string>
+    <string name="module_keyboard_49">自定义边框圆角：6dp</string>
+    <string name="module_keyboard_50">自定义文字间距：0dp</string>
+    <string name="module_keyboard_51">自定义输入长度：6</string>
+    <string name="module_keyboard_52">点击输入框输入内容：</string>
+    <string name="module_keyboard_53">点击输入框输入内容：</string>
+    <string name="module_keyboard_54">请输入重复位数</string>
+    <string name="module_keyboard_55">请输入检测强度(0~4)</string>
+    <string name="module_keyboard_56">密码强度检测</string>
+    <string name="module_keyboard_57">两次密码输入校验</string>
+
+</resources>

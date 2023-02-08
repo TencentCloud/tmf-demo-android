@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_height="match_parent">
+
+    <EditText
+            android:id="@+id/bid_input"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:layout_height="60dp"
+            android:hint="@string/module_hybrid_11"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/edittext_border"
+            android:importantForAutofill="no" />
+    <EditText
+            android:id="@+id/indexPath_input"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:layout_height="60dp"
+            android:hint="@string/module_hybrid_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/edittext_border"
+            android:importantForAutofill="no" />
+
+    <EditText
+            android:id="@+id/resource_input"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:layout_height="60dp"
+            android:hint="@string/module_hybrid_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/edittext_border"
+            android:importantForAutofill="no" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_open_offline_app"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/module_hybrid_14"
+            android:layout_marginTop="2dp"
+            app:qmui_radius="4dp" />
+
+</LinearLayout>

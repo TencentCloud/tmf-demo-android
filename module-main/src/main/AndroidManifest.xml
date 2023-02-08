@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tencent.tmf.demo.main">
+    <application>
+        <!--module-main start-->
+        <activity
+            android:name="com.tencent.tmf.module.main.activtiy.TMFMainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.tmf.module.main.activtiy.ComponentListActivity"
+            android:screenOrientation="portrait"/>
+        <!--module-main end-->
+    </application>
+</manifest>

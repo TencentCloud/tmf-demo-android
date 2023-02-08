@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/qmui_config_color_white">
+
+    <TextView
+            android:textSize="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/module_upgrade_0" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_marginBottom="20dp"
+            android:id="@+id/manual_upgrade_check"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:padding="10dp"
+            app:qmui_radius="4dp"
+            android:text="@string/module_upgrade_19" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_marginBottom="20dp"
+            android:id="@+id/auto_upgrade_check"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:padding="10dp"
+            app:qmui_radius="4dp"
+            android:text="@string/module_upgrade_20" />
+
+    <TextView
+            android:id="@+id/tv_download_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/module_upgrade_4"
+            android:visibility="gone" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/app_primary_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_back_selector"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@mipmap/back_icon" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:background="@android:color/white"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_finish"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/view_line"
+                android:background="@drawable/icon_back_selector"
+                android:scaleType="center"
+                android:src="@mipmap/close_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_back_selector"
+                android:scaleType="center"
+                android:src="@mipmap/more"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" />
+</LinearLayout>

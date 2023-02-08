@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hotpatch_pull_activity_toast">请确保填入信息格式正确</string>
+    <string name="hotpatch_test_activity_title">热修复</string>
+    <string name="module_hotpatch_0">合并补丁</string>
+    <string name="module_hotpatch_1">补丁ID</string>
+    <string name="module_hotpatch_2">补丁版本号</string>
+    <string name="module_hotpatch_3">补丁链接</string>
+    <string name="module_hotpatch_4">补丁包MD5</string>
+    <string name="module_hotpatch_5">补丁包大小</string>
+    <string name="module_hotpatch_6">下载并合并补丁</string>
+    <string name="module_hotpatch_7">下载补丁</string>
+    <string name="module_hotpatch_8">删除已下载补丁包</string>
+    <string name="module_hotpatch_9">清除补丁</string>
+    <string name="module_hotpatch_10">修复状态</string>
+    <string name="module_hotpatch_11">监听补丁下发</string>
+    <string name="module_hotpatch_12">主动拉取热修复补丁</string>
+    <string name="module_hotpatch_13">重启App生效</string>
+</resources>

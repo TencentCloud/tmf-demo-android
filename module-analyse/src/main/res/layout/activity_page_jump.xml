@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:text="@string/analyse_page_jump_0"
+            android:layout_height="100dp"
+            android:id="@+id/et_input_value" />
+
+    <Button
+            android:layout_width="match_parent"
+            android:text="@string/analyse_page_jump_1"
+            android:id="@+id/jump_back"
+            android:layout_marginTop="6dp"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>

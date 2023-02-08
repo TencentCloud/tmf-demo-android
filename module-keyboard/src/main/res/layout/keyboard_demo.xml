@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".keyboad.KeyboardDemoActivity">
+
+
+    <Switch
+        android:id="@+id/switch_screen_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="@string/module_keyboard_39" />
+
+    <Switch
+        android:id="@+id/switch_border_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_screen_shot"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="@string/module_keyboard_40" />
+
+    <Switch
+        android:id="@+id/switch_plain_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/switch_border_state"
+        android:layout_toEndOf="@id/switch_border_state"
+        android:layout_toRightOf="@id/switch_border_state"
+        android:paddingLeft="10dp"
+        android:text="@string/module_keyboard_41" />
+
+    <Switch
+        android:id="@+id/switch_number_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/switch_plain_text"
+        android:layout_toRightOf="@id/switch_plain_text"
+        android:paddingLeft="20dp"
+        android:text="@string/module_keyboard_42"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/border_color_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_border_state"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:background="#c6c6c6"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/border_color_options"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/normal_border_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_keyboard_43" />
+
+            <RadioButton
+                android:id="@+id/selected_border_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_keyboard_44" />
+
+            <RadioButton
+                android:id="@+id/normal_fill_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_keyboard_45" />
+
+            <RadioButton
+                android:id="@+id/selected_fill_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_keyboard_46" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/from_color_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_keyboard_47" />
+
+            <SeekBar
+                android:id="@+id/color_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/to_color_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_keyboard_27" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/border_width_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/border_color_option"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/from_width_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/module_keyboard_48" />
+
+        <SeekBar
+            android:id="@+id/border_width_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <TextView
+            android:id="@+id/to_width_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/border_corner_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/border_width_option"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/from_corner_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/module_keyboard_49" />
+
+        <SeekBar
+            android:id="@+id/border_corner_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <TextView
+            android:id="@+id/to_corner_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_gap_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/border_corner_option"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/from_gap_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/module_keyboard_50" />
+
+        <SeekBar
+            android:id="@+id/gap_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <TextView
+            android:id="@+id/to_gap_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_length_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_gap_option"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/from_length_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/module_keyboard_51" />
+
+        <SeekBar
+            android:id="@+id/length_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <TextView
+            android:id="@+id/to_lengthtips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_length_option"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/module_keyboard_52"
+        android:textColor="#FF4081" />
+
+    <com.tencent.tmf.keyboard.component.text.PasswordEditText
+        android:id="@+id/pwd_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tips"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:borderCorner="5dp"
+        app:dotColor="#FF0000"
+        app:drawBorder="true"
+        app:normalStateTextColor="#000000"
+        app:textGap="0dp"
+        app:text_size="16sp" />
+
+    <TextView
+        android:id="@+id/log_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/pwd_view"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#727B80"
+        android:fadeScrollbars="false"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp"
+        android:scrollbars="vertical"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+</RelativeLayout>

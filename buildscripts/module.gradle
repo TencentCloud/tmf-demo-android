@@ -1,0 +1,20 @@
+apply from: "${ext.buildScriptPath}${File.separator}common-lib.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    kapt {
+        arguments {
+            arg("output", project.rootProject.projectDir.absolutePath)
+        }
+    }
+}
+
+dependencies {
+    implementation project(":commonlib")
+    if (project.ext.isSourcePack && project.ext.isDebugPortal) {
+        kapt project(":portal-processor")
+    } else {
+        kapt rootProject.ext.TMF_components['portalProcessor']
+    }
+}

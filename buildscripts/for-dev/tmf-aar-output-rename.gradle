@@ -1,0 +1,130 @@
+/**
+ * 本地maven库aar重命名并输出
+ */
+
+//源码工程root路径
+File rootFile = rootProject.projectDir.parentFile.parentFile.parentFile
+println('rootFile: ' + rootFile)
+//重命名aar输出目录
+def reNameOutputDir = rootFile.getPath() + File.separator + "aar-rename-output"
+def reNameOutputWithLogDir = rootFile.getPath() + File.separator + "aar-rename-output-withlog"
+println('reNameOutputDir: ' + reNameOutputDir)
+println('reNameOutputWithLogDir: ' + reNameOutputWithLogDir)
+//本地maven库路径
+def mavenLocalDir = project.rootDir.getPath() + File.separator + "maven" + File.separator + "mavenLocal"
+def mavenLocalWithLogDir = project.rootDir.getPath() + File.separator + "maven" + File.separator + "mavenLocal-withlog"
+println('mavenLocalDir: ' + mavenLocalDir)
+println('mavenLocalWithLogDir: ' + mavenLocalWithLogDir)
+// 过滤前缀
+def gitPrefix = 'Git version info:'
+def originalPrefix = 'Original file: '
+def tmfPrefix = 'TMF'
+def jsonPrefix = '{'
+def jsonSuffix = '}'
+
+//创建输出目录 每次运行保持最新
+def createOutputDir = { String renamePath, String renameWithLogPath ->
+    def renameDir = new File(renamePath)
+    def renameWithLogDir = new File(renameWithLogPath)
+    if (!renameDir.exists()) {
+        renameDir.mkdirs()
+    } else {
+        delete renameDir
+        renameDir.mkdirs()
+    }
+    if (!renameWithLogDir.exists()) {
+        renameWithLogDir.mkdirs()
+    } else {
+        delete renameWithLogDir
+        renameWithLogDir.mkdirs()
+    }
+}
+
+//copy 与 重命名
+def copyAndRename = { String path ,String outputDir->
+    //pom文件遍历
+    fileTree( path , {
+        //自定义过滤规则
+        include '**/*.pom'
+    }).each { file ->
+        //println file.name
+        //pom文件解析
+        def xmlSlurper = new XmlSlurper()
+        def result =xmlSlurper.parse(file)
+        String description = result.description.text()
+        String artifactId = result.artifactId.text()
+        String version = result.version.text()
+        String git = description - gitPrefix
+        //println description
+
+        def isOriginPrefix = description.startsWith(originalPrefix)
+        def isGitPrefix = description.startsWith(gitPrefix)
+        def isTmfPrefix = description.startsWith(tmfPrefix)
+        //是否是json数据
+        def isJson = description.startsWith(jsonPrefix) && description.endsWith(jsonSuffix)
+
+        boolean hasLogSuffix = false
+        if (outputDir.contains("withlog")){
+            hasLogSuffix = true
+        }
+        if (description.isEmpty()){
+            String renameStr =  "TMF-" + (file.name - ".pom") + (hasLogSuffix ? '-withlog' : '') + '.aar'
+            copy {
+                from file.path.replace(".pom",".aar")
+                into outputDir
+                rename { fileName ->
+                    fileName = renameStr
+                }
+            }
+        } else if (isOriginPrefix){
+            String renameStr = "TMF-" + artifactId + "-" + version  + (hasLogSuffix ? '-withlog' : '') + '.aar'
+            copy {
+                from file.path.replace(".pom",".aar")
+                into outputDir
+                rename { fileName ->
+                    fileName = renameStr
+                }
+            }
+        }else if (isGitPrefix){
+            String renameStr = "TMF-" + artifactId + "-" + version + '-' + git + (hasLogSuffix ? '-withlog' : '') + '.aar'
+            copy {
+                from file.path.replace(".pom",".aar")
+                into outputDir
+                rename { fileName ->
+                    fileName = renameStr
+                }
+            }
+        }else if (isTmfPrefix){
+            copy {
+                from file.path.replace(".pom",".aar")
+                into outputDir
+                rename { fileName ->
+                    fileName = description
+                }
+            }
+        }else if (isJson){
+            def descriptionJson = new groovy.json.JsonSlurper().parseText(description)
+          //  println("parsedJson: " + descriptionJson.oldAarName)
+            copy {
+                from file.path.replace(".pom",".aar")
+                into outputDir
+                rename { fileName ->
+                    fileName = descriptionJson.oldAarName
+                }
+            }
+        }
+    }
+
+}
+
+task reName{
+    doLast {
+        //创建输出目录 每次运行保持最新
+        createOutputDir(reNameOutputDir,reNameOutputWithLogDir)
+        //无log
+        copyAndRename(mavenLocalDir,reNameOutputDir)
+        //有log
+        copyAndRename(mavenLocalWithLogDir,reNameOutputWithLogDir)
+    }
+}
+

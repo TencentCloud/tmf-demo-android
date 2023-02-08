@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_share_1">Share components</string>
+    <string name="module_share_2">Whether to share in the circle of friends</string>
+    <string name="module_share_3">Share to WeChat friends circle</string>
+    <string name="module_share_4">Share to WeChat conversation friends</string>
+    <string name="module_share_5">Share pictures using bitmap</string>
+    <string name="module_share_6">Use the local path of sdcard to share pictures</string>
+    <string name="module_share_7">Whether to share in Alipay life circle</string>
+    <string name="module_share_8">Share to Alipay life circle</string>
+    <string name="module_share_9">Share to Alipay conversation friends</string>
+    <string name="module_share_10">Share text</string>
+    <string name="module_share_11">Share pictures</string>
+    <string name="module_share_12">Sharing succeeded, sharing type:</string>
+    <string name="module_share_13">Share callback results:</string>
+    <string name="module_share_14">Sharing success</string>
+    <string name="module_share_15">Sharing failed. Sharing type:</string>
+    <string name="module_share_16">Error code:</string>
+    <string name="module_share_17">Error message:</string>
+    <string name="module_share_18">App not installed:</string>
+    <string name="module_share_19">User cancel:</string>
+    <string name="module_share_20">Validation failed:</string>
+    <string name="module_share_21">The shared parameter is illegal:</string>
+    <string name="module_share_22">The sharing interface does not support:</string>
+    <string name="module_share_23">Failed to send sharing request:</string>
+    <string name="module_share_24">Unknown error:</string>
+    <string name="module_share_25">WeChat sharing</string>
+    <string name="module_share_26">Share text</string>
+    <string name="module_share_27">Share pictures (supports picture local address and bitmap)</string>
+    <string name="module_share_28">Share web pages</string>
+    <string name="module_share_29">Enterprise WeChat sharing</string>
+    <string name="module_share_30">Share text</string>
+    <string name="module_share_31">Share pictures</string>
+    <string name="module_share_32">Share web pages</string>
+    <string name="module_share_33">Share videos</string>
+    <string name="module_share_34">Share files</string>
+    <string name="module_share_35">Alipay Share</string>
+    <string name="module_share_36">Nail sharing</string>
+    <string name="module_share_37">Sina Weibo Sharing</string>
+    <string name="module_share_38">Share to Weibo</string>
+    <string name="module_share_39">QQ sharing</string>
+    <string name="module_share_40">Share text and pictures</string>
+    <string name="module_share_41">Other sharing</string>
+    <string name="module_share_42">SMS sharing</string>
+</resources>

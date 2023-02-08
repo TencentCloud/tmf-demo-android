@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conch_activity_input_id">Enter cloud instruction id</string>
+    <string name="conch_activity_pull_conch">Pull instruction</string>
+    <string name="conch_activity_conch_list">Instruction List</string>
+    <string name="conch_activity_conch_title">Cloud instruction</string>
+    <string name="conch_activity_conch_registed">Registered cloud directives: \n\n\n</string>
+    <string name="conch_activity_conch_input_correct">Please enter the correct cloud instruction ID</string>
+    <string name="conch_activity_conch_input_not_found">Unable to find cloud instruction service</string>
+    <string name="conch_activity_conch_input_result">Results of cloud command: \n</string>
+</resources>

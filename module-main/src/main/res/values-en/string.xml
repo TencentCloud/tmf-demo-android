@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="item_0">Mobile gateway</string>
+    <string name="item_1">Cloud instruction</string>
+    <string name="item_2">Message push</string>
+    <string name="item_3">Hot fix</string>
+    <string name="item_4">H5 container</string>
+    <string name="item_5">Offline package</string>
+    <string name="item_6">Performance analysis</string>
+    <string name="item_7">File upload</string>
+    <string name="item_8">Staining Log</string>
+    <string name="item_9">Security keyboard</string>
+    <string name="item_10">APP update</string>
+    <string name="item_11">Scan components</string>
+    <string name="item_12">UI Components</string>
+    <string name="item_13">Storage components</string>
+    <string name="item_14">Share components</string>
+    <string name="item_15">Positioning components</string>
+    <string name="item_16">Equipment identification</string>
+    <string name="item_17">ICDP</string>
+    <string name="item_18">Routing component</string>
+    <string name="item_19">National secret algorithm</string>
+    <string name="item_20">Multiple instances</string>
+    <string name="item_21">Hybrid</string>
+    <string name="item_22">Applets</string>
+    <string name="item_23">Mobile gateway</string>
+    <string name="item_24">Analyse</string>
+    <string name="tmf_main_more">More</string>
+    <string name="tmf_main_pack_time">Packaging time:</string>
+    <string name="tmf_main_dynamic_conf">Dynamic configuration</string>
+    <string name="tmf_main_enter_correct_url">Please enter the correct link address</string>
+    <string name="tmf_main_guid_copy_tips">Guid copied to clipboard</string>
+    <string name="module_main_0">Please enter the link address</string>
+    <string name="module_main_1">Open</string>
+    <string name="module_main_2">Scan QR code</string>
+    <string name="module_main_3">APP information</string>
+    <string name="module_main_4">TMF assembly</string>
+    <string name="module_main_5">Hot fix loaded successfully</string>
+
+    <string name="module_main_6">POC</string>
+    <string name="module_main_7">Test</string>
+    <string name="module_main_8">Customize</string>
+</resources>

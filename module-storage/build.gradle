@@ -1,0 +1,14 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}module.gradle"
+
+android {
+    kapt {
+        arguments {
+            arg("portalModuleName", "module-storage")
+        }
+    }
+}
+
+dependencies {
+    api rootProject.ext.TMF_components['cipher']
+    api rootProject.ext.TMF_components['keymanager']
+}

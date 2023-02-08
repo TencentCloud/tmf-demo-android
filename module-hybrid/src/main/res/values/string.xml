@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hybrid_access_title">离线包API优化测试</string>
+    <string name="hybrid_access_title_hint">输入离线包bid或者url地址</string>
+    <string name="hybrid_access_open_url">打开 URL ：%s</string>
+    <string name="hybrid_access_global_host_set_success">全局虚拟Host设置成功</string>
+    <string name="hybrid_access_global_specify_bid_or_url">请指定bid或者url</string>
+    <string name="hybrid_access_global_custom_global_view_setted">自定义全局视图已经设置</string>
+    <string name="hybrid_access_global_recover_global_view_setted">恢复全局默认视图</string>
+    <string name="hybrid_access_global_set_custom_global_view">设置全局自定义视图</string>
+    <string name="hybrid_access_global_remove_global_view_setted">已经移除全局自定义视图</string>
+
+    <string name="hybrid_access_global_resume_ui">恢复默认UISettings打开页面</string>
+    <string name="hybrid_access_global_set_ui">设置UISettings成功</string>
+    <string name="hybrid_access_global_custom_uid">自定义UISettings打开页面</string>
+    <string name="hybrid_access_global_resume_ui_success">恢复UISettings成功</string>
+    <string name="hybrid_access_global_remote_host_reset">重置RemoteHost</string>
+    <string name="hybrid_access_global_remote_host_specify">指定RemoteHost</string>
+    <string name="hybrid_access_global_remote_host_set">RemoteHost 设置为 %s</string>
+    <string name="hybrid_access_global_common_resources_add">公共资源包 %s 已添加</string>
+    <string name="hybrid_access_global_open_with_params">指定参数打开离线包</string>
+    <string name="module_hybrid_0">打开在线URL地址</string>
+    <string name="module_hybrid_1">打开离线包(支持bid和url)</string>
+    <string name="module_hybrid_2">设置全局虚拟地址</string>
+    <string name="module_hybrid_3">设置离线包URL为默认值</string>
+    <string name="module_hybrid_4">设置全局自定义视图</string>
+    <string name="module_hybrid_5">自定义UISettings打开页面</string>
+    <string name="module_hybrid_6">指定参数打开离线包</string>
+    <string name="module_hybrid_7">EmbedView集成测试</string>
+    <string name="module_hybrid_8">指定RemoteHost</string>
+    <string name="module_hybrid_9">添加全局公共包Bid</string>
+    <string name="module_hybrid_10">删除本地所有离线包资源</string>
+    <string name="module_hybrid_11">请输入离线包BID</string>
+    <string name="module_hybrid_12">请输入离线包indexPath,默认为index.html</string>
+    <string name="module_hybrid_13">请输入公共包bid,以 , 分隔</string>
+    <string name="module_hybrid_14">打开离线包</string>
+    <string name="module_hybrid_"></string>
+</resources>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_example">Sample Picture</string>
+    <string name="app_upgrade_tip_title">Release Notes (%1$s)</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="emptyView_mode_title_loading">Show Loading</string>
+    <string name="emptyView_mode_title_single_text">Display a line of prompts</string>
+    <string name="emptyView_mode_title_double_text">Show two lines of prompts</string>
+    <string name="emptyView_mode_title_single_text_and_button">Show a line of text and buttons</string>
+    <string name="emptyView_mode_title_double_text_and_button">Show two lines of text and buttons</string>
+    <string name="emptyView_mode_desc_single">This is a line of prompts</string>
+    <string name="emptyView_mode_desc_double">I am an EmptyView</string>
+    <string name="emptyView_mode_desc_detail_double">Switch my different statuses through the menu in the upper right
+        corner
+    </string>
+    <string name="emptyView_mode_desc_fail_title">Load failed</string>
+    <string name="emptyView_mode_desc_fail_desc">Please check whether the network can be connected normally</string>
+    <string name="emptyView_mode_desc_retry">Click Retry</string>
+    <string name="tabSegment_item_1_title">Item 1</string>
+    <string name="tabSegment_item_2_title">Item 2</string>
+    <string name="tabSegment_item_1_content">This is the content area of the first item</string>
+    <string name="tabSegment_item_2_content">This is the content area of the second item</string>
+    <string name="tabSegment_mode_general">Simple text</string>
+    <string name="tabSegment_mode_bottom_indicator">Text+bottom indicator</string>
+    <string name="tabSegment_mode_top_indicator">Text+top indicator</string>
+    <string name="tabSegment_mode_indicator_with_content">The length of text+indicator should not follow the length of
+        content
+    </string>
+    <string name="tabSegment_mode_left_icon_and_auto_tint">Text+icon (supports four directions)+automatic coloring of
+        selected icon
+    </string>
+    <string name="tabSegment_mode_sign_count">Show red dots</string>
+    <string name="tabSegment_mode_icon_change">Replace icon in selected status</string>
+    <string name="tabSegment_mode_muti_color">Different items, different text (icon) colors</string>
+    <string name="tabSegment_mode_change_content_by_index">Update tab text according to index</string>
+    <string name="tabSegment_mode_replace_tab_by_index">Replace the tab completely according to the index</string>
+    <string name="tabSegment_mode_scale_selected">Amplify selected state</string>
+    <string name="tabSegment_mode_change_gravity">Modify Gravity</string>
+    <string name="progress_start_button_text">Click Start</string>
+    <string name="progress_back_button_text">Rollback Progress</string>
+    <string name="circularImageView_item_xml_circle_title">Clip to circle+border+click effect</string>
+    <string name="circularImageView_item_xml_oval_title">Cut to oval+border+click effect</string>
+    <string name="circularImageView_item_xml_round_rect_title">Clip to rounded rectangle+border+click effect</string>
+    <string name="circularImageView_item_xml_scale_type_desc">The following two pictures are fixed in size. The first
+        picture is smaller than View,
+    </string>
+    <string name="circularImageView_modify_tip">The effect of the following figure can be dynamically modified through
+        the buttons in the upper right corner
+    </string>
+    <string name="circularImageView_modify_1">Change border color and width</string>
+    <string name="circularImageView_modify_2">Change the color and width of the selected border</string>
+    <string name="circularImageView_modify_3">Change the color of the selected mask (with transparency)</string>
+    <string name="circularImageView_modify_4">Manually switch the selected status</string>
+    <string name="circularImageView_modify_5">Change fillet size</string>
+    <string name="circularImageView_modify_6">Become round</string>
+    <string name="circularImageView_modify_7">Become oval</string>
+    <string name="circularImageView_modify_8">Do not use the touchSelect state</string>
+    <string name="circularImageView_modify_9">Reset to initial state</string>
+    <string name="popup_normal_action_button_text_show">Display ordinary floating layer</string>
+    <string name="popup_normal_action_button_text_hide">Hide ordinary floating layer</string>
+    <string name="popup_list_action_button_text_show">Show List Floats</string>
+    <string name="popup_list_action_button_text_hide">Hide List Floats</string>
+    <string name="linkTextView_auto_identify">URL/Mail/Tel automatic recognition</string>
+    <string name="linkTextView_auto_identify_word">Can automatically identify web links, such as http://www.qmuiteam.com
+        。 \N Phone numbers can be automatically identified, e.g. 13600000000. \N can also identify email addresses, such
+        as qmuiteam@gmail.com 。 \N We can add custom click events for them.
+    </string>
+    <string name="spanTouchFix_description">QMUISpanTouchFixTextView is mainly used to correct the click behavior and
+        event delivery after adding ClickSpan to TextView
+    </string>
+    <string name="spanTouchFix_system_behavior">TextView System Behavior</string>
+    <string name="spanTouchFix_qmui_fix_behavior">QMUI post repair behavior</string>
+    <string name="pull_refresh_default_offset_calculator">Default effect: Loading does not move after being pulled down
+        to a certain distance
+    </string>
+    <string name="pull_refresh_follow_offset_calculator">Loading always follows the pull-down</string>
+    <string name="pull_refresh_center_gravity_offset_calculator">Loading remains in the middle of the drop-down area
+    </string>
+    <string name="sticky_section_decoration_list_footer">This is the footer of the entire list</string>
+    <string name="sticky_section_decoration_section_top_tip">This is the prompt at the head of the section list</string>
+    <string name="sticky_section_decoration_section_bottom_tip">This is the prompt at the bottom of the section list
+    </string>
+    <string name="system_behavior_1">\@Qmui: Clicking the span area will start the span click event and TextView click
+        event # qmui#
+    </string>
+    <string name="system_behavior_2">\@Qmui: By default, TextView does not add click events, and then the parent element
+        of TextView adds click events,
+    </string>
+    <string name="span_touch_fix_1">\@Qmui: The span click event is completely separated from the textView click event #
+        qmui#
+    </string>
+    <string name="span_touch_fix_2">\@Qmui: By default, if the textView adds clickSpan, # qmui #, then the textView
+        events cannot bubble to the parent.
+    </string>
+    <string name="colorHelper_alpha_title">Set the alpha value of the color</string>
+    <string name="colorHelper_ratio_title">Calculate a color value between two color values according to the
+        proportion
+    </string>
+    <string name="colorHelper_transform_title">Convert color value to string</string>
+    <string name="colorHelper_squqre_origin">original</string>
+    <string name="colorHelper_squqre_alpha">%1$.1f alpha</string>
+    <string name="deviceHelper_tablet_title">Judge whether it is a tablet device</string>
+    <string name="deviceHelper_flyme_title">Judge whether it is Flyme system</string>
+    <string name="deviceHelper_miui_title">Judge whether it is MIUI system</string>
+    <string name="deviceHelper_meizu_title">Judge whether it is Meizu mobile phone</string>
+    <string name="drawableHelper_create_from_view_title">Create Bitmap from a View</string>
+    <string name="drawableHelper_create_from_view_button">Take the Root View of this interface as an example</string>
+    <string name="drawableHelper_solid_image_title">Create a solid color picture of a specified size, supporting rounded
+        corners
+    </string>
+    <string name="drawableHelper_circle_gradient_title">Create a gradient image, supporting rounded corners</string>
+    <string name="drawableHelper_tint_color_title">Set the color of Drawable</string>
+    <string name="drawableHelper_separator_title">Create a Drawable with an upper or lower divider</string>
+    <string name="statusBarHelper_translucentActivity_desc">The effect of immersive status bar can be achieved by
+        calling QMUIStatusBarHelper. translate() method in Activity
+    </string>
+    <string name="statusBarHelper_statusBar_height_result">The actual height of the status bar is%1$d</string>
+    <string name="spanUtils_side_icon_title">Add Icon directly to the left or right of the text</string>
+    <string name="spanUtils_align_middle_title">Support for vertically centered ImageSpan</string>
+    <string name="spanUtils_margin_image_title">Support ImageSpan with increased left and right spacing</string>
+    <string name="spanUtils_block_space_title">Blank Span of the whole line, which can be used to make segment spacing
+    </string>
+    <string name="spanUtils_custom_type_face_title">Customize the font of some text</string>
+    <string name="spanUtils_rmb">¥</string>
+    <string name="about_title">about</string>
+    <string name="about_item_homepage">Visit the official website</string>
+    <string name="about_item_github">GitHub</string>
+    <string name="about_copyright">© %1$s QMUI Team All rights reserved.</string>
+    <string name="qmui_0">add to</string>
+    <string name="qmui_1">delete</string>
+    <string name="qmui_2">There are few items. How about adding a few first?</string>
+    <string name="qmui_3">Share to WeChat</string>
+    <string name="qmui_4">Share to the circle of friends</string>
+    <string name="qmui_5">Share to Weibo</string>
+    <string name="qmui_6">Share to private message</string>
+    <string name="qmui_7">Save to Local</string>
+    <string name="qmui_8">The font color of this TextView is:%1$s</string>
+    <string name="qmui_9">Click to expand more n</string>
+    <string name="qmui_10">Current device%1$s tablet device</string>
+    <string name="qmui_11">Current device%1$s Flyme system</string>
+    <string name="qmui_12">Current device%1$s MIUI system</string>
+    <string name="qmui_13">Current device%1$s Meizu mobile phone</string>
+    <string name="qmui_14">yes</string>
+    <string name="qmui_15">no</string>
+    <string name="qmui_16">Message Type Dialog Box (blue button)</string>
+    <string name="qmui_17">Message Type Dialog Box (red button)</string>
+    <string name="qmui_18">Message Type Dialog Box (Long Text)</string>
+    <string name="qmui_19">Menu Type Dialog Box</string>
+    <string name="qmui_20">Message confirmation box with checkbox</string>
+    <string name="qmui_21">Radio Menu Type Dialog Box</string>
+    <string name="qmui_22">Multi Select Menu Type Dialog Box</string>
+    <string name="qmui_23">Multi choice menu type dialog box (many items)</string>
+    <string name="qmui_24">Dialog box with input box</string>
+    <string name="qmui_25">Dialog box for height adaptation to keyboard rise and fall</string>
+    <string name="qmui_26">title</string>
+    <string name="qmui_27">Are you sure you want to send?</string>
+    <string name="qmui_28">cancel</string>
+    <string name="qmui_29">determine</string>
+    <string name="qmui_30">Sending succeeded</string>
+    <string name="qmui_31">title</string>
+    <string name="qmui_32">Are you sure you want to delete?</string>
+    <string name="qmui_33">cancel</string>
+    <string name="qmui_34">delete</string>
+    <string name="qmui_35">Deletion succeeded</string>
+    <string name="qmui_36">Delete account information after exiting?</string>
+    <string name="qmui_37">Delete account information</string>
+    <string name="qmui_38">cancel</string>
+    <string name="qmui_39">sign out</string>
+    <string name="qmui_40">Option%s</string>
+    <string name="qmui_41">You chose</string>
+    <string name="qmui_42">Submit</string>
+    <string name="qmui_43">Enter your nickname here</string>
+    <string name="qmui_44">Your nickname:</string>
+    <string name="qmui_45">Please fill in your nickname</string>
+    <string name="qmui_46">You clicked OK</string>
+    <string name="qmui_47">Input box</string>
+    <string name="qmui_48">After observing the focus input box, the dialog height adaptively changes when the keyboard
+        is raised or lowered. \n\n
+    </string>
+    <string name="qmui_49">Use QMUI default Dialog style</string>
+    <string name="qmui_50">custom style</string>
+    <string name="qmui_51">Example effect (click the figure below to close this floating layer)</string>
+    <string name="qmui_item_0">Add an item</string>
+    <string name="qmui_item_1">Reduce one item</string>
+    <string name="qmui_item_2">be at the left side</string>
+    <string name="qmui_item_3">Center</string>
+    <string name="qmui_item_4">be at the right</string>
+    <string name="qmui_item_5">Limit display to 1 line</string>
+    <string name="qmui_item_6">Limit the display of up to 4 item</string>
+    <string name="qmui_item_7">No limit on the number of lines or numbers</string>
+    <string name="qmui_item_8">Details on the right</string>
+    <string name="qmui_item_9">Details below the title</string>
+    <string name="qmui_item_10">Section 1: The style provided by default</string>
+    <string name="qmui_item_11">Description of Section 1</string>
+    <string name="qmui_item_12">Section 2: Customize the right view</string>
+    <string name="qmui_item_13">The recognized telephone number is:</string>
+    <string name="qmui_item_14">The identified email address is:</string>
+    <string name="qmui_item_15">Recognized web links are:</string>
+    <string name="qmui_item_16">Popup can animate its position and display and hide</string>
+    <string name="qmui_item_17">QMUI implementation scheme performance</string>
+    <string name="qmui_item_18">ImageSpan Implementation Scheme Performance</string>
+    <string name="qmui_item_19">horizontal direction</string>
+    <string name="qmui_item_20">vertical direction</string>
+    <string name="qmui_item_21">This is a line of sample text. The previous Span is set to be vertically centered with
+        the text
+    </string>
+    <string name="qmui_item_22">Width of Chinese characters</string>
+    <string name="qmui_item_23">Left content</string>
+    <string name="qmui_item_24">[margin] Right content</string>
+    <string name="qmui_item_25">This is the first long paragraph, demonstrating the insertion of paragraph spacing
+        between paragraphs. \n
+    </string>
+    <string name="qmui_item_26">This is the second longer paragraph, demonstrating the insertion of paragraph spacing
+        between paragraphs.
+    </string>
+    <string name="qmui_item_27">100. The preceding RMB symbols are specially processed by using custom fonts. Compared
+        with the common RMB symbols:
+    </string>
+    <string name="qmui_item_28">Support MIUI and Flyme versions above 4.4, and other Android versions above 5.0</string>
+    <string name="qmui_item_29">Immersive status bar</string>
+    <string name="qmui_item_30">Support MIUI and Flyme versions above 4.4, and other Android versions above 6.0</string>
+    <string name="qmui_item_31">Set black font and icon of status bar</string>
+    <string name="qmui_item_32">Set white font and icon of status bar</string>
+    <string name="qmui_item_33">The height of the status bar may be slightly different under different models, which is
+        not a fixed value. You can obtain the actual height by this method
+    </string>
+    <string name="qmui_item_34">Get the actual height of the status bar</string>
+    <string name="qmui_item_35">Dynamic update copy</string>
+    <string name="qmui_item_36">Dynamic update</string>
+    <string name="qmui_item_37">This is the No</string>
+    <string name="qmui_item_38">Content area of items</string>
+    <string name="qmui_item_39">Loading type prompt box</string>
+    <string name="qmui_item_40">Success prompt type prompt box</string>
+    <string name="qmui_item_41">Failure prompt type prompt box</string>
+    <string name="qmui_item_42">Information prompt type prompt box</string>
+    <string name="qmui_item_43">Single picture type prompt box</string>
+    <string name="qmui_item_44">Single text type prompt box</string>
+    <string name="qmui_item_45">Customize content prompt box</string>
+    <string name="qmui_item_46">Loading</string>
+    <string name="qmui_item_47">Sending succeeded</string>
+    <string name="qmui_item_48">fail in send</string>
+    <string name="qmui_item_49">Do not repeat the operation</string>
+    <string name="qmui_item_50">%S realizes the vertical typesetting of characters. And the non CJK (Chinese, Japanese,
+        Korean) characters are rotated 90 degrees. You can enter text in the input box below to experience the effect of
+        vertical typesetting of different text.
+    </string>
+    <string name="qmui_item_51">Click to display floating layer</string>
+    <string name="qmui_item_52">Click to close floating layer</string>
+    <string name="qmui_item_53">Display this floating layer with Fade animation</string>
+    <string name="qmui_item_54">Hide this floating layer with Fade animation</string>
+    <string name="qmui_item_55">Display this floating layer with Slide animation</string>
+    <string name="qmui_item_56">Hide this floating layer with Slide animation</string>
+    <string name="qmui_item_57">Click to start flashing</string>
+    <string name="qmui_item_58">After clicking, the background will change from yellow to green</string>
+    <string name="qmui_item_59">Background animation</string>
+    <string name="qmui_item_60">Entry and exit animation</string>
+    <string name="qmui_item_61">Are you sure to download this file?</string>
+    <string name="qmui_item_62">Fixed width, equally divided content</string>
+    <string name="qmui_item_63">Content adaptive, scrolling if exceeding the parent container</string>
+    <string name="qmui_item_64">Content adaptation, adding weight to control spacing</string>
+    <string name="qmui_item_65">Performance observation</string>
+    <string name="qmui_item_66">QQ expression display</string>
+    <string name="qmui_item_67">Use SnapHelper to realize page scrolling of RecyclerView</string>
+    <string name="qmui_item_68">ListView Slide Delete</string>
+    <string name="qmui_item_69">Fade entry and exit animation</string>
+    <string name="qmui_item_70">Slide entry and exit animation</string>
+    <string name="qmui_item_71">Animate the background flash</string>
+    <string name="qmui_item_72">Animate background changes&gt;</string>
+    <string name="qmui_item_73">Immersive status bar example&gt;</string>
+    <string name="qmui_item_">Immersive status bar example&gt;</string>
+    <string name="qmui_xml_0">The fillet is half of the short edge</string>
+    <string name="qmui_xml_1">Specify fillet size</string>
+    <string name="qmui_xml_2">finger</string>
+    <string name="qmui_xml_3">set</string>
+    <string name="qmui_xml_4">square</string>
+    <string name="qmui_xml_5">towards</string>
+    <string name="qmui_xml_6">Use ColorStateList to specify the text color, border color, background color and click
+        state
+    </string>
+    <string name="qmui_xml_7">Change text color, border color, and background color</string>
+    <string name="qmui_xml_8">Set setChangeAlphaWhenPressed (true) to change the overall alpha when clicked</string>
+    <string name="qmui_xml_9">Safe area nTODO vivo display and brightness - third party application display scale nTODO
+        OPPO setting - display - application full screen display - concave area display control
+    </string>
+    <string name="qmui_xml_10">If the content exceeds, compress each child</string>
+    <string name="qmui_xml_11">Test copyTest copyTest</string>
+    <string name="qmui_xml_12">Increase the weight of some children without compression</string>
+    <string name="qmui_xml_13">1. This element will not be compressed</string>
+    <string name="qmui_xml_14">This element will not be compressed</string>
+    <string name="qmui_xml_15">Single line expression, omitted at the end</string>
+    <string name="qmui_xml_16">Display up to 3 lines, omit at the end</string>
+    <string name="qmui_xml_17">Single line, beginning omitted</string>
+    <string name="qmui_xml_18">Up to 3 lines are displayed, and the beginning is omitted</string>
+    <string name="qmui_xml_19">Single line, omitted in the middle</string>
+    <string name="qmui_xml_20">Enter text here to see the effect of vertical typesetting</string>
+    <string name="qmui_xml_21">Custom icon</string>
+    <string name="qmui_xml_22">Custom Structure</string>
+</resources>

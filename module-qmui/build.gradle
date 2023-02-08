@@ -1,0 +1,14 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}common-lib.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.TMF_components['qmui']
+    implementation rootProject.ext.TMF_components['qmuiArch']
+
+    api project.ext.dependencies['legacy-support-v4']
+    api project.ext.dependencies['androidx-appcompat']
+    api project.ext.dependencies['android.material']
+    api project.ext.dependencies['androidx-constraintlayout']
+    api project.ext.dependencies['androidx-swiperefreshlayout']
+}

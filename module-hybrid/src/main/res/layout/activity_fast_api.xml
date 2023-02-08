@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <EditText
+                android:id="@+id/edit_app_id_or_url"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_height="60dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                style="@style/edittext_border"
+                android:importantForAutofill="no" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/btn_start_h5_container"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="100dp"
+                android:text="@string/module_hybrid_0"
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@+id/btn_start_h5_container"
+                android:id="@+id/btn_start_offline_app"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="2dp"
+
+                android:text="@string/module_hybrid_1"
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_start_offline_app"
+                android:id="@+id/btn_set_virtual_url"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_2"
+                android:layout_marginTop="2dp"
+
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_set_virtual_url"
+                android:id="@+id/btn_set_url"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_3"
+                android:layout_marginTop="2dp"
+
+                app:qmui_radius="4dp" />
+
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_set_url"
+                android:id="@+id/btn_set_custom_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_4"
+                android:layout_marginTop="2dp"
+
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_set_custom_view"
+                android:id="@+id/btn_set_default_title_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_5"
+                android:layout_marginTop="2dp"
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_set_default_title_view"
+                android:id="@+id/btn_h5_container_set"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_6"
+                android:layout_marginTop="2dp"
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_h5_container_set"
+                android:id="@+id/btn_h5_embedview_test"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_7"
+                android:layout_marginTop="2dp"
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_h5_embedview_test"
+                android:id="@+id/btn_h5_set_remote"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_8"
+                android:layout_marginTop="2dp"
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_h5_set_remote"
+                android:id="@+id/btn_h5_set_common_res"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_9"
+                android:layout_marginTop="2dp"
+                app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                app:layout_constraintTop_toBottomOf="@id/btn_h5_set_common_res"
+                android:id="@+id/btn_h5_remove_all_offline_resouces"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/module_hybrid_10"
+                android:layout_marginTop="2dp"
+                app:qmui_radius="4dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

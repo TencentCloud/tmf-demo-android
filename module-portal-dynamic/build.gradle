@@ -1,0 +1,5 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}module.gradle"
+
+dependencies {
+
+}

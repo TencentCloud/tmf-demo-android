@@ -1,0 +1,256 @@
+<resources>
+    <string name="app_name">TMFDemo</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- 文件存储 -->
+    <string name="hint_file_demo">输入需要存储的文本</string>
+    <string name="file_write">明文存储</string>
+    <string name="file_write_encrypt">加密存储</string>
+    <string name="file_read">明文读取</string>
+    <string name="file_read_decrypt">解密读取</string>
+    <string name="file_encrypt">文件加密</string>
+    <string name="file_decrypt">文件解密</string>
+    <string name="file_delete">文件删除</string>
+    <string name="kv_detail_demo">详细KV存储示例</string>
+    <string name="storage_default">全局存储</string>
+    <string name="storage_uid">按UID存储</string>
+    <string name="storage_uid_invalid">请输入UID</string>
+    <string name="storage_temp">临时存储</string>
+    <string name="name_kv">键值对存储</string>
+    <string name="name_file">文件存储</string>
+    <string name="name_db">数据库存储</string>
+    <string name="db_CRUD">数据库CRUD</string>
+    <string name="db_encrypt">数据库加密迁移</string>
+    <string name="db_repair">数据库修复</string>
+    <string name="db_room">Room存储</string>
+    <string name="storage_module">存储组件</string>
+
+    <string name="name_encryptdb">EncryptedDBSample</string>
+    <string name="name_cruddb">CRUDSample</string>
+    <string name="name_repairdb">RepairDBSample</string>
+    <string name="init_plain_text_db">明文数据库</string>
+    <string name="init_encrypted_db">迁移到加密数据库</string>
+    <string name="insert_message">插入数据</string>
+    <string name="init_db">Init</string>
+    <string name="corrupt_db">Corrupt!</string>
+    <string name="repair_db">Repair</string>
+
+    <!--性能分析-->
+    <string name="performance">性能分析</string>
+    <string name="performance_test_db">测试DB</string>
+    <string name="performance_test_slide_list">滑动列表(测试掉帧)</string>
+    <string name="performance_test_memory_leak">测试内存泄漏</string>
+    <string name="performance_test_file_io">测试文件IO</string>
+    <string name="performance_test_bettary">测试电量</string>
+    <string name="performance_test_crash">测试Crash</string>
+    <string name="performance_test_params">参数设置</string>
+    <string name="performance_test_x5_reporter">测试X5内核上报</string>
+    <string name="performance_test_crash_java">测试JAVA RUNTIME EXCEPTION</string>
+    <string name="performance_test_crash_native">测试Native Crash</string>
+    <string name="performance_test_crash_null">空指针</string>
+    <string name="performance_test_crash_oom">OOM</string>
+    <string name="performance_test_crash_so">加载so出错</string>
+
+    <string name="conch_label">云指令</string>
+    <string name="choose_uploadfile">选择文件</string>
+    <string name="hotpatch_top_title">热修复</string>
+    <!--<string name="hotpatch_top_title">热修复（已加热）</string>-->
+
+    <string name="location_module">定位组件</string>
+    <string name="location_amap">高德地图</string>
+    <string name="location_tencent">腾讯地图</string>
+    <string name="location_xm_report">上报地理位置（小马）</string>
+    <string name="location_profile_report">上报地理位置（Profile）</string>
+    <string name="location_demo">定位详细demo</string>
+    <!--高德定位SDK示例-->
+    <string name="title_main">高德定位SDK功能展示</string>
+
+    <string name="title_location">获取定位数据</string>
+    <string name="location">获取定位数据</string>
+    <string name="location_dec">调用定位接口获取定位数据</string>
+
+    <string name="title_assistantLocation">H5辅助定位</string>
+    <string name="assistantLocation">H5辅助定位</string>
+    <string name="assistantLocation_dec">展示H5辅助定位功能</string>
+
+    <string name="currentLocation">获取当前位置</string>
+    <string name="lastLocation">获取最后一次位置</string>
+    <string name="lastLocation_dec">获取最后一次定位的位置，此位置是一个历史位置</string>
+
+    <string name="title_errorCode">错误码说明</string>
+    <string name="errorCode">错误码说明</string>
+    <string name="errorCode_dec">错误码说明以及对应的解决方法</string>
+
+    <string name="defaultInteval">2000</string>
+    <string name="defaultHttpTimeout">30000</string>
+
+    <string name="battery_saving">低功耗模式</string>
+    <string name="device_sensors">仅设备模式</string>
+    <string name="hight_accuracy">高精度模式</string>
+    <string name="interval">定位周期(ms)</string>
+    <string name="httpTimeout">网络超时(ms)</string>
+    <string name="location_once">单次定位</string>
+    <string name="needAddress">逆地理编码</string>
+    <string name="cacheAble">开启缓存</string>
+    <string name="onceLastest">提高首次定位精度</string>
+    <string name="gpsFirst">GPS优先</string>
+    <string name="useSensor">使用传感器</string>
+    <string name="wifiScan">开启wifi扫描</string>
+
+    <string name="geoLanguage">逆地理语言</string>
+
+
+    <string name="alarmInterval">唤醒周期(s)</string>
+
+    <string name="startLocation">开始定位</string>
+    <string name="stopLocation">停止定位</string>
+
+    <string name="hideOption">隐藏设置</string>
+    <string name="showOption">显示设置</string>
+
+    <string name="showList">显示列表</string>
+    <string name="hideList">隐藏列表</string>
+
+    <string name="getLastLocation">获取最后位置</string>
+
+    <string name="startAssistantLocation">启动H5辅助定位</string>
+    <string name="stopAssistantLocation">停止H5辅助定位</string>
+    <string name="urlLocation">浏览器定位</string>
+    <string name="assistantLocationInfo">辅助定位已经启动，请点击模拟浏览器请求或者在浏览器中输入http://127.0.0.1:43689/进行测试</string>
+
+    <string name="coordinateConvert">坐标转换</string>
+    <string name="checkIsChina">位置区域判断</string>
+
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+
+    <string name="clear_status">清空</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+
+    <string name="errorCodeInfo">
+	    0	定位成功。	可以在定位回调里判断定位返回成功后再进行业务逻辑运算\n
+	    1	一些重要参数为空，如context；	请对定位传递的参数进行非空判断\n
+	    2	定位失败，由于仅扫描到单个wifi，且没有基站信息。	请重新尝试\n
+	    3	获取到的请求参数为空，可能获取过程中出现异常。	请对所连接网络进行全面检查，请求可能被篡改\n
+	    4	请求服务器过程中的异常，多为网络情况差，链路不通导致	请检查设备网络是否通畅\n
+	    5	返回的XML格式错误，解析失败。	请稍后再试\n
+	    6	定位服务返回定位失败。	请将errorDetail（通过getLocationDetail()方法获取）信息通过工单系统反馈给我们\n
+	    7	KEY鉴权失败。	请仔细检查key绑定的sha1值与apk签名sha1值是否对应，或通过高频问题查找相关解决办法\n
+	    8	Android exception常规错误	请将errordetail（通过getLocationDetail()方法获取）信息通过工单系统反馈给我们\n
+	    9	定位初始化时出现异常。	请重新启动定位\n
+	    10	定位客户端启动失败。	请检查AndroidManifest.xml文件是否配置了APSService定位服务\n
+	    11	定位时的基站信息错误。	请检查是否安装SIM卡，设备很有可能连入了伪基站网络\n
+	    12	缺少定位权限。	请在设备的设置中开启app的定位权限\n
+	    13	定位失败，由于设备未开启WIFI模块或未插入SIM卡，且GPS当前不可用。 建议开启设备的WIFI模块，并将设备中插入一张可以正常工作的SIM卡，或者检查GPS是否开启；如果以上都内容都确认无误，请您检查App是否被授予定位权限\n
+	    14  GPS 定位失败，由于设备当前 GPS 状态差。 建议持设备到相对开阔的露天场所再次尝试\n
+	    15	定位结果被模拟导致定位失败。 如果您希望位置被模拟，请通过setMockEnable(true);方法开启允许位置模拟\n
+	    16 	当前POI检索条件、行政区划检索条件下，无可用地理围栏。 建议调整检索条件后重新尝试，例如调整POI关键字，调整POI类型，调整周边搜区域，调整行政区关键字等\n
+	    17 	相同的地理围栏已经存在，无需重复添加\n
+	    18	飞行模式下关闭了WIFI开关，请关闭飞行模式或者打开WIFI开关\n
+	    19	没有检查到SIM卡，并且关闭了WIFI开关，请打开WIFI开关或者插入SIM卡\n
+	</string>
+
+    <!--版本升级-->
+    <string name="upgrade">版本升级</string>
+    <string name="manual_upgrade_check">手动拉取更新</string>
+    <string name="auto_upgrade_check">开始监听升级单</string>
+    <string name="local_upgrade_check">本地升级单检查</string>
+    <string name="check_upgrade_ing">正在检查更新</string>
+    <string name="check_upgrade_success">检测到新版本</string>
+    <string name="check_upgrade_latest_version_now">当前已是最新版</string>
+    <string name="check_upgrade_network_error">网络异常，请稍后再试</string>
+    <string name="check_upgrade_res_limit">资源限额</string>
+    <string name="upgrade_apk_downloading">正在下载新版本</string>
+
+    <!--活体检测-->
+    <string name="keep_face_on_the_screen">请保持正脸对准框内</string>
+    <string name="be_closer">靠近一点</string>
+    <string name="be_farer">离远一点</string>
+    <string name="no_face">没有检测到脸</string>
+    <string name="please_holding">请保持</string>
+    <string name="start_pull_color_seq">拉取配置...</string>
+    <string name="request_color_seq_fail">获取颜色序列失败</string>
+    <string name="check_passed">检测通过</string>
+    <string name="check_fail">检测未通过</string>
+    <string name="no_camera">未找到相机设备</string>
+    <string name="initializing">初始化...</string>
+    <string name="camera_set_failed">相机设置失败</string>
+    <string name="open_camera_failed">打开相机失败</string>
+    <string name="begin_check">开始检测</string>
+    <string name="switch_camera_direction">切换相机</string>
+
+    <!--Sonic-->
+    <string name="default_no_sonic">Load Without Sonic</string>
+    <string name="sonic">Load With Sonic</string>
+    <string name="sonic_preload">DO Sonic Preload</string>
+    <string name="sonic_offline">Load Sonic With Offline Cache</string>
+    <string name="sonic_no_eTag">Load Sonic With No ETag</string>
+    <string name="reset_clear">Clean Up Cache</string>
+    <string name="set_custom_url">设置自定义URL</string>
+    <string name="close">关闭</string>
+    <string name="http_prefix">http://</string>
+    <string name="finish">完成</string>
+    <string name="illegal_url">不合法的URL</string>
+    <string name="edit">编辑</string>
+
+    <!--Keyboard-->
+    <string name="mLabelTextSize">mLabelTextSize</string>
+
+    <!--小应用-->
+    <string name="no_tinyapp">暂无小应用，请稍后再试！</string>
+    <string name="load_tinyapp_fail">未找到任何小应用，请稍后再试！</string>
+
+    <!--染色日志-->
+    <string name="color_log">染色日志</string>
+    <string name="color_log_input_hint">请输入需要上传日志的日期，如20190101</string>
+    <string name="upload_color_log">上传染色日志</string>
+    <string name="upload_color_log_today">一键上传今日染色日志</string>
+    <string name="upload_color_log_test">日志输出测试</string>
+
+    <!-- SettingActivity   -->
+    <string name="setting_activity_title">设置</string>
+    <string name="setting_activity_start_new_protocal">开启新协议</string>
+    <string name="setting_activity_restart_to_take_effect">重启APP才能生效哦</string>
+
+    <string name="share_manager_share_to_wechat_friend">分享到微信好友</string>
+    <string name="share_manager_share_test_content">测试分享内容</string>
+    <string name="share_manager_create_local_pic_failed">生成本地图片没有成功，不能分享图片，请重试！</string>
+    <string name="share_manager_create_local_video_failed">生成本地文件没有成功，不能分享视频，请重试！</string>
+    <string name="share_manager_create_local_file_failed">生成本地文件没有成功，不能分享文件，请重试！</string>
+    <string name="share_manager_share_to_wechat">分享到微信</string>
+    <string name="share_manager_share_to_wechat_content">分享到微信的内容</string>
+    <string name="share_manager_share_to_company_wechat">分享到企业微信</string>
+    <string name="share_manager_share_to_company_wechat_content">分享到企业微信的内容</string>
+    <string name="share_manager_share_to_company_wechat_content_test">测试分享到企业微信的内容</string>
+    <string name="share_manager_share_to_zfb">我正在使用支付宝分享到会话好友</string>
+    <string name="share_manager_share_to_ding_talk">我正在使用钉钉分享到会话好友</string>
+    <string name="share_manager_share_to_zfb_friend">分享到支付宝会话好友</string>
+    <string name="share_manager_share_to_ding_friend">分享到钉钉会话好友</string>
+    <string name="share_manager_share_to_weibo">我正在使用微博客户端发分享文字</string>
+    <string name="share_manager_share_to_weibo_friend">分享到支付宝会话好友</string>
+    <string name="share_manager_share_to_at_least_one">至少选择分享文字或分享图片任意一项!!!</string>
+    <string name="share_manager_share_to_qq">分享到QQ好友</string>
+    <string name="share_manager_share_to_qq_content">测试分享内容</string>
+
+    <string name="tmf_config_activity_load_config">加载配置</string>
+    <string name="tmf_config_activity_load_config_failed">加载配置失败</string>
+    <string name="tmf_config_activity_load_config_get_it">知道啦</string>
+    <string name="tmf_config_activity_load_config_success">加载配置成功</string>
+    <string name="tmf_config_activity_load_config_restart_app">重启APP</string>
+    <string name="tmf_config_activity_load_config_file_not_exists">文件不存在</string>
+
+    <string name="tmf_config_list_activity_title">TMF本地配置</string>
+    <string name="tmf_config_list_activity_menu">菜单</string>
+    <string name="tmf_config_list_activity_current_config">TMF当前配置</string>
+    <string name="tmf_config_list_activity_confirm">确认</string>
+    <string name="tmf_config_list_activity_text_1">当前配置</string>
+    <string name="tmf_config_list_activity_text_2">清除本地配置</string>
+    <string name="tmf_config_list_activity_text_3">从sd卡加载配置</string>
+    <string name="tmf_config_list_activity_text_4">从剪切板加载配置</string>
+    <string name="tmf_config_list_activity_clear_cache_succes">本地配置清除成功, APP重启</string>
+    <string name="tmf_config_list_activity_copy_clip_failed">读取剪切板失败</string>
+
+
+</resources>

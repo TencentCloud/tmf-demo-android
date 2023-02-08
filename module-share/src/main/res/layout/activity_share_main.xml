@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/qmui_topbar_height"
+    android:background="@color/qmui_config_color_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/button_wrapper_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_share_25" />
+
+            <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+                android:id="@+id/wx_share_timeline"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/qmui_list_item_height"
+                app:qmui_accessory_type="switcher"
+                app:qmui_commonList_titleColor="@color/app_color_blue" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/wx_share_word"
+                style="@style/stat_btn"
+                android:text="@string/module_share_26"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+                android:id="@+id/wx_share_image_bitmap"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/qmui_list_item_height"
+                app:qmui_accessory_type="switcher"
+                app:qmui_commonList_titleColor="@color/app_color_blue" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/wx_share_image"
+                style="@style/stat_btn"
+                android:text="@string/module_share_27"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/wx_share_webpage"
+                style="@style/stat_btn"
+                android:text="@string/module_share_28"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+                style="@style/button_wrapper_style"
+                android:orientation="vertical">
+
+            <TextView
+                    style="@style/QDCommonTitle"
+                    android:text="@string/module_share_29" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/cwx_share_word"
+                    style="@style/stat_btn"
+                    android:text="@string/module_share_30"
+                    app:qmui_backgroundColor="@color/qmui_config_color_white"
+                    app:qmui_borderColor="@color/app_color_blue"
+                    app:qmui_borderWidth="1px"
+                    app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/cwx_share_image"
+                    style="@style/stat_btn"
+                    android:text="@string/module_share_31"
+                    app:qmui_backgroundColor="@color/qmui_config_color_white"
+                    app:qmui_borderColor="@color/app_color_blue"
+                    app:qmui_borderWidth="1px"
+                    app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/cwx_share_webpage"
+                    style="@style/stat_btn"
+                    android:text="@string/module_share_32"
+                    app:qmui_backgroundColor="@color/qmui_config_color_white"
+                    app:qmui_borderColor="@color/app_color_blue"
+                    app:qmui_borderWidth="1px"
+                    app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/cwx_share_video"
+                    style="@style/stat_btn"
+                    android:text="@string/module_share_33"
+                    app:qmui_backgroundColor="@color/qmui_config_color_white"
+                    app:qmui_borderColor="@color/app_color_blue"
+                    app:qmui_borderWidth="1px"
+                    app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/cwx_share_file"
+                    style="@style/stat_btn"
+                    android:text="@string/module_share_34"
+                    app:qmui_backgroundColor="@color/qmui_config_color_white"
+                    app:qmui_borderColor="@color/app_color_blue"
+                    app:qmui_borderWidth="1px"
+                    app:qmui_radius="4dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/button_wrapper_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_share_35" />
+
+            <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+                android:id="@+id/alipay_share_timeline"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/qmui_list_item_height"
+                app:qmui_accessory_type="switcher"
+                app:qmui_commonList_titleColor="@color/app_color_blue" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/alipay_share_word"
+                style="@style/stat_btn"
+                android:text="@string/module_share_30"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/alipay_share_image"
+                style="@style/stat_btn"
+                android:text="@string/module_share_31"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/alipay_share_webpage"
+                style="@style/stat_btn"
+                android:text="@string/module_share_32"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/button_wrapper_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_share_36" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/ding_share_word"
+                style="@style/stat_btn"
+                android:text="@string/module_share_30"
+                app:qmui_backgroundColor="@color/qmui_config_color_white"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/ding_share_image"
+                style="@style/stat_btn"
+                android:text="@string/module_share_31"
+                app:qmui_backgroundColor="@color/qmui_config_color_white"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/ding_share_webpage"
+                style="@style/stat_btn"
+                android:text="@string/module_share_32"
+                app:qmui_backgroundColor="@color/qmui_config_color_white"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/button_wrapper_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_share_37" />
+
+            <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+                android:id="@+id/weibo_share_word"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/qmui_list_item_height"
+                app:qmui_accessory_type="switcher"
+                app:qmui_commonList_titleColor="@color/app_color_blue" />
+
+            <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+                android:id="@+id/weibo_share_image"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/qmui_list_item_height"
+                app:qmui_accessory_type="switcher"
+                app:qmui_commonList_titleColor="@color/app_color_blue" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/weibo_share"
+                style="@style/stat_btn"
+                android:text="@string/module_share_38"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/button_wrapper_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_share_39" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qq_share_image"
+                style="@style/stat_btn"
+                android:text="@string/module_share_31"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qq_share_word_and_image"
+                style="@style/stat_btn"
+                android:text="@string/module_share_40"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/button_wrapper_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_share_41" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/sms_share"
+                style="@style/stat_btn"
+                android:text="@string/module_share_42"
+                app:qmui_backgroundColor="@color/app_color_blue_3"
+                app:qmui_borderColor="@color/app_color_blue"
+                app:qmui_borderWidth="1px"
+                app:qmui_radius="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

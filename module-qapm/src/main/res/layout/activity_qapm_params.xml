@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <include android:id="@+id/item_params_uid" layout="@layout/title_value_item"></include>
+    <include android:id="@+id/item_params_qapmKey" layout="@layout/title_value_item"></include>
+    <include android:id="@+id/item_params_qapm_server" layout="@layout/title_value_item"></include>
+    <include android:id="@+id/item_params_qapmathenahost_server" layout="@layout/title_value_item"></include>
+
+
+    <TextView
+        android:id="@+id/save_params"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_submit"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/module_qapm_0"
+        android:textColor="#fff"
+        android:textSize="16sp"></TextView>
+
+</LinearLayout>

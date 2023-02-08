@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>TMF JS API Demo</title>
+    <link rel="stylesheet" href="common.css">
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript">
+        tmf_sample_onNavigationItemClick()
+        tmf_ready(function() {
+            tmf_showOptionMenu()
+            tmf_showFinish()
+        })
+
+    </script>
+</head>
+<body>
+<div id="container">
+    <button class="jsapi-button" onclick="tmf_setTitle('自定义标题');">设置标题和颜色</button>
+    <button class="jsapi-button" onclick="tmf_actionSheet();">选择列表</button>
+    <button class="jsapi-button" onclick="tmf_alert();">警告框</button>
+    <button class="jsapi-button" onclick="tmf_confirm();">确认框</button>
+    <button class="jsapi-button" onclick="tmf_customOptionMenu('#FE2E2E');">设置右上角按钮（红色）</button>
+    <button class="jsapi-button" onclick="tmf_customOptionMenu('#3A5FCD');">设置右上角按钮（蓝色）</button>
+    <button class="jsapi-button" onclick="tmf_showOptionMenu();">显示右上角按钮</button>
+    <button class="jsapi-button" onclick="tmf_hideOptionMenu();">隐藏右上角按钮</button>
+    <button class="jsapi-button" onclick="tmf_showLoading();">显示加载中</button>
+    <button class="jsapi-button" onclick="tmf_hideLoading();">隐藏加载中</button>
+    <button class="jsapi-button" onclick="tmf_showToast();">弱提示</button>
+</div>
+</body>
+</html>

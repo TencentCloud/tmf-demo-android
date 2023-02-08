@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="custom_doc_activity_title">Customized document display</string>
+    <string name="custom_doc_activity_load_doc_failed">Failed to load file</string>
+    <string name="file_reader_dialog_unsupport_file_type">File type is not supported!</string>
+    <string name="h5_container_activity">H5 container</string>
+    <string name="h5_container_jsapi_title">JsApi Example</string>
+    <string name="js_api_activiity_menu_0">Demonstrate Native Event Notification H5</string>
+    <string name="js_api_activiity_menu_1">Copy Link</string>
+    <string name="js_api_activiity_menu_2">Open in browser</string>
+    <string name="js_api_activiity_native_h5">Demonstrate Native Event Notification H5</string>
+    <string name="js_api_activiity_copy_clip">Copy to clipboard succeeded:</string>
+    <string name="js_api_activiity_open_browser">Click to open in the browser</string>
+    <string name="js_api_activiity_show_jsapi">JsApi Demo</string>
+    <string name="js_api_activiity_cancel">cancel</string>
+    <string name="js_api_activiity_uri_get_failed">Failed to get image uri</string>
+    <string name="js_api_save_success">Saving succeeded</string>
+    <string name="js_api_scan_no_data">Data not scanned</string>
+    <string name="js_api_has_clicked">Clicked</string>
+    <string name="js_api_share_success">Sharing success</string>
+    <string name="js_api_share_failed">Sharing failed</string>
+    <string name="js_api_share_app_not_install">App not installed</string>
+    <string name="js_api_share_app_user_cancel">User Cancel</string>
+    <string name="js_api_share_app_verify_failed">Validation failed</string>
+    <string name="js_api_share_app_bad_params">Illegal sharing parameters</string>
+    <string name="js_api_share_app_not_support">The sharing interface is not supported</string>
+    <string name="js_api_share_send_req_failed">Failed to send sharing request</string>
+    <string name="js_api_share_unknown_error">unknown error</string>
+    <string name="x5_doc_list_activity_title">X5 Document Preview</string>
+    <string name="x5_doc_list_activity_title_2">Online document preview</string>
+    <string name="x5_doc_list_activity_file_not_exists">file does not exist</string>
+    <string name="module_h5container_0">Unknown file</string>
+    <string name="module_h5container_1">File size: unknown</string>
+    <string name="module_h5container_2">Document Preview</string>
+    <string name="module_h5container_3">Local File Viewer</string>
+    <string name="module_h5container_4">Online preview (multiple files)</string>
+    <string name="module_h5container_5">Open Local File</string>
+</resources>

@@ -1,0 +1,17 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}module.gradle"
+
+android {
+    kapt {
+        arguments {
+            arg("portalModuleName", "module-base")
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.61'
+//    implementation 'org.jsoup:jsoup:1.13.1'
+    implementation 'com.squareup.okio:okio:2.9.0'// okhttp3.12.1 搭配 okio2.9.0~2.10.0 才能适应GMWebview
+//    implementation('com.squareup.okhttp:okhttp-urlconnection:2.7.5')
+}

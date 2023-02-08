@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tencent.tmf.h5container">
+    <application>
+        <!--module-H5容器 start-->
+        <activity android:name=".browser.BrowserActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".jsapi.JSapiActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".H5ContainerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".doc.X5DocListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".doc.ShowContentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".doc.CustomDocShowActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".interceptReporter.InterceptReporterActivity" android:screenOrientation="portrait"/>
+        <!--module-H5容器 end-->
+    </application>
+</manifest>

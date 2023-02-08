@@ -1,0 +1,162 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}app.gradle"
+apply plugin: 'com.tencent.tmf.android.portal'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.huawei.agconnect'
+
+def keystoreFile = project.file('keystore.properties')
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystoreFile))
+
+android {
+    defaultConfig {
+        applicationId "com.tencent.tmf.demo"
+        multiDexEnabled true
+        ndk {
+//            1，armeabi或者armeabi-v7a都统一放在armeabi文件夹下。
+//            TMFDEMO已经配置只保留armeabi文件下的so, 其它文件夹的so库会被过滤掉的。
+//            原因是x5内核的so太多了，不可能放多份在armeabi或者armeabi-v7a(46个so,共52M)，且要统一放在一个目录下。
+//            2，TMFDemo中不要有c或者c++代码，若加c或者c++代码，请编译成so库，如上述1那样放。这样做就不用管TMFDEMO的AS的NDK版本了.
+            abiFilters "armeabi-v7a"
+        }
+
+        packagingOptions {
+            pickFirst 'lib/arm64-v8a/libc++_shared.so'
+            pickFirst 'lib/armeabi/libc++_shared.so'
+            pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        }
+
+        lintOptions {
+            warning 'UniquePermission'
+        }
+
+        manifestPlaceholders = [
+                QQ_SHARE_DATA_SCHEME: "tencent" + rootProject.ext.TMFDemo_share.qqAppId,
+                TINKER_ID           : rootProject.ext.TMFDemo_tinker.tinkerId,
+                AMAP_KEY            : rootProject.ext.TMFDemo_location.aMapKey,
+                TENCENT_MAP_KEY     : rootProject.ext.TMFDemo_location.tencentMapKey,
+                HW_APPID            : rootProject.ext.TMFDemo_push.huaweiPushAppId,
+                HONOR_APPID         : rootProject.ext.TMFDemo_push.honorPushAppId,
+                XM_APPID            : rootProject.ext.TMFDemo_push.xiaomiPushAppId,
+                XM_APPKEY           : rootProject.ext.TMFDemo_push.xiaomiPushAppKey,
+                OPPO_APPKEY         : rootProject.ext.TMFDemo_push.oppoPushAppKey,
+                OPPO_APPSECRET      : rootProject.ext.TMFDemo_push.oppoPushAppSecret,
+                VIVO_APPID          : rootProject.ext.TMFDemo_push.vivoPushAppId,
+                VIVO_APPKEY         : rootProject.ext.TMFDemo_push.vivoPushAppKey,
+        ]
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['keyPassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            multiDexKeepProguard file('multidex-rules.pro')
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            multiDexKeepProguard file('multidex-rules.pro')
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+    }
+
+    packagingOptions {
+//        不允许AS打包时优化so库，因为X5内核的so库做了MD5的校验，否则会出现加载成功X5内核后，会被删掉
+//        这里统一不优化so库，若要优化其他模块so库，也可单独对某个so库配置
+        doNotStrip "**/*.so"
+    }
+
+    applicationVariants.all { variant ->
+        variant.assemble.doLast {
+            StringBuilder builder = new StringBuilder()
+            builder.append("${project.rootProject.projectDir.getParent()}")
+                    .append(File.separator)
+                    .append("TMFDemo")
+                    .append(File.separator)
+                    .append("build-app-output")
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                println "outputFile=${outputFile.name}"
+                if (outputFile?.name?.endsWith('.apk')) {
+                    File file = new File(builder.toString())
+                    if (!file.exists()) {
+                        file.mkdirs()
+                    }
+                    copy {
+                        from outputFile
+                        into builder.toString()
+                        rename {
+                            String versionName = rootProject.ext.TMFDemo_version['versionName']
+                            //管理后台上传app不允许带.
+                            versionName = versionName.replace(".", "_")
+                            "${getName(outputFile.name)}-${versionName}-${rootProject.ext.TMFDemo_version['buildNo']}.apk"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+def getName(String fileName) {
+    String[] array = fileName.split("\\.")
+    return array[0]
+}
+
+//TMFPortal {
+//    commonlibPath = "${project.rootProject.projectDir.absolutePath}${File.separator}commonlib"
+//    constClassPkg = "com${File.separator}tencent${File.separator}tmf${File.separator}common${File.separator}gen"
+//}
+
+dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+//    if (project.ext.modulePocDir.exists() && isBuildPocModule) {
+//        implementation project(":${project.ext.modulePocDir.name}")
+//    }
+    if (project.ext.moduleCustomMainDir.exists() && isBuildCustomModule) {
+        implementation project(":${project.ext.moduleCustomMainDir.name}")
+    }
+    if (project.ext.moduleCustomGjdwDir.exists() && isBuildCustomModule && isBuildGjdwCustomModule) {
+        implementation project(":${project.ext.moduleCustomGjdwDir.name}")
+    }
+
+    rootProject.childProjects.each { name, pro ->
+        if (name.equals("app") || name.equals("buildscripts") || name.equals("maven")) {
+
+        } else {
+            implementation project(':' + name)
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

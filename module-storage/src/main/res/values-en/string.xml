@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_storage_0">Confirm Insert</string>
+    <string name="module_storage_1">Start Query</string>
+    <string name="module_storage_2">confirm deletion</string>
+    <string name="module_storage_3">Confirm modification</string>
+    <string name="module_storage_4">Name cannot be blank!</string>
+    <string name="module_storage_5">Address cannot be empty!</string>
+    <string name="module_storage_6">The inserted object already exists!</string>
+    <string name="module_storage_7">Insert data successfully!</string>
+    <string name="module_storage_8">Failed to insert data!</string>
+    <string name="module_storage_9">Query result: no data</string>
+    <string name="module_storage_10">Data deleted successfully!</string>
+    <string name="module_storage_11">Failed to delete data!</string>
+    <string name="module_storage_12">The deleted object does not exist!</string>
+    <string name="module_storage_13">Data updated successfully!</string>
+    <string name="module_storage_14">Failed to update data!</string>
+    <string name="module_storage_15">The modified object does not exist!</string>
+    <string name="module_storage_16">Read encrypted database</string>
+    <string name="module_storage_17">File storage service not found!</string>
+    <string name="module_storage_18">Clear text storage path:</string>
+    <string name="module_storage_19">Encrypted storage path:</string>
+    <string name="module_storage_20">The saved content cannot be empty</string>
+    <string name="module_storage_21">Clear text storage succeeded</string>
+    <string name="module_storage_22">Clear text storage failed</string>
+    <string name="module_storage_23">Clear text read successfully</string>
+    <string name="module_storage_24">Clear text read failed</string>
+    <string name="module_storage_25">Encrypted storage succeeded</string>
+    <string name="module_storage_26">Encrypting storage failed</string>
+    <string name="module_storage_27">Before decryption:</string>
+    <string name="module_storage_28">After decryption:</string>
+    <string name="module_storage_29">Decryption read succeeded</string>
+    <string name="module_storage_30">Decrypt read failed</string>
+    <string name="module_storage_31">File encryption succeeded</string>
+    <string name="module_storage_32">File encryption failed</string>
+    <string name="module_storage_33">File decrypted successfully</string>
+    <string name="module_storage_34">File decryption failed</string>
+    <string name="module_storage_35">File deleted successfully</string>
+    <string name="module_storage_36">File deletion failed</string>
+    <string name="module_storage_37">Successfully stored kv</string>
+    <string name="module_storage_38">The click time of the storage button is:</string>
+    <string name="module_storage_39">Migration results:</string>
+    <string name="module_storage_40">It takes a long time to repair the database, please wait for a moment</string>
+    <string name="module_storage_41">insert data</string>
+    <string name="module_storage_42">Query Data</string>
+    <string name="module_storage_43">Delete Data</string>
+    <string name="module_storage_44">Modify Data</string>
+    <string name="module_storage_45">Enter name</string>
+    <string name="module_storage_46">Enter address</string>
+    <string name="module_storage_47">Confirm Insert</string>
+    <string name="module_storage_48">Key Value Storage</string>
+    <string name="module_storage_49">KV reading</string>
+    <string name="module_storage_50">SharedPreferences Migration</string>
+    <string name="module_storage_51">Detailed usage entrance of KV storage components</string>
+    <string name="module_storage_52">This page is a simple use example of KV storage components \nFor detailed usage, see
+        Demo code KVActivity
+    </string>
+    <string name="module_storage_53">Enter UID</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hybrid_access_title">Hybird</string>
+    <string name="hybrid_access_title_hint">Enter the offline package bid or url address</string>
+    <string name="hybrid_access_open_url">Open URL:%s</string>
+    <string name="hybrid_access_global_host_set_success">Global virtual host set successfully</string>
+    <string name="hybrid_access_global_specify_bid_or_url">Please specify the bid or url</string>
+    <string name="hybrid_access_global_custom_global_view_setted">The custom global view has been set</string>
+    <string name="hybrid_access_global_recover_global_view_setted">Restore Global Default View</string>
+    <string name="hybrid_access_global_set_custom_global_view">Set Global Custom View</string>
+    <string name="hybrid_access_global_remove_global_view_setted">The global custom view has been removed</string>
+    <string name="hybrid_access_global_resume_ui">Restore the default UISettings open page</string>
+    <string name="hybrid_access_global_set_ui">Setting UISettings succeeded</string>
+    <string name="hybrid_access_global_custom_uid">Customize UISettings Open Page</string>
+    <string name="hybrid_access_global_resume_ui_success">Restore UISettings succeeded</string>
+    <string name="hybrid_access_global_remote_host_reset">Reset RemoteHost</string>
+    <string name="hybrid_access_global_remote_host_specify">Specify RemoteHost</string>
+    <string name="hybrid_access_global_remote_host_set">RemoteHost set to %s</string>
+    <string name="hybrid_access_global_common_resources_add">Public resource package %s added</string>
+    <string name="hybrid_access_global_open_with_params">Specify parameters to open offline package</string>
+
+    <string name="module_hybrid_0">Open Online URL Address</string>
+    <string name="module_hybrid_1">Open offline package (supports bid and url)</string>
+    <string name="module_hybrid_2">Set global virtual address</string>
+    <string name="module_hybrid_3">Set offline package URL as default</string>
+    <string name="module_hybrid_4">Set Global Custom View</string>
+    <string name="module_hybrid_5">Customize UISettings Open Page</string>
+    <string name="module_hybrid_6">Specify parameters to open offline package</string>
+    <string name="module_hybrid_7">EmbedView integration test</string>
+    <string name="module_hybrid_8">Specify RemoteHost</string>
+    <string name="module_hybrid_9">Add Global Public Package Bid</string>
+    <string name="module_hybrid_10">Delete all local offline package resources</string>
+    <string name="module_hybrid_11">Please enter offline package BID</string>
+    <string name="module_hybrid_12">Please enter the offline package indexPath. The default is index.html</string>
+    <string name="module_hybrid_13">Please enter the public package bid, separated by</string>
+    <string name="module_hybrid_14">Open Offline Package</string>
+</resources>

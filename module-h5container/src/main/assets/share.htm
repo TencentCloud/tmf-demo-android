@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>TMF JS API Demo</title>
+    <link rel="stylesheet" href="common.css">
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="share.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript">
+        tmf_sample_onNavigationItemClick()
+        tmf_ready(function() {
+            tmf_showFinish()
+        })
+
+    </script>
+</head>
+<body>
+<div id="container">
+    <button class="jsapi-button" onclick="tmf_shareWxTimeLine();">分享到微信朋友圈</button>
+    <button class="jsapi-button" onclick="tmf_shareWxFriend();">分享到微信好友</button>
+    <button class="jsapi-button" onclick="tmf_shareCwxFriend();">分享到企业微信好友</button>
+    <button class="jsapi-button" onclick="tmf_shareQQFriend();">分享到QQ好友</button>
+    <button class="jsapi-button" onclick="tmf_shareSinaWeibo();">分享到新浪微博好友</button>
+    <button class="jsapi-button" onclick="tmf_shareAlipayFriend();">分享到支付宝好友</button>
+    <button class="jsapi-button" onclick="tmf_shareAlipayTimeline();">分享到支付宝生活圈</button>
+    <button class="jsapi-button" onclick="tmf_shareDingFriend();">分享到钉钉好友</button>
+</div>
+</body>
+</html>

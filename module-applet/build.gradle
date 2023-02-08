@@ -1,0 +1,37 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}module.gradle"
+
+android {
+    kapt {
+        arguments {
+            arg("portalModuleName", "module-applet")
+        }
+    }
+}
+
+dependencies {
+    //demo依赖
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation('com.github.niorgai:StatusBarCompat:2.3.3')
+    implementation project(":commonlib")
+    implementation("com.github.bumptech.glide:glide:4.11.0") {
+        exclude group: "com.android.support"
+    }
+
+    //包依赖
+
+//    implementation "com.google.android.material:material:1.3.0-alpha03"
+//    //gosn
+//    implementation 'com.google.code.gson:gson:2.8.6'
+    // ok-http
+    implementation "com.squareup.okhttp3:okhttp:3.12.13"
+//    //x5内核
+//    implementation 'com.tencent.tbs.tbssdk:sdk:43903'
+    // mini app start
+    kapt 'com.tencent.tmf.android:mini_annotation_processor:1.4.1-SNAPSHOT'
+    implementation 'com.tencent.tmf.android:mini_core:1.4.23-SNAPSHOT'
+    //扫码扩展组件
+    implementation 'com.tencent.tmf.android:mini_extra_qrcode:1.4.2-SNAPSHOT'
+    //google定位地图扩展组件
+    implementation 'com.tencent.tmf.android:mini_extra_google_map:1.4.5-SNAPSHOT'
+    // mini app end
+}

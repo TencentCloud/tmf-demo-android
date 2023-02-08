@@ -1,0 +1,33 @@
+{
+  "list": [
+    {
+      "title": "wxapkg.zip基础库未拆分",
+      "appId": "wxapkg.zip",
+      "entry": "12581"
+    },{
+      "title": "wxapkg-split.zip基础库已拆分",
+      "appId": "wxapkg-split.zip",
+      "entry": "12581"
+    },
+    {
+      "title": "我的小程序ZIP包",
+      "appId": "wxapkg-my.zip",
+      "entry": "12581"
+    },
+    {
+      "title": "wxapkg.tmfapkg基础库未拆分",
+      "appId": "wxapkg.tmfapkg",
+      "entry": "12581"
+    },
+    {
+      "title": "wxapkg-split.tmfapkg基础库已拆分",
+      "appId": "wxapkg-split.tmfapkg",
+      "entry": "12581"
+    },
+    {
+      "title": "检查更新测试",
+      "appId": "tmfxk034wv6fiqh6t5",
+      "entry": "tmfxk034wv6fiqh6t5"
+    }
+  ]
+}

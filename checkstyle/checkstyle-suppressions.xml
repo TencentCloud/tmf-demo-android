@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+        "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+        "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+	<!-- 常用过滤规则示例start -->
+    <!--过滤文件-->
+    <!-- <suppress files="AESCipher.java" checks="[a-zA-Z0-9]*"/> -->
+    <!--过滤目录-->
+    <suppress checks="[a-zA-Z0-9]*" files="[\\/]assets[\\/]tmfconfig[\\/]" />
+    <!--过滤路径-->
+    <!-- <suppress checks="[a-zA-Z0-9]*" files="com[\\/]tencent[\\/]tmf[\\/]base[\\/]"/> -->
+    <!-- 常用过滤规则示例end -->
+</suppressions>

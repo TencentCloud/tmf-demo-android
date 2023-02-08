@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:id="@+id/patch_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/qmui_config_color_white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/module_push_12"
+            android:id="@+id/userid_text"/>
+
+
+        <EditText
+            android:id="@+id/et_user_id"
+            android:layout_below="@id/userid_text"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:hint="@string/module_push_13"
+            android:text="tmf_poc_user_id"
+            android:background="@drawable/edittext_border"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_below="@id/et_user_id"
+            android:id="@+id/btn_set_user_id"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="@string/module_push_14"
+            app:qmui_radius="4dp" />
+
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_below="@id/btn_set_user_id"
+            android:id="@+id/btn_remove_user_id"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:text="@string/module_push_15"
+            app:qmui_radius="4dp" />
+
+        <TextView
+            android:layout_below="@id/btn_remove_user_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/module_push_16"
+            android:id="@+id/usertag_text"/>
+
+        <EditText
+            android:id="@+id/et_tag_key"
+            android:layout_below="@id/usertag_text"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Tag Key"
+            android:text="poc_tag_1"
+            android:background="@drawable/edittext_border"/>
+
+        <EditText
+            android:layout_below="@id/et_tag_key"
+            android:id="@+id/et_tag_value"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Tag Value"
+            android:text="poc_tag_1_value_1"
+            android:background="@drawable/edittext_border"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_below="@id/et_tag_value"
+            android:id="@+id/btn_set_tag"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="@string/module_push_17"
+            app:qmui_radius="4dp" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_below="@id/btn_set_tag"
+            android:id="@+id/btn_remove_tag"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:text="@string/module_push_18"
+            app:qmui_radius="4dp" />
+
+        <TextView
+            android:layout_below="@id/btn_remove_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/module_push_19"
+            android:id="@+id/district_tag_text"/>
+
+        <LinearLayout
+            android:layout_below="@id/district_tag_text"
+            android:id="@+id/lin_district"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_push_20" />
+
+
+            <EditText
+                android:id="@+id/et_district_country"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:minWidth="12dp"
+                android:text="@string/module_push_21"
+                android:background="@drawable/edittext_border"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_push_22" />
+
+
+            <EditText
+                android:id="@+id/et_district_province"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="@string/module_push_23"
+                android:minWidth="12dp"
+                android:background="@drawable/edittext_border"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/module_push_24" />
+
+
+            <EditText
+                android:id="@+id/et_district_city"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:minWidth="12dp"
+                android:text="@string/module_push_23"
+                android:background="@drawable/edittext_border"/>
+
+        </LinearLayout>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_below="@id/lin_district"
+            android:id="@+id/btn_report_district"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="@string/module_push_25"
+            app:qmui_radius="4dp" />
+
+        <TextView
+            android:layout_below="@id/btn_report_district"
+            android:id="@+id/text_google_fcm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:text="Google FCM:" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_below="@id/text_google_fcm"
+            android:id="@+id/btn_google_fcm"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:text="@string/module_push_26"
+            app:qmui_radius="4dp" />
+    </RelativeLayout>
+</ScrollView>

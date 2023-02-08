@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gm_demo_title">国密</string>
+    <string name="gm_demo_sm2_encrypt_in">【sm2加密输入】</string>
+    <string name="gm_demo_sm2_encrypt_out">【sm2加密输出】</string>
+    <string name="gm_demo_sm2_derypt_out">【sm2解密输出】</string>
+    <string name="gm_demo_sm2_encrypt_result">【sm2加解密结果】</string>
+
+    <string name="gm_demo_sm4_encrypt_in">【sm4加密输入】</string>
+    <string name="gm_demo_sm4_encrypt_out">【sm4加密输出】</string>
+    <string name="gm_demo_sm4_derypt_out">【sm4解密输出】</string>
+    <string name="gm_demo_sm4_encrypt_result">【sm4加解密结果】</string>
+
+    <string name="gm_demo_sm2_sign_in">【sm2签名输入】</string>
+    <string name="gm_demo_sm2_sign_out">【sm2签名输出】</string>
+    <string name="gm_demo_sm2_sign_check_out">【sm2签名校验结果】</string>
+    <string name="gm_demo_sm2_sign_check_result">【sm2签名结果】</string>
+
+    <string name="gm_demo_sm3_encrypt_in">【sm3输入】</string>
+    <string name="gm_demo_sm3_encrypt_out">【sm3输出】</string>
+    <string name="gm_demo_sm3_derypt_out">【sm3结果】</string>
+
+    <string name="gm_demo_sm3_hmac_encrypt_in">【sm3Hmac输入】</string>
+    <string name="gm_demo_sm3_hmac_encrypt_out">【sm3Hmac输出】</string>
+    <string name="gm_demo_sm3_hmac_derypt_out">【sm3Hmac结果】</string>
+    <string name="gm_ssl_demo_requesting">正在请求中...</string>
+    <string name="gm_ssl_demo_ssl">【国密ssl】</string>
+    <string name="gm_ssl_demo_seprate_out">\n--------SM2(C1、C2、C3分开输出)-------</string>
+    <string name="gm_ssl_demo_merge">\n--------SM2(C1、C2、C3 合并 )--------</string>
+
+    <string name="module_gm_0">待加密数据</string>
+    <string name="module_gm_1">加解密测试</string>
+    <string name="module_gm_2">签名验签测试</string>
+    <string name="module_gm_3">sm3测试</string>
+    <string name="module_gm_4">国密ssl测试</string>
+    <string name="module_gm_5">清除日志</string>
+    <string name="module_gm_6">指定协议版本</string>
+    <string name="module_gm_7">指定套件</string>
+    <string name="module_gm_8">单向认证测试</string>
+    <string name="module_gm_9">双向认证测试</string>
+    <string name="module_gm_10">清除日志</string>
+
+</resources>

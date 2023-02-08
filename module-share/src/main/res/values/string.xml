@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_share_1">分享组件</string>
+    <string name="module_share_2">是否分享到朋友圈</string>
+    <string name="module_share_3">分享到微信朋友圈</string>
+    <string name="module_share_4">分享到微信会话好友</string>
+    <string name="module_share_5">使用bitmap方式分享图片</string>
+    <string name="module_share_6">使用sdcard的本地路径分享图片</string>
+    <string name="module_share_7">是否分享到支付宝生活圈</string>
+    <string name="module_share_8">分享到支付宝生活圈</string>
+    <string name="module_share_9">分享到支付宝会话好友</string>
+    <string name="module_share_10">分享文字</string>
+    <string name="module_share_11">分享图片</string>
+    <string name="module_share_12">分享成功, 分享类型: </string>
+    <string name="module_share_13"> 分享回调结果: </string>
+    <string name="module_share_14">分享成功</string>
+    <string name="module_share_15">分享失败, 分享类型: </string>
+    <string name="module_share_16"> 错误码: </string>
+    <string name="module_share_17">  错误信息: </string>
+    <string name="module_share_18">应用未安装: </string>
+    <string name="module_share_19">用户取消:</string>
+    <string name="module_share_20">验证失败:</string>
+    <string name="module_share_21">分享参数不合法: </string>
+    <string name="module_share_22">分享接口不支持: </string>
+    <string name="module_share_23">发送分享请求失败:</string>
+    <string name="module_share_24">未知错误:</string>
+    <string name="module_share_25">微信分享</string>
+    <string name="module_share_26">分享文字</string>
+    <string name="module_share_27">分享图片(支持图片本地地址和bitmap)</string>
+    <string name="module_share_28">分享网页</string>
+    <string name="module_share_29">企业微信分享</string>
+    <string name="module_share_30">分享文字</string>
+    <string name="module_share_31">分享图片</string>
+    <string name="module_share_32">分享网页</string>
+    <string name="module_share_33">分享视频</string>
+    <string name="module_share_34">分享文件</string>
+    <string name="module_share_35">支付宝分享</string>
+    <string name="module_share_36">钉钉分享</string>
+    <string name="module_share_37">新浪微博分享</string>
+    <string name="module_share_38">分享到微博</string>
+    <string name="module_share_39">QQ分享</string>
+    <string name="module_share_40">分享文字和图片</string>
+    <string name="module_share_41">其它分享</string>
+    <string name="module_share_42">短信分享</string>
+</resources>

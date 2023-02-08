@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="analyse_custom_report">Custom event reporting</string>
+    <string name="analyse_set_default_location">Set virtual address (%s:%s:%s)</string>
+    <string name="analyse_app_use_time">App usage time</string>
+    <string name="analyse_open_app">Open APP (simulation event)</string>
+    <string name="analyse_open_page">Open Page</string>
+    <string name="analyse_logout">Log out</string>
+    <string name="analyse_login">Login (simulation)</string>
+    <string name="analyse_do_custom_report">Custom escalation</string>
+    <string name="analyse_custom_report_key">User-defined reporting key</string>
+    <string name="analyse_custom_report_value">Custom escalation parameters</string>
+    <string name="analyse_page_jump_title">Mobile analysis page submission test</string>
+    <string name="analyse_page_jump_0">Go Back</string>
+    <string name="analyse_page_jump_1">Go to test page</string>
+    <string name="analyse_test_main_0">country</string>
+    <string name="analyse_test_main_1">province</string>
+    <string name="analyse_test_main_2">city</string>
+    <string name="analyse_test_main_3">TMF mobile analysis page</string>
+    <string name="analyse_test_main_4">Location permission is disabled!</string>
+    <string name="analyse_test_main_5">Positioning is not turned on</string>
+    <string name="analyse_test_main_6">User login uid</string>
+    <string name="analyse_test_main_7">User logout</string>
+    <string name="analyse_test_main_8">Set the address to</string>
+    <string name="analyse_test_main_9">Location not obtained</string>
+    <string name="analyse_custom_main_0">Custom Event Report</string>
+    <string name="analyse_custom_main_1">Params error,Must Be Json Format</string>
+    <string name="analyse_custom_main_2">Key can not be empty</string>
+</resources>

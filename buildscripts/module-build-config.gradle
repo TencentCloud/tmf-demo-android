@@ -1,0 +1,16 @@
+//组件化工程中，管理模块编译配置
+ext{
+    /********************************此部分用于管理module编译start*************************************/
+    isBuildPocModule = true//是否build Poc模块，默认编译
+    isBuildTestModule = false//是否build Test模块，默认不编译。注：还需要选择test变体才可以将test模块打包
+    isBuildCustomModule = false//是否build定制化模块，默认不编译
+    isBuildGjdwCustomModule = false//是否build国家电网定制化模块，默认不编译
+    /********************************此部分用于管理module编译end*************************************/
+
+    forDevDir = new File("${rootProject.projectDir.parentFile.absolutePath}${File.separator}forDev")
+    modulePocDir = new File(forDevDir, "${File.separator}module-poc")
+    moduleTestDir = new File(forDevDir, "${File.separator}module-test")
+    customDir = new File("${rootProject.projectDir.parentFile.absolutePath}${File.separator}custom")
+    moduleCustomMainDir = new File(customDir, "${File.separator}module-custom-main")
+    moduleCustomGjdwDir = new File(customDir, "${File.separator}module-custom-gjdw")
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="locate_success">Positioning succeeded</string>
+    <string name="locate_type">Positioning type:</string>
+    <string name="locate_longitude">Longitude:</string>
+    <string name="locate_latitude">Latitude:</string>
+    <string name="locate_currency">Precision:</string>
+    <string name="locate_provider">Provider:</string>
+    <string name="locate_speed">Speed:</string>
+    <string name="locate_degree">Angle:</string>
+    <string name="locate_satellite">Number of stars:</string>
+    <string name="locate_country">country:</string>
+    <string name="locate_province">Province:</string>
+    <string name="locate_city">city:</string>
+    <string name="locate_city_code">City code:</string>
+    <string name="locate_city_distinct">Zone:</string>
+    <string name="locate_city_distinct_code">Area code:</string>
+    <string name="locate_city_address">Address:</string>
+    <string name="locate_city_poi">Points of interest:</string>
+    <string name="locate_time">Positioning time:</string>
+    <string name="locate_failed">Positioning failed:</string>
+    <string name="locate_err_code">Error code:</string>
+    <string name="locate_err_msg">Error message:</string>
+    <string name="locate_err_desc">Error description:</string>
+    <string name="locate_pro">***Positioning quality report***</string>
+    <string name="locate_wifi">*WIFI switch:</string>
+    <string name="locate_gps_state">*GPS status:</string>
+    <string name="locate_gps_start">*Number of GPS stars:</string>
+    <string name="locate_net_type">*Network type:</string>
+    <string name="locate_net_cost">*Network time consumption:</string>
+    <string name="locate_callback_time">Callback time:</string>
+    <string name="locate_gps_status_normal">GPS status is normal</string>
+    <string name="locate_gps_status_no_provider">There is no GPS provider in the phone, so GPS positioning cannot be
+        performed
+    </string>
+    <string name="locate_gps_status_off">GPS is off. It is recommended to turn on GPS to improve the positioning
+        quality
+    </string>
+    <string name="locate_gps_status_mode_saving">The selected positioning mode does not include GPS positioning. It is
+        recommended to select a mode that includes GPS positioning to improve the positioning quality
+    </string>
+    <string name="locate_gps_status_no_permission">No GPS positioning permission, it is recommended to enable GPS
+        positioning permission
+    </string>
+    <string name="locate_miles_per_second">M/s</string>
+    <string name="locate_a_map">Gaud map</string>
+    <string name="locate_t_map">Tencent Maps</string>
+    <string name="locate_meter">rice</string>
+    <string name="locate_report_to_profile">Call the interface to report the geographic location to the Profile</string>
+    <string name="locate_gps_signal">*GPS signal:</string>
+    <string name="locate_zbx">Coordinate system:</string>
+    <string name="locate_direction">Direction:</string>
+    <string name="locate_street">street:</string>
+    <string name="locate_street_code">Street code:</string>
+    <string name="locate_town">Town:</string>
+    <string name="locate_villege">village:</string>
+    <string name="locate_name">name:</string>
+    <string name="locate_wifi_status">WiFi status:</string>
+    <string name="locate_wifi_no_permission">No WIFI permission</string>
+    <string name="locate_wifi_not_open">WIFI is not enabled</string>
+    <string name="locate_wifi_already_open">WIFI is enabled</string>
+    <string name="locate_wifi_locate_service_off">Location service shutdown</string>
+    <string name="locate_gps_status_no">nothing</string>
+    <string name="locate_gps_status_weak">weak</string>
+    <string name="locate_gps_status_mid">in</string>
+    <string name="locate_gps_status_strong">strong</string>
+    <string name="module_location_0"> show map location</string>
+
+</resources>

@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/patch_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/qmui_config_color_white"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_hotpatch_1"/>
+
+            <EditText
+                android:id="@+id/patch_baseid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/module_hotpatch_1"/>
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_hotpatch_2"/>
+
+            <EditText
+                android:id="@+id/patch_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/module_hotpatch_2"/>
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_hotpatch_3"/>
+
+            <EditText
+                android:id="@+id/patch_url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/module_hotpatch_3"/>
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_hotpatch_4"/>
+
+            <EditText
+                android:id="@+id/patch_md5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/module_hotpatch_4"/>
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="@string/module_hotpatch_5"/>
+
+            <EditText
+                android:id="@+id/patch_size"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/module_hotpatch_5"/>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/patch_download_upgrade"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="@string/module_hotpatch_6"
+                app:qmui_radius="4dp"/>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/patch_download"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="@string/module_hotpatch_7"
+                app:qmui_radius="4dp"/>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/patch_upgrade"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="@string/module_hotpatch_0"
+                app:qmui_radius="4dp"/>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/patch_delete"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="@string/module_hotpatch_8"
+                app:qmui_radius="4dp"/>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/patch_clean_patches"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="@string/module_hotpatch_9"
+                app:qmui_radius="4dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+{
+  "channel": "Android",
+  "customId": "9ab50ac0-be06-11ec-a34e-278d66d394b5",
+  "material": "01PllnwYTTBt0a7GtAxA8Y3l2+OUBMM8+OkS0tCAhqTKJP8ayBoKASZnFEqePWucp0xqGvmwMwLBgzLsOAt0VLmWc51ZGG27wyGcog3FyOMF4Il3pOt3o74f+dc7B6Xv1tB+EcA6X0oalK9WEzsdbO8JsUEIgL/80QFmLclm7SI7P91Kb+alVhuwWIAjSYRt6qh2s09sofztLtzDXQtJDGSOfrPzlPOm8BNpP6lOFMAQYDtFuQ3rBnDu8BLvN+Naw0CXV35SaEkbOVyuGxuY+t9SZwPx934dsa95sMy/kvWDAJqbE+r7jbhDty0XIorGh90HNQDxjhxILMbENdv9JxUbAebHhVUp0ZOPAu68/Xkc2efWbDuLxpVtaFRzGtDZZIkTBhjIE0WszaVNJ5vxm0pcErJx14ieEky+7Tv0+/q4NRnxR4gbe9z2URlCq8rPR1jn33QtXkBqvjM7IrJdDZnlK1yGSY1TToP2gdHVsw0wYCkLO524JZ+DaFk6+aTZWOBKq4nxZUKpYEBbqGleB1GpfXvI5R+9nD9pBeBffevK8H5iMW8aE4NEtLHsjOJ/eMkjWjOMEfl2GrIRe3SlNGw+UnT1ata80jTL/gDrmdAEqiyjs7UFf3JE26iyWYcxyrVPaFa5CZyzekChBCzS6ktRp+J5PZBx92Yy5Wy0BkNrk=fd9395aa7662bc7c",
+  "packageName": "com.cntaiping.fxtp.sit",
+  "productId": "1292",
+  "qapm": {
+    "appKey": "None",
+    "url": "https://tmfqapm.qq.com:30026"
+  },
+  "shark": {
+    "appKey": "app-d0xqqyt02k",
+    "asymEnc": 1,
+    "httpUrl": "https://tmfmp.qq.com:30013/",
+    "symEnc": 2,
+    "tcpHost": "42.194.253.71",
+    "tcpPort": 30014
+  }
+}

@@ -1,0 +1,243 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}common-lib.gradle"
+
+android {
+    defaultConfig {
+        buildConfigField "boolean", "LOG_DEBUG", "true"
+        // 分享
+        buildConfigField "String", "SHARE_QQ_APP_ID", "\"" + rootProject.ext.TMFDemo_share.qqAppId + "\""
+        buildConfigField "String", "SHARE_WX_APP_ID", "\"" + rootProject.ext.TMFDemo_share.wxAppId + "\""
+        buildConfigField "String", "SHARE_CWX_APP_ID", "\"" + project.ext.TMFDemo_share.cwxAppid + "\""
+        buildConfigField "String", "SHARE_CWX_APP_AGENT_ID", "\"" + project.ext.TMFDemo_share.cwxAppAgentId + "\""
+        buildConfigField "String", "SHARE_CWX_SCHEMA", "\"" + project.ext.TMFDemo_share.cwxSchema + "\""
+        buildConfigField "String", "SHARE_WEIBO_APP_ID", "\"" + rootProject.ext.TMFDemo_share.weiboAppId + "\""
+        buildConfigField "String", "SHARE_WEIBO_REDIRECT_URL", "\"" + rootProject.ext.TMFDemo_share.weiboRedirectUrl + "\""
+        buildConfigField "String", "SHARE_WEIBO_SCOPE", "\"" + rootProject.ext.TMFDemo_share.weiboScope + "\""
+        buildConfigField "String", "SHARE_ALIPAY_APP_ID", "\"" + rootProject.ext.TMFDemo_share.alipayAppId + "\""
+        buildConfigField "String", "SHARE_DINGDING_APP_ID", "\"" + project.ext.TMFDemo_share.dingdingAppId + "\""
+        // 版本信息相关
+        buildConfigField "int", "BUILD_NO", "" + rootProject.ext.TMFDemo_version.buildNo
+        buildConfigField "boolean", "PROTO_TYPE_SHARK", "" + rootProject.ext.TMFDemo_version.protoTypeShark
+        buildConfigField "String", "CHANNEL", "\"" + rootProject.ext.TMFDemo_version.channel + "\""
+        // 热修复
+        buildConfigField "String", "TINKER_ID", "\"" + rootProject.ext.TMFDemo_tinker.tinkerId + "\""
+    }
+}
+
+repositories {
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    //demo运行需要组件
+    api project.ext.dependencies['androidx-multidex']
+    api project.ext.dependencies['androidx-preference']
+    implementation rootProject.ext.TMF_components['fastjson']
+    api rootProject.ext.TMF_components['rxandroid']
+    if (project.ext.isSourcePack && project.ext.isDebugPortal) {
+        api project(':portal-core')
+        api project(':portal-annotations')
+    } else {
+        api rootProject.ext.TMF_components['portalAnnotations']
+        api (rootProject.ext.TMF_components['portalCore']){
+            exclude group: 'com.tencent.tmf.android', module: 'base'
+        }
+    }
+    api 'com.github.bingoogolapple:BGABaseAdapter-Android:1.2.0'
+    //所有tmf组件
+    //基础库
+    api rootProject.ext.TMF_components['gson']
+    api rootProject.ext.TMF_components['gm']
+//    api rootProject.ext.TMF_components['gmssl']
+    api rootProject.ext.TMF_components['wup']
+    api rootProject.ext.TMF_components['cipher']
+    api rootProject.ext.TMF_components['keymanager']
+    api rootProject.ext.TMF_components['patchutils']
+    api rootProject.ext.TMF_components['gmssl-kona']
+    if (project.ext.isSourcePack && project.ext.isDebugBase) {
+        api project(':base')
+    }else{
+        api (rootProject.ext.TMF_components['base']){
+            exclude group: 'com.tencent.tmf.android', module: 'gm'
+            exclude group: 'com.tencent.tmf.android', module: 'shark'
+            exclude group: 'com.tencent.tmf.android', module: 'base-core'
+            exclude group: 'com.tencent.tmf.android', module: 'gmssl'
+            exclude group: 'com.tencent.tmf.android', module: 'gmssl-kona'
+        }
+    }
+    api project.ext.TMF_components['wup']
+    //UI库
+    api rootProject.ext.TMF_components['qmui']
+    api rootProject.ext.TMF_components['qmuiArch']
+    api project(':module-qmui')
+    //网关
+    if (project.ext.isSourcePack && project.ext.isDebugShark) {
+        api project(':shark')
+    }else {
+        api rootProject.ext.TMF_components['shark']
+    }
+    api rootProject.ext.TMF_components['base-core']
+    if (project.ext.moduleTestDir.exists() && isBuildTestModule) {
+        tmfTestApi files(project.projectDir.parentFile.absolutePath + "/commonlib/libs-test/shark-1.3.1.0-16d8f6bd7-withlog-fortest.aar")
+    }
+    //云指令
+    if (project.ext.isSourcePack && project.ext.isDebugConch){
+        api project(':conch')
+    }else{
+        api rootProject.ext.TMF_components['conch']
+    }
+    //应用更新
+    if (project.ext.isSourcePack && project.ext.isDebugUpgrade) {
+        api project(':upgrade')
+    }else {
+        api rootProject.ext.TMF_components['upgrade']
+    }
+    //profile标签
+    if (project.ext.isSourcePack && project.ext.isDebugProfile) {
+        api project(':profile')
+    }else {
+        api rootProject.ext.TMF_components['profile']
+    }
+    //push
+    api 'com.google.firebase:firebase-messaging:23.1.0'//google push
+    if (project.ext.isSourcePack && project.ext.isDebugPush) {
+        api project(':push')
+        api project(':push-support-oppo')
+    }else {
+        api rootProject.ext.TMF_components['push']
+        implementation project.ext.TMF_components['push-support-oppo']
+//        implementation 'com.huawei.hms:push:5.0.4.302'// huawei push
+//        implementation project.ext.TMF_components['oppo-push']
+//        implementation project.ext.TMF_components['vivo-push']
+////        implementation project.ext.TMF_components['xiaomi-push']
+////        implementation project.ext.TMF_components['honor-common']
+//        implementation project.ext.TMF_components['honor-push']
+    }
+    implementation 'com.huawei.hms:push:5.0.4.302'// huawei push
+    implementation project.ext.TMF_components['oppo-push']
+    implementation project.ext.TMF_components['vivo-push']
+    implementation project.ext.TMF_components['honor-push']
+    implementation 'commons-codec:commons-codec:1.11'
+
+    implementation project.ext.TMF_components['push-support-fcm']
+    implementation project.ext.TMF_components['push-support-honor']
+    implementation project.ext.TMF_components['push-support-huawei']
+    implementation project.ext.TMF_components['push-support-xiaomi']
+    implementation project.ext.TMF_components['push-support-vivo']
+    //文件上传
+    if (project.ext.isSourcePack && project.ext.isDebugUpload) {
+        api project(':upload')
+    } else {
+        api rootProject.ext.TMF_components['upload']
+    }
+    //定位
+    api 'com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.4.9'
+    //分享
+    if (project.ext.isSourcePack && project.ext.isDebugShare) {
+        api project(':share')
+    }else {
+        api rootProject.ext.TMF_components['share']
+    }
+    api rootProject.ext.TMF_components['WeiboSDK']
+    api rootProject.ext.TMF_components['WeChatSDK']
+    api rootProject.ext.TMF_components['QQSDK']
+    api rootProject.ext.TMF_components['DDSDK']
+    api rootProject.ext.TMF_components['AliPaySDK']
+    api rootProject.ext.TMF_components['CompanyWeChatSDK']
+    //扫码
+    if (project.ext.isSourcePack && project.ext.isDebugQrcode) {
+        api project(':qrcode')
+    } else {
+        api rootProject.ext.TMF_components['qrcode']
+    }
+    //文件存储
+    if (project.ext.isSourcePack && project.ext.isDebugStorage) {
+        api project(':storage')
+    } else {
+        api rootProject.ext.TMF_components['storage']
+    }
+    api rootProject.ext.TMF_components['storage-mmkv']
+    api rootProject.ext.TMF_components['storage-wcdb']
+
+    if (project.ext.isSourcePack && project.ext.isDebugX5) {
+        api project(':tbscore')
+    }else {
+        api rootProject.ext.TMF_components['tbscore']
+    }
+
+    if (project.ext.isSourcePack && project.ext.isDebugH5) {
+        api project(':webview')
+      //  api project(':x5webview')
+        api project(':x5docpreview')
+    } else {
+        //H5容器
+        api rootProject.ext.TMF_components['webview']
+        //文档预览
+        api rootProject.ext.TMF_components['x5docpreview']
+    }
+    api rootProject.ext.TMF_components['android-pdf-viewer']
+    api rootProject.ext.TMF_components['pdfium-android']
+    //离线包
+    if (project.ext.isSourcePack && project.ext.isDebugOffline) {
+        api project(':weboffline')
+    } else {
+        api rootProject.ext.TMF_components['weboffline']
+    }
+    //hybrid
+    if (project.ext.isSourcePack && project.ext.isDebugHyBrid) {
+        api project(':hybrid')
+    } else {
+        api rootProject.ext.TMF_components['hybrid']
+    }
+    //热修复
+    if (project.ext.isSourcePack && project.ext.isDebugHotpatch) {
+        api project(':hotpatch')
+        api project(':hotpatchcore')
+    }else{
+        api rootProject.ext.TMF_components['hotpatchcore']
+        api rootProject.ext.TMF_components['hotpatch']
+    }
+    //安全键盘
+    if (project.ext.isSourcePack && project.ext.isDebugKeyboard) {
+        api project(':keyboard')
+    } else {
+        api rootProject.ext.TMF_components['keyboard']
+    }
+    //qamp移动监控
+    api rootProject.ext.TMF_components['qapm']
+    //icdp智慧投放
+    api rootProject.ext.TMF_components['icdp']
+    api rootProject.ext.TMF_components['image-loader']
+    api rootProject.ext.TMF_components['volley']
+
+    //小助手
+    if (project.ext.isSourcePack && project.ext.isDebugToolKit) {
+        api project(':toolkit')
+        api project(':toolkit-colorlog')
+        api project(':toolkit-conch')
+        api project(':toolkit-offline')
+        api project(':toolkit-push')
+        api project(':toolkit-shark')
+        api project(':toolkit-webview')
+    } else {
+        api rootProject.ext.TMF_components['toolkit']
+        api rootProject.ext.TMF_components['toolkit-colorlog']
+        api rootProject.ext.TMF_components['toolkit-conch']
+        api rootProject.ext.TMF_components['toolkit-offline']
+        api rootProject.ext.TMF_components['toolkit-push']
+        api rootProject.ext.TMF_components['toolkit-shark']
+        api rootProject.ext.TMF_components['toolkit-webview']
+    }
+
+    //analyse
+    if (project.ext.isSourcePack && project.ext.isDebugAnalyse) {
+//        api project(':analyse')
+        api rootProject.ext.TMF_components['analyse']
+
+    } else {
+        api rootProject.ext.TMF_components['analyse']
+    }
+}

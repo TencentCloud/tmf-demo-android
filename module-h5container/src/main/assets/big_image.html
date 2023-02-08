@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试Jsbridge传输大数据图片</title>
+    <link rel="stylesheet" href="common.css">
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="./plugin/vconsole.min.js"></script>
+    <style type="text/css">
+        img {
+            width: 100%;
+            height: 300px;
+            background-repeat: no-repeat;
+            margin-top: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        var vConsole = new VConsole();
+        var data;
+        var data1;
+        function logObject(object) {
+            console.log(JSON.stringify(object))
+        }
+
+        function tmf_ready(callback) {
+            if (window.TMFJSBridge) {
+                callback && callback();
+            } else {
+                document.addEventListener("TMFJSBridgeReady", callback, false);
+            }
+        }
+
+        function loadBase64BigImage() {
+            TMFJSBridge.invoke('loadBigImage', {type:100}, function (res) {
+                data = res;
+                var img1 = document.getElementById("img1");
+                data1 = img1.src = res.img1;
+            });
+        }
+
+        function loadUrlBigImage() {
+            TMFJSBridge.invoke('loadBigImage', {type:101}, function (res) {
+                data = res;
+                var img1 = document.getElementById("img1");
+                img1.src = res.img1;
+            });
+        }
+
+        function getBase64Image(img) {
+            var canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, img.width, img.height);
+            var dataURL = canvas.toDataURL("image/jpg");
+            return dataURL;
+        }
+
+        function getBase64Image1(img) {
+            var canvas = document.createElement("canvas");
+            canvas.width = img.naturalWidth;
+            canvas.height = img.naturalHeight;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight);
+            var dataURL = canvas.toDataURL("image/png");
+            return dataURL;
+        }
+
+        function saveBigImage() {
+            var img1 = document.getElementById("img1");
+            var img2 = document.getElementById("img2");
+            var img3 = document.getElementById("img3");
+            var img4 = document.getElementById("img4");
+            var img5 = document.getElementById("img5");
+
+            var param = {
+                'img1':data1
+            };
+
+            TMFJSBridge.invoke('saveBigImage', param, function (res) {
+                tmf_logObject(res, 2);
+            });
+        }
+
+        tmf_ready(function () {
+            document.getElementById("load_base64_img").addEventListener("click", loadBase64BigImage);
+            document.getElementById("load_url_img").addEventListener("click", loadUrlBigImage);
+            document.getElementById("save_img").addEventListener("click", saveBigImage);
+        })
+    </script>
+</head>
+<body>
+<button id="load_base64_img" type="button">加载图片(Base64方式，效率低)</button>
+<button id="save_img" type="button">保存图片(Base64)</button>
+<button id="load_url_img" type="button">加载图片(url方式，效率高)</button>
+<img id="img1"><br/>
+</body>
+</html>

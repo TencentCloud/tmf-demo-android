@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tencent.tmf.module.qapm">
+    <application>
+        <!--module-网关 start-->
+        <activity android:name=".performance.activity.CrashActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".performance.activity.DropFrameActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".performance.activity.MemoryLeakActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".performance.activity.PerformanceMainActivity" android:screenOrientation="portrait"/>
+        <!--module-网关 end-->
+        <activity android:name=".performance.activity.ParamsActivity" android:screenOrientation="portrait"></activity>
+    </application>
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gm_demo_title">National secrets</string>
+    <string name="gm_demo_sm2_encrypt_in">[SM2 encryption input]</string>
+    <string name="gm_demo_sm2_encrypt_out">[SM2 encrypted output]</string>
+    <string name="gm_demo_sm2_derypt_out">[SM2 decryption output]</string>
+    <string name="gm_demo_sm2_encrypt_result">[SM2 encryption and decryption results]</string>
+    <string name="gm_demo_sm4_encrypt_in">[SM4 encryption input]</string>
+    <string name="gm_demo_sm4_encrypt_out">[SM4 encrypted output]</string>
+    <string name="gm_demo_sm4_derypt_out">[SM4 decryption output]</string>
+    <string name="gm_demo_sm4_encrypt_result">[SM4 encryption and decryption results]</string>
+    <string name="gm_demo_sm2_sign_in">[sm2 signature input]</string>
+    <string name="gm_demo_sm2_sign_out">[sm2 signature output]</string>
+    <string name="gm_demo_sm2_sign_check_out">[SM2 signature verification result]</string>
+    <string name="gm_demo_sm2_sign_check_result">[SM2 signature result]</string>
+    <string name="gm_demo_sm3_encrypt_in">[SM3 input]</string>
+    <string name="gm_demo_sm3_encrypt_out">[SM3 output]</string>
+    <string name="gm_demo_sm3_derypt_out">[SM3 result]</string>
+    <string name="gm_demo_sm3_hmac_encrypt_in">[sm3Hmac input]</string>
+    <string name="gm_demo_sm3_hmac_encrypt_out">[sm3Hmac output]</string>
+    <string name="gm_demo_sm3_hmac_derypt_out">[sm3Hmac result]</string>
+    <string name="gm_ssl_demo_requesting">Requesting</string>
+    <string name="gm_ssl_demo_ssl">[ Guomi ssl ]</string>
+    <string name="gm_ssl_demo_seprate_out">\n--------SM2(C1、C2、C3 Separate)--------</string>
+    <string name="gm_ssl_demo_merge">\n--------SM2(C1、C2、C3 Merge )--------</string>
+
+    <string name="module_gm_0">Data to be encrypted</string>
+    <string name="module_gm_1">Encryption and decryption test</string>
+    <string name="module_gm_2">Signature verification test</string>
+    <string name="module_gm_3">Sm3 test</string>
+    <string name="module_gm_4">SSL test of state secrets</string>
+    <string name="module_gm_5">Clear Log</string>
+    <string name="module_gm_6">Specify protocol version</string>
+    <string name="module_gm_7">Specify Suite</string>
+    <string name="module_gm_8">One way certification test</string>
+    <string name="module_gm_9">Two way authentication test</string>
+    <string name="module_gm_10">Clear Log</string>
+</resources>

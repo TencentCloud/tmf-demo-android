@@ -1,0 +1,35 @@
+apply from: "buildscripts${File.separator}module-build-config.gradle"
+apply from: "buildscripts${File.separator}for-dev${File.separator}tmf-source-config.gradle"
+apply from: "buildscripts${File.separator}for-dev${File.separator}tmf-source-code.gradle"
+
+File rootFile = rootProject.getProjectDir()
+def files = rootFile.listFiles()
+for (File f : files){
+    if(f.getName().startsWith('module-')){
+        include ':' + f.getName()
+    }
+}
+include ':commonlib'
+include ':app'
+include ':buildscripts'
+//include ':maven'
+
+if(ext.modulePocDir.exists() && isBuildPocModule){
+    include ":${ext.modulePocDir.name}"
+    project(":${ext.modulePocDir.name}").projectDir = modulePocDir
+}
+
+if(ext.moduleTestDir.exists() && isBuildTestModule){
+    include ":${ext.moduleTestDir.name}"
+    project(":${ext.moduleTestDir.name}").projectDir = moduleTestDir
+}
+
+if(ext.moduleCustomMainDir.exists() && isBuildCustomModule){
+    include ":${ext.moduleCustomMainDir.name}"
+    project(":${ext.moduleCustomMainDir.name}").projectDir = moduleCustomMainDir
+}
+
+if(ext.moduleCustomGjdwDir.exists() && isBuildCustomModule && isBuildGjdwCustomModule){
+    include ":${ext.moduleCustomGjdwDir.name}"
+    project(":${ext.moduleCustomGjdwDir.name}").projectDir = moduleCustomGjdwDir
+}

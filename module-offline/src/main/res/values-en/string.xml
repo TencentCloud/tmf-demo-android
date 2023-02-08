@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="offline_activity_check_update_tip_0">Check the update result: no update</string>
+    <string name="offline_activity_check_update_tip_1">Do not update frequently</string>
+    <string name="offline_activity_check_update_tip_2">Signature error, please confirm whether the public key of the
+        client is consistent with the private key uploaded by the management background!
+    </string>
+    <string name="offline_activity_check_update_tip_3">Tips</string>
+    <string name="offline_activity_check_update_tip_4">Offline package</string>
+    <string name="offline_activity_check_update_tip_5">The bid cannot be empty</string>
+    <string name="offline_activity_check_update_tip_6">Configuration information:</string>
+    <string name="offline_activity_check_update_tip_7">edition:</string>
+    <string name="offline_activity_check_update_tip_8">Last updated:</string>
+    <string name="offline_activity_check_update_tip_9">eliminate</string>
+    <string name="offline_activity_check_update_tip_10">success</string>
+    <string name="offline_activity_check_update_tip_11">fail</string>
+    <string name="offline_activity_check_update_tip_12">Local offline package:</string>
+    <string name="offline_activity_check_update_tip_13">Please enter the public key:</string>
+    <string name="offline_activity_check_update_tip_14">Saving succeeded</string>
+    <string name="offline_activity_check_update_tip_15">You need to restart the APP to take effect</string>
+    <string name="offline_activity_check_update_tip_16">Please select a public key</string>
+    <string name="offline_activity_check_update_tip_17">Intercept requests and use local resources</string>
+    <string name="offline_activity_check_update_tip_18">Resource limit</string>
+    <string name="offline_xml_1">Single offline package check and update</string>
+    <string name="offline_xml_2">Open single offline package</string>
+    <string name="offline_xml_3">Multi offline package check and update</string>
+    <string name="offline_xml_4">Open multi offline package</string>
+    <string name="offline_xml_5">Check for all updates</string>
+    <string name="offline_xml_6">Last time offline package was updated</string>
+    <string name="offline_xml_7">Get offline package configuration information</string>
+    <string name="offline_xml_8">View the specified offline package version</string>
+    <string name="offline_xml_9">View all local offline package versions</string>
+    <string name="offline_xml_10">Delete the specified offline package cache</string>
+    <string name="offline_xml_11">Clear all offline package caches</string>
+    <string name="offline_xml_12">Clear Log</string>
+    <string name="offline_xml_13">Offline package repeated download test</string>
+    <string name="offline_xml_14">Please enter the public key, which can be selected or manually entered</string>
+    <string name="offline_xml_15">Save Public Key</string>
+</resources>

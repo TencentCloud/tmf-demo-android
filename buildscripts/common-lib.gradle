@@ -1,0 +1,3 @@
+apply plugin: 'com.android.library'
+//apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}common.gradle"
+apply from: "${ext.buildScriptPath}${File.separator}common.gradle"

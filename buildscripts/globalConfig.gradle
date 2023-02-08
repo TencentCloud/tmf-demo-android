@@ -1,0 +1,228 @@
+//因为这个配置文件会被其他工程加载(非TMFDemo工程)，如果使用绝对或相对路径，会导致配置文件找不到
+//获取TMFDemo中buildscripts子模块路径
+ext.buildScriptPath = rootProject.getChildProjects().get('buildscripts').projectDir.absolutePath
+//获取TMFDemo中maven子模块路径
+//ext.mavenPath = rootProject.getChildProjects().get('maven').projectDir.absolutePath
+
+apply from: "${ext.buildScriptPath}${File.separator}module-build-config.gradle"
+apply from: "${ext.buildScriptPath}${File.separator}for-dev${File.separator}tmf-source-config.gradle"
+
+
+def isCI() {
+    System.getenv('CI') != null && System.env.CI == "True"
+}
+
+ext {
+    // TMFDemo版本信息
+    TMFDemo_version = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            //oppo push要求最低19
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            versionCode      : 1,
+            versionName      : isCI() ? System.env.versionName : "1.0.0",
+            buildNo          : isCI() ? System.env.build_no : 100001,
+            channel          : "channel_googleplay",
+            //是否使用新版协议：
+            // 1. 公有云必须改为true。
+            // 2. 私有云默认使用false即可，如需改为true需确认服务版本是否支持新协议。
+            protoTypeShark   : isCI() ? System.env.protoTypeShark : false,
+    ]
+
+    println "build_hotpatch=${System.env.build_hotpatch}"
+    println "build_no=${TMFDemo_version['buildNo']}"
+    println "versionName=${TMFDemo_version['versionName']}"
+
+    //tmf所有组件
+    TMF_components = [
+            //demo运行需要组件
+            fastjson            : 'com.alibaba:fastjson:1.2.75',
+            rxandroid           : 'io.reactivex:rxandroid:1.2.1',
+            portalAnnotations   : "com.tencent.tmf.android:portal-annotations:3.0.0.0",
+            portalProcessor     : "com.tencent.tmf.android:portal-processor:3.0.0.0",
+            portalGradlePlugin  : "com.tencent.tmf.android:portal-gradle-plugin:3.0.0.1",
+            portalCore          : "com.tencent.tmf.android:portal-core:3.0.0.0",
+            //tmf功能组件
+            //基础库
+            gson                : "com.tencent.tmf.android:gson:2.8.2",
+            patchutils          : "com.tencent.tmf.android:patchutils:2.0.0.1",
+            base                : "com.tencent.tmf.android:base:3.0.1.4",
+            'base-core'           : "com.tencent.tmf.android:base-core:3.0.1.0",
+            'report'           : "com.tencent.tmf.android:report:3.0.2.0",
+            //UI库
+            qmui                : "com.tencent.tmf.android:qmui:1.4.2",
+            qmuiArch            : "com.tencent.tmf.android:qmui-arch:1.4.1",
+            //安全
+            gm                  : "com.tencent.tmf.android:gm:2.0.0.2-224-35762e9e-SNAPSHOT",
+            gmssl               : "com.tencent.tmf.android:gmssl:+",
+            'gmssl-kona'          : "com.tencent.tmf.android:gmssl-kona:1.0.1-507--SNAPSHOT",
+            keymanager          : "com.tencent.tmf.android:keymanager:2.0.0.2",
+            cipher              : "com.tencent.tmf.android:cipher:2.0.1.0",
+            //网关
+            wup                 : "com.tencent.tmf.android:wup:2.0.0.1",
+            shark               : "com.tencent.tmf.android:shark:3.0.2.0",
+            //云指令
+            conch               : "com.tencent.tmf.android:conch:3.0.1.0",
+            //应用更新
+            upgrade             : "com.tencent.tmf.android:upgrade:3.0.2.1",
+            //push
+            profile             : "com.tencent.tmf.android:profile:3.0.1.1",
+            push                : "com.tencent.tmf.android:push:3.0.2.1",
+            'push-support-fcm'                : "com.tencent.tmf.android:push-support-fcm:1.0.0.0",
+            'push-support-honor'                : "com.tencent.tmf.android:push-support-honor:1.0.0.0",
+            'push-support-huawei'                : "com.tencent.tmf.android:push-support-huawei:1.0.0.0",
+            'push-support-xiaomi'                : "com.tencent.tmf.android:push-support-xiaomi:1.0.0.0",
+            'push-support-oppo'                : "com.tencent.tmf.android:push-support-oppo:1.0.0.0",
+            'push-support-vivo'                : "com.tencent.tmf.android:push-support-vivo:1.0.0.0",
+            'oppo-push'         : "com.tencent.tmf.android:oppo-push:+",
+            'vivo-push'         : "com.tencent.tmf.android:vivo-push:+",
+            'xiaomi-push'       : "com.tencent.tmf.android:xiaomi-push:+",
+            'honor-common'      : "com.tencent.tmf.android:honor-common:6.0.4.200",
+            'honor-push'        : "com.tencent.tmf.android:honor-push:7.0.1.103",
+            //文件上传
+            upload              : "com.tencent.tmf.android:upload:3.0.1.0-501-4b659352-SNAPSHOT",
+            //定位
+            location            : "com.tencent.tmf.android:location:2.0.0.3",
+            //分享
+            share               : "com.tencent.tmf.android:share:2.0.1.1",
+            WeiboSDK            : "com.tencent.tmf.android:WeiboSDK:11.12.0",
+            AliPaySDK           : "com.tencent.tmf.android:AliPaySDK:20.16.11.08",
+            WeChatSDK           : "com.tencent.tmf.android:WeChatSDK:6.8.0",
+            QQSDK               : "com.tencent.tmf.android:QQSDK:3.5.11.6",
+            DDSDK               : "com.tencent.tmf.android:DDSDK:1.1.0",
+            CompanyWeChatSDK    : 'com.tencent.tmf.android:CompanyWeChatSDK:2.0.12.11',
+            //扫码
+            qrcode              : "com.tencent.tmf.android:qrcode:3.0.1.1",
+            //文件存储
+            storage             : "com.tencent.tmf.android:storage:3.0.0.1",
+            'storage-file'         : "com.tencent.tmf.android:storage-file:2.0.0.1",
+            'storage-wcdb'      : "com.tencent.tmf.android:storage-wcdb:1.1.10",
+            'storage-mmkv'      : "com.tencent.tmf.android:storage-mmkv:1.0.23",
+            //H5容器
+            tbscore             : "com.tencent.tmf.android:tbscore:20221011_132116_20221011_132116",
+            webview             : "com.tencent.tmf.android:webview:3.0.1.2",
+            //文档预览
+            'android-pdf-viewer': "com.tencent.tmf.android:android-pdf-viewer:3.2.0",
+            'pdfium-android'    : "com.tencent.tmf.android:pdfium-android:1.9.0",
+            x5docpreview        : "com.tencent.tmf.android:x5docpreview:3.0.0.0",
+            //离线包
+            weboffline          : "com.tencent.tmf.android:weboffline:3.0.2.1",
+            //小应用
+            tinyapp             : "com.tencent.tmf.android:tinyapp:2.0.0.0",
+            //热修复
+            hotpatchcore        : "com.tencent.tmf.android:hotpatchcore:3.0.2.0",
+            hotpatch            : "com.tencent.tmf.android:hotpatch:3.0.2.1",
+            //安全键盘
+            keyboard            : "com.tencent.tmf.android:keyboard:3.0.1.0",
+            //qamp移动监控
+            qapm                : "com.tencent.tmf.android:qapm:4.0.0.43-PREVIEW",
+            //icdp智慧投放
+            icdp                : 'com.tencent.tmf.android:icdp-core:1.1.0.0-163-0f836e72-SNAPSHOT',
+            volley              : "com.tencent.tmf.android:volley:1.1.1",
+            'image-loader'      : "com.tencent.tmf.android:image-loader:1.0.0",
+            storecontext        : 'com.tencent.tmf.android:storecontext:3.0.0.0',
+            //小助手
+            toolkit             : 'com.tencent.tmf.android:toolkit:1.0.0.3',
+            'toolkit-colorlog'  : 'com.tencent.tmf.android:toolkit-colorlog:1.0.0.3',
+            'toolkit-conch'     : 'com.tencent.tmf.android:toolkit-conch:1.0.0.3',
+            'toolkit-offline'   : 'com.tencent.tmf.android:toolkit-offline:1.0.0.3',
+            'toolkit-push'      : 'com.tencent.tmf.android:toolkit-push:1.0.0.3',
+            'toolkit-shark'     : 'com.tencent.tmf.android:toolkit-shark:1.0.0.3',
+            'toolkit-webview'   : 'com.tencent.tmf.android:toolkit-webview:1.0.0.3',
+            hybrid              : 'com.tencent.tmf.android:hybrid:1.0.0.2-599--SNAPSHOT',
+//            analyse             : 'com.tencent.tmf.android:analyse:1.1.0.11',
+            analyse             : 'com.tencent.tmf.android:analyse:1.1.0.11-620--SNAPSHOT',
+    ]
+
+    // 分享组件
+    TMFDemo_share = [
+            qqAppId         : "1108836394",
+            wxAppId         : "wx8071141a542f9dad",
+            cwxAppid        : "ww360f06b9053bc6a9",
+            cwxAppAgentId   : "1000044",
+            cwxSchema       : "wwauth360f06b9053bc6a9000044",
+            weiboAppId      : "970420627",
+            weiboRedirectUrl: "https://api.weibo.com/oauth2/default.html",
+            weiboScope      : "email,direct_messages_read,direct_messages_write," +
+                    "friendships_groups_read,friendships_groups_write,statuses_to_me_read," +
+                    "follow_app_official_microblog,invitation_write",
+            alipayAppId     : "2019050864378948",
+            dingdingAppId   : "dingoao5ii3kob5q0lnjn4"
+    ]
+
+    // 厂商push
+    TMFDemo_push = [
+            huaweiPushAppId  : "appid=100792977",
+            honorPushAppId   : "220870880",
+            xiaomiPushAppId  : "appid=2882303761518005167",
+            xiaomiPushAppKey : "appkey=5431800554167",
+            oppoPushAppKey   : "0caeb8e43a2849268e48a32ab9b0329d",
+            oppoPushAppSecret: "2aca089135444d7e84aff8ee270e944b",
+            vivoPushAppId    : "19790",
+            vivoPushAppKey   : "6bf4dafd-ae92-4d3f-9cb9-5109a260717a"
+    ]
+
+    // 定位组件
+    TMFDemo_location = [
+            aMapKey      : "970f952d513720994ece3da1cfab8606",
+            tencentMapKey: "U4VBZ-KBUK5-72KIE-QJGDW-VOWI5-ZFF4L"
+    ]
+
+    // 热修复
+    TMFDemo_tinker = [
+            tinkerId: TMFDemo_version.versionName + "." + TMFDemo_version.buildNo
+    ]
+
+    buildTools = [
+            "android-gradle-plugin": 'com.android.tools.build:gradle:4.1.3',
+            "kotlin-gradle-plugin" : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
+    ]
+
+    /**
+     * support库版本配置
+     */
+    versions = [
+            "support-version": "27.0.2",
+            "junit-version"  : "4.12",
+    ]
+
+    /**
+     * 第三方依赖
+     */
+    dependencies = [
+            'core-ktx'                   : "androidx.core:core-ktx:1.5.0",
+            "lifecycle-extensions"       : "android.arch.lifecycle:extensions:1.1.1",
+            "lifecycle-compiler"         : "android.arch.lifecycle:compiler:1.1.1",
+            "androidx-appcompat"         : "androidx.appcompat:appcompat:1.1.0",
+            "android.material"           : "com.google.android.material:material:1.3.0-alpha03",
+            "legacy-support-v4"          : "androidx.legacy:legacy-support-v4:1.0.0",
+            "androidx-core"              : "androidx.core:core:1.3.2",
+            "androidx-multidex"          : "androidx.multidex:multidex:2.0.1",
+            "androidx-legacy"            : "androidx.legacy:legacy-support-v4:1.0.0",
+            "androidx-viewpager"         : "androidx.viewpager:viewpager:1.0.0",
+            "androidx-fragment"          : "androidx.fragment:fragment:1.2.5",
+            "androidx-constraintlayout"  : "androidx.constraintlayout:constraintlayout:2.0.4",
+            "androidx-swiperefreshlayout": "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+            "androidx-recyclerview"      : "androidx.recyclerview:recyclerview:1.1.0",
+            'junit'                      : "junit:junit:4.12",
+            "gson"                       : "com.google.code.gson:gson:2.8.2",
+            "androidx-preference"        : 'androidx.preference:preference:1.1.1',
+
+            "support-v4"              : "com.android.support:support-v4:${versions["support-version"]}",
+            "appcompat-v7"            : "com.android.support:appcompat-v7:${versions["support-version"]}",
+            "recyclerview-v7"         : "com.android.support:recyclerview-v7:${versions["support-version"]}",
+            "support-v13"             : "com.android.support:support-v13:${versions["support-version"]}",
+            "support-fragment"        : "com.android.support:support-fragment:${versions["support-version"]}",
+            "support-annotations"     : "com.android.support:support-annotations:${versions["support-version"]}",
+            "design"                  : "com.android.support:design:${versions["support-version"]}",
+            "animated-vector-drawable": "com.android.support:animated-vector-drawable:${versions["support-version"]}",
+    ]
+
+    //加载maven配置
+    mavenConfigFile = new File("${rootProject.projectDir.parentFile.parentFile.parentFile}${File.separator}buildscripts${File.separator}config${File.separator}mavenConfig.gradle")
+    if (mavenConfigFile.exists()) {
+        apply from: mavenConfigFile.absolutePath
+    }
+}
+

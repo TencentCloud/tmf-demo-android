@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/item_params_phone"
+        style="@style/icdp_qmui_btn_item"
+        android:text="@string/module_icdp_12"
+        app:qmui_radius="4dp" />
+    <!--<com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/item_params_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="6dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:padding="10dp"
+        android:text="设置灰度信息"
+        app:qmui_radius="4dp" />-->
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/item_params_booth"
+        style="@style/icdp_qmui_btn_item"
+        android:text="@string/module_icdp_13"
+        app:qmui_radius="4dp" />
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/item_params_env"
+        style="@style/icdp_qmui_btn_item"
+        android:text="@string/module_icdp_14"
+        app:qmui_radius="4dp" />
+   <!-- <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/item_params_other"
+        style="@style/icdp_qmui_btn_item"
+        android:text="设置其他参数"
+        app:qmui_radius="4dp" />-->
+
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="module_portal_dynamic">动态模块页面</string>
+    <string name="moduel_portal_0">此为动态加载的模块</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_push_0">云指令的结果：\n</string>
+    <string name="module_push_1">确认</string>
+    <string name="module_push_2">取消</string>
+
+    <string name="module_push_3">绑定标签成功</string>
+    <string name="module_push_4">绑定标签失败:</string>
+    <string name="module_push_5">解绑标签成功</string>
+    <string name="module_push_6">解绑标签失败:</string>
+    <string name="module_push_7">绑定账号成功</string>
+    <string name="module_push_8">解绑帐号成功</string>
+    <string name="module_push_9">推送设置</string>
+    <string name="module_push_10">Google FCM是否可用</string>
+    <string name="module_push_11">地区未填</string>
+
+    <string name="module_push_12">用户账号:</string>
+    <string name="module_push_13">输入用户标识</string>
+    <string name="module_push_14">绑定UserId</string>
+    <string name="module_push_15">解绑UserId</string>
+    <string name="module_push_16">标签设置:</string>
+    <string name="module_push_17">绑定标签</string>
+    <string name="module_push_18">解绑标签</string>
+    <string name="module_push_19">地区上报:</string>
+    <string name="module_push_20">地区上报:</string>
+    <string name="module_push_21">中国</string>
+    <string name="module_push_22">省:</string>
+    <string name="module_push_23">北京市</string>
+    <string name="module_push_24">市:</string>
+    <string name="module_push_25">上报地区</string>
+    <string name="module_push_26">检查Google FCM是否可用</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_push_0">Results of cloud command: n</string>
+    <string name="module_push_1">confirm</string>
+    <string name="module_push_2">cancel</string>
+    <string name="module_push_3">Label binding succeeded</string>
+    <string name="module_push_4">Failed to bind tag:</string>
+    <string name="module_push_5">Label unbinding succeeded</string>
+    <string name="module_push_6">Failed to unbind label:</string>
+    <string name="module_push_7">Successfully bound the account</string>
+    <string name="module_push_8">Account unbound successfully</string>
+    <string name="module_push_9">Push Settings</string>
+    <string name="module_push_10">Is Google FCM available</string>
+    <string name="module_push_11">Region not filled</string>
+    <string name="module_push_12">User account:</string>
+    <string name="module_push_13">Enter User ID</string>
+    <string name="module_push_14">Bind UserId</string>
+    <string name="module_push_15">Unbind UserId</string>
+    <string name="module_push_16">Label settings:</string>
+    <string name="module_push_17">Binding Label</string>
+    <string name="module_push_18">Unbind label</string>
+    <string name="module_push_19">Regional reporting:</string>
+    <string name="module_push_20">Regional reporting:</string>
+    <string name="module_push_21">China</string>
+    <string name="module_push_22">Province:</string>
+    <string name="module_push_23">Beijing</string>
+    <string name="module_push_24">City:</string>
+    <string name="module_push_25">Reporting area</string>
+    <string name="module_push_26">Check if Google FCM is available</string>
+</resources>

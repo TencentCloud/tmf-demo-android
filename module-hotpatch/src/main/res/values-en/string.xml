@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hotpatch_pull_activity_toast">Please make sure the format of the information is correct</string>
+    <string name="hotpatch_test_activity_title">hot fix</string>
+    <string name="module_hotpatch_0">Merge Patch</string>
+    <string name="module_hotpatch_1">Patch ID</string>
+    <string name="module_hotpatch_2">Patch version number</string>
+    <string name="module_hotpatch_3">Patch link</string>
+    <string name="module_hotpatch_4">Patch Pack MD5</string>
+    <string name="module_hotpatch_5">Patch package size</string>
+    <string name="module_hotpatch_6">Download and merge patches</string>
+    <string name="module_hotpatch_7">Download patch</string>
+    <string name="module_hotpatch_8">Delete the downloaded patch package</string>
+    <string name="module_hotpatch_9">Clear Patch</string>
+    <string name="module_hotpatch_10">Repair Status</string>
+    <string name="module_hotpatch_11">Monitoring patch distribution</string>
+    <string name="module_hotpatch_12">Actively pull hot fixes</string>
+    <string name="module_hotpatch_13">Restart the app to take effect</string>
+</resources>

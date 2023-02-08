@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="custom_doc_activity_title">自定义文档展示</string>
+    <string name="custom_doc_activity_load_doc_failed">加载文件失败</string>
+    <string name="file_reader_dialog_unsupport_file_type">文件类型不支持!</string>
+    <string name="h5_container_activity">H5容器</string>
+    <string name="h5_container_jsapi_title">JsApi示例</string>
+    <string name="js_api_activiity_menu_0">演示Native事件通知H5</string>
+    <string name="js_api_activiity_menu_1">复制链接</string>
+    <string name="js_api_activiity_menu_2">在浏览器打开</string>
+    <string name="js_api_activiity_native_h5">演示Native事件通知H5</string>
+    <string name="js_api_activiity_copy_clip">复制到剪切板成功：</string>
+    <string name="js_api_activiity_open_browser">点击了在浏览器打开</string>
+    <string name="js_api_activiity_show_jsapi">JsApi演示</string>
+    <string name="js_api_activiity_cancel">取消</string>
+    <string name="js_api_activiity_uri_get_failed">获取图片uri失败</string>
+    <string name="js_api_save_success">保存成功</string>
+    <string name="js_api_scan_no_data">未扫码到数据</string>
+    <string name="js_api_has_clicked">点击了</string>
+    <string name="js_api_share_success">分享成功</string>
+    <string name="js_api_share_failed">分享失败</string>
+    <string name="js_api_share_app_not_install">应用未安装</string>
+    <string name="js_api_share_app_user_cancel">用户取消</string>
+    <string name="js_api_share_app_verify_failed">验证失败</string>
+    <string name="js_api_share_app_bad_params">分享参数不合法</string>
+    <string name="js_api_share_app_not_support">分享接口不支持</string>
+    <string name="js_api_share_send_req_failed">发送分享请求失败</string>
+    <string name="js_api_share_unknown_error">未知错误</string>
+    <string name="x5_doc_list_activity_title">X5文档预览</string>
+    <string name="x5_doc_list_activity_title_2">在线文档预览</string>
+    <string name="x5_doc_list_activity_file_not_exists">文件不存在</string>
+
+    <string name="module_h5container_0">未知文件</string>
+    <string name="module_h5container_1">文件大小：未知</string>
+    <string name="module_h5container_2">文档预览</string>
+    <string name="module_h5container_3">本地文件查看器</string>
+    <string name="module_h5container_4">在线预览(多种文件)</string>
+    <string name="module_h5container_5">打开本地文件</string>
+</resources>

@@ -1,0 +1,62 @@
+/*css 初始化代码 css reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*清除列表样式*/
+li{
+    list-style-type: none;
+}
+
+/*清除输入框轮廓线*/
+input{
+    outline: none;
+}
+
+/*清除按钮样式*/
+/*button{
+    border: none;
+}*/
+/*清除链接下划线*/
+a{
+    text-decoration: none;
+}
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after{
+    display: block;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+/*common css代码*/
+button {
+    width: 95%;
+    height: 40px;
+    margin: 10px auto;
+    display: block;
+}
+
+.section-header{
+    margin-left: 10px;
+    margin-top: 10px
+}
+
+* {
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

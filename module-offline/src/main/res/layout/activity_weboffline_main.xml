@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qmui_config_color_white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/edit_one"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                style="@style/edittext_border" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onCheckOneByBid"
+                android:padding="10dp"
+                android:text="@string/offline_xml_1"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onOpenOne"
+                android:padding="10dp"
+                android:text="@string/offline_xml_2"
+                app:qmui_radius="4dp" />
+
+            <EditText
+                android:id="@+id/edit_multi"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                style="@style/edittext_border"/>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onCheckMultiByBid"
+                android:padding="10dp"
+                android:text="@string/offline_xml_3"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onOpenMulti"
+                android:padding="10dp"
+                android:text="@string/offline_xml_4"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/check_update_forall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="checkUpdateForAllBiz"
+                android:padding="10dp"
+                android:text="@string/offline_xml_5"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/get_biz_update_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="getBizUpdateTime"
+                android:padding="10dp"
+                android:text="@string/offline_xml_6"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/download_biz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="getBizConfig"
+                android:padding="10dp"
+                android:text="@string/offline_xml_7"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/get_biz_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="getBizVersion"
+                android:padding="10dp"
+                android:text="@string/offline_xml_8"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/get_local_versions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="getLocalOfflineVersions"
+                android:padding="10dp"
+                android:text="@string/offline_xml_9"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/delete_biz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="deleteBiz"
+                android:padding="10dp"
+                android:text="@string/offline_xml_10"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/delete_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="deleteAllOfflineData"
+                android:padding="10dp"
+                android:text="@string/offline_xml_11"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onCleanLog"
+                android:padding="10dp"
+                android:text="@string/offline_xml_12"
+                app:qmui_radius="4dp" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="onDownloadTest"
+                    android:padding="10dp"
+                    android:text="@string/offline_xml_13"
+                    app:qmui_radius="4dp" />
+
+
+            <TextView
+                android:id="@+id/text_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

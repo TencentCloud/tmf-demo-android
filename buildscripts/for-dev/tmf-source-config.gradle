@@ -1,0 +1,33 @@
+//此文件用于管理配置开关
+ext {
+    /********************************此部分用于配置开启加载那个源码模块start*************************************/
+    isSourcePack = false//源码编译总控制
+    isDebugBase = false//控制是否源码调试基础库模块
+    isDebugBaseCore = false//控制是否源码调试基础库模块
+    isDebugH5 = false//控制是否源码调试H5模块
+    isDebugX5 = false//控制是否源码调试X5模块
+    isDebugOffline = false//控制是否源码调试离线包模块
+    isDebugKeyboard = false//控制是否源码调试安全键盘模块
+    isDebugHotpatch = false//控制是否源码调试热修复模块
+    isDebugQapm = false//控制是否源码调试qapm模块false
+    isDebugProfile = false//控制是否源码调试profile模块
+    isDebugPush = false//控制是否源码调试push模块
+    isDebugShark = false//控制是否源码调试shark模块
+    isDebugSharkService = false//控制是否源码调试shark模块
+    isDebugUpload = false//控制是否源码调试upload模块
+    isDebugKeyManager = false//控制是否源码调试KeyManager模块
+    isDebugCipher = false//控制是否源码调试KeyManager模块
+    isDebugQrcode = false//控制是否源码调试Qrcode模块
+    isDebugShare = false //控制是否源码调试Share模块
+    isDebugConch = false //控制是否源码调试Conch
+    isDebugUpgrade = false //控制是否源码调试Upgrade
+    isDebugColorLog = false //控制是否源码调试ColorLog
+    isDebugHyBrid = false
+    isDebugDownloader = false
+    isDebugReport = false
+    isDebugPortal = false //控制是否源码调试Portal
+    isDebugToolKit = false //控制是否源码调试ToolKit
+    isDebugStorage = false //控制是否源码调试Storage
+    isDebugAnalyse = false //控制是否源码调试analyse
+    /********************************此部分用于配置开启加载那个源码模块end*************************************/
+}

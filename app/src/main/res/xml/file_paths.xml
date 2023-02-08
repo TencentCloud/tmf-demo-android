@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!-- 自定义目录映射用于微信分享,可以定义多个。name值随意填写，path需要填写子目录名,
+    要和文件保存目录保持一致,如下获得路径时用context.getExternalFilesDir("img")，context.getFilesDir() -->
+    <external-files-path name="sharedata" path="img" />
+    <files-path name="sharedata2" path="." />
+
+    <!-- opensdk_root，opensdk_external 为QQ分享默认规定，无需修改 -->
+    <external-files-path name="opensdk_external" path="Images/tmp"/>
+    <root-path name="opensdk_root" path=""/>
+    <external-path name="external_files" path="."/>
+</paths>

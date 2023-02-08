@@ -1,0 +1,13 @@
+apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}module.gradle"
+
+android {
+    kapt {
+        arguments {
+            arg("portalModuleName", "module-hotpatch")
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+}

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "449160747646",
+    "project_id": "tmfdemo-5889e",
+    "storage_bucket": "tmfdemo-5889e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449160747646:android:06d623ed02bcb0ca01562f",
+        "android_client_info": {
+          "package_name": "com.tencent.tmf.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449160747646-8781k4lc1190pj4feoa8f85fbq5mqrbm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tencent.tmf.demo",
+            "certificate_hash": "0224a537230451d02298895e2f721faead33ac9b"
+          }
+        },
+        {
+          "client_id": "449160747646-v89lpabs99vfpmsrqosbb5oq8k1cb5te.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAzWMz_34I7Av3NIPBxdxpTpJjT91CxPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449160747646-v89lpabs99vfpmsrqosbb5oq8k1cb5te.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

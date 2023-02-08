@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icdp_title">ICDP</string>
+    <string name="icdp_booth_activity_tips">Operating steps for screen cutting effect display: \n</string>
+    <string name="icdp_activity_title">ICDP</string>
+    <string name="icdp_activity_param_set">Parameter setting</string>
+    <string name="icdp_activity_param_set_info">Set booth information</string>
+    <string name="icdp_params_activity_announcement">Announcement component</string>
+    <string name="icdp_params_activity_banner">Carousel component</string>
+    <string name="icdp_params_activity_image">Single diagram component</string>
+    <string name="icdp_params_activity_splash">Flash screen component</string>
+    <string name="icdp_params_activity_popup">Pop up</string>
+    <string name="icdp_params_activity_list">List Component</string>
+    <string name="icdp_params_activity_hot_splash">Hot Splash component</string>
+    <string name="icdp_params_env_activity_title">Setting environment parameters</string>
+    <string name="icdp_params_env_server_add">Service Address</string>
+    <string name="icdp_params_env_server_uid">User ID</string>
+    <string name="icdp_params_env_server_poc">Poc environment</string>
+    <string name="icdp_params_env_server_test">testing environment</string>
+    <string name="icdp_params_env_server_custom">custom</string>
+    <string name="icdp_params_env_restart_to_take_effect">Restart takes effect</string>
+    <string name="icdp_params_phone_activity_title">Get mobile information</string>
+    <string name="icdp_params_phone_activity_phone_type">Mobile phone type</string>
+    <string name="icdp_params_phone_activity_device_id">Device ID</string>
+    <string name="icdp_params_phone_activity_version">Sdk version</string>
+    <string name="icdp_params_phone_activity_city">Current City</string>
+    <string name="module_icdp_0">Provide personalized advertising and campaign launch crowd within the application, help
+        operators reach users accurately and timely, and achieve promotion of vitality, retention and business growth
+    </string>
+    <string name="module_icdp_1">Online advertising page</string>
+    <string name="module_icdp_2">Parameter setting</string>
+    <string name="module_icdp_3">Flash screen style</string>
+    <string name="module_icdp_4">Announcement style</string>
+    <string name="module_icdp_5">Single Chart Style</string>
+    <string name="module_icdp_6">Carousel style</string>
+    <string name="module_icdp_7">Pop up style</string>
+    <string name="module_icdp_8">List Style</string>
+    <string name="module_icdp_9">Screen cutting style</string>
+    <string name="module_icdp_10">APP ICDP demo</string>
+    <string name="module_icdp_11">H5 ICDP demo</string>
+    <string name="module_icdp_12">Get mobile information</string>
+    <string name="module_icdp_13">Set booth information</string>
+    <string name="module_icdp_14">Setting environment parameters</string>
+    <string name="module_icdp_15">preservation</string>
+    <string name="module_icdp_16">Current environment</string>
+</resources>

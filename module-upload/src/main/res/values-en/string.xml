@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_upload_0">File upload example</string>
+    <string name="module_upload_1">Please select a picture to upload</string>
+    <string name="module_upload_2">File source:</string>
+    <string name="module_upload_3">File does not exist!!!</string>
+    <string name="module_upload_4">Ready to upload, guid:</string>
+    <string name="module_upload_5">Start uploading, guid:</string>
+    <string name="module_upload_6">Upload successful file information: \n</string>
+    <string name="module_upload_7">[Abnormal decoding]</string>
+    <string name="module_upload_8">Upload failed, error code:</string>
+    <string name="module_upload_9">Upload progress:</string>
+    <string name="module_upload_10">Exception occurred:</string>
+    <string name="module_upload_11">Upload files</string>
+</resources>

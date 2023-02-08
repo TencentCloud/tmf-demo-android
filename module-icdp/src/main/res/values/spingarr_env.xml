@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_env">
+        <item>Poc环境</item>
+        <item>测试环境</item>
+        <item>自定义</item>
+    </string-array>
+</resources>

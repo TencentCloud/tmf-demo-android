@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="item_0">移动网关</string>
+    <string name="item_1">云指令</string>
+    <string name="item_2">消息推送</string>
+    <string name="item_3">热修复</string>
+    <string name="item_4">H5容器</string>
+    <string name="item_5">离线包</string>
+    <string name="item_6">性能分析</string>
+    <string name="item_7">文件上传</string>
+    <string name="item_8">染色日志</string>
+    <string name="item_9">安全键盘</string>
+    <string name="item_10">APP更新</string>
+    <string name="item_11">扫描组件</string>
+    <string name="item_12">UI组件</string>
+    <string name="item_13">存储组件</string>
+    <string name="item_14">分享组件</string>
+    <string name="item_15">定位组件</string>
+    <string name="item_16">设备标识</string>
+    <string name="item_17">智慧投放</string>
+    <string name="item_18">路由组件</string>
+    <string name="item_19">国密算法</string>
+    <string name="item_20">多实例</string>
+    <string name="item_21">Hybrid</string>
+    <string name="item_22">小程序</string>
+    <string name="item_23">移动网关</string>
+    <string name="item_24">移动分析</string>
+    <string name="tmf_main_more">更多</string>
+    <string name="tmf_main_pack_time">打包时间: </string>
+    <string name="tmf_main_dynamic_conf">动态配置</string>
+    <string name="tmf_main_enter_correct_url">请输入正确的链接地址</string>
+    <string name="tmf_main_guid_copy_tips">guid已复制到剪贴板</string>
+
+    <string name="module_main_0">请输入链接地址</string>
+    <string name="module_main_1">打开</string>
+    <string name="module_main_2">扫二维码</string>
+    <string name="module_main_3">APP信息</string>
+    <string name="module_main_4">TMF组件</string>
+    <string name="module_main_5">热修复加载成功</string>
+
+    <string name="module_main_6">POC入口</string>
+    <string name="module_main_7">测试入口</string>
+    <string name="module_main_8">定制化</string>
+
+</resources>

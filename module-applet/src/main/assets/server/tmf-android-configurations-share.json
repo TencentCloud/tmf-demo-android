@@ -1,0 +1,19 @@
+{
+  "channel": "Android",
+  "customId": "21b4bfc0-5967-11ec-907d-ff65a9732fae",
+  "material": "01tbalvUODGqHVPOneJeFnxxCbcF8Cb6jfIZU2HshBzdZC9bZpaYrq5NOxTocdm1/x4Fy3y3ogwGzegKJYuLKJGK659sUtxOuCWUGvdzM/1Xoj14UtnbpAh+CYM+2JIoRJqWnQQhRfXTRxhHy/DfYMRpOE4Oj2C79DgLF4QZnJXRbcreEH47pWwasooS4Qb2wdCy+BI10vLsDuHbvOYE95vsL5fEF83yIiFyuMb97J+FWQWt0mR7BPzmDcsPHVJx1ksuY33Epc2k/cG+h2zkLAY/LspDfu5XSlLa4sichwTsqDd9jbg7CE/f/E4dErldOk4W9ihhcvQHW6DAQs/7Pm/ntv9gax4KDDOWQNR25Ho4KONsrVLejBHi5NlIu3GeVLYovaCs5DI2PzHFRNtfWrvdshmzpn53Fdhn9sZeLeBEad5RgQ7uouWmFHkb23MnoJVLQh18XHLX95FSTXnlWPBz6yHsulScg3wAxGqcuVMNwrIcTQDl/HR/5cAy+CyTfndSPbTCmoVNDmY2s5VvwnZ8SLbhd18LUTpYJP4EO8DwisLf1jjqPouX2prjNcHtseMjE+bfCMtmVv+bx5fmjn4z2kiitnj+QWWrtegtynAfLouLX17/unH2GzstL0DkaZqGNrQZ5nFcVcyf2elyYx/O+kkR50eEyz5DvCeFQ2nu0KF47Aa458Rm5GwDsnJRrbzCy7BVUrsXaV1IV4p7RxqKdERYUZX9kgMIl24Duwvi+7whPyfgq2IV/j6/2RZl0R5d169efcdb288dd1",
+  "packageName": "com.tencent.tmf.demo",
+  "productId": "8421",
+  "qapm": {
+    "appKey": "None",
+    "url": "http://xx.com"
+  },
+  "shark": {
+    "appKey": "app-jp8hldw8q8",
+    "asymEnc": 1,
+    "httpUrl": "http://58.87.98.187:30013",
+    "symEnc": 2,
+    "tcpHost": "58.87.98.187",
+    "tcpPort": 30014
+  }
+}

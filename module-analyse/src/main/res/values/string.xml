@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="analyse_custom_report">自定义事件上报</string>
+    <string name="analyse_set_default_location">设置虚拟地址(%s:%s:%s)</string>
+    <string name="analyse_app_use_time">APP使用时长</string>
+    <string name="analyse_open_app">打开APP（模拟事件）</string>
+    <string name="analyse_open_page">打开页面</string>
+    <string name="analyse_logout">登出</string>
+    <string name="analyse_login">登录(模拟)</string>
+    <string name="analyse_do_custom_report">自定义上报</string>
+    <string name="analyse_custom_report_key">自定义上报key</string>
+    <string name="analyse_custom_report_value">自定义上报参数</string>
+    <string name="analyse_page_jump_title">移动分析页面上报测试</string>
+    <string name="analyse_page_jump_0">返回测试主页面</string>
+    <string name="analyse_page_jump_1">跳转测试页面上报</string>
+    <string name="analyse_test_main_0">国家</string>
+    <string name="analyse_test_main_1">省</string>
+    <string name="analyse_test_main_2">市</string>
+    <string name="analyse_test_main_3">TMF移动分析页面</string>
+    <string name="analyse_test_main_4">定位权限被禁用!</string>
+    <string name="analyse_test_main_5">定位未开启</string>
+    <string name="analyse_test_main_6">用户登录 uid </string>
+    <string name="analyse_test_main_7">用户登出</string>
+    <string name="analyse_test_main_8">设置地址为 </string>
+    <string name="analyse_test_main_9">未获取到位置</string>
+    <string name="analyse_custom_main_0">自定义事件上报</string>
+    <string name="analyse_custom_main_1">自定义事件参数异常，请按照标准Json格式填充数据</string>
+    <string name="analyse_custom_main_2">自定义事件key不能为空</string>
+</resources>

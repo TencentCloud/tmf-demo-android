@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="applet_app_name">TmfAppletDemo</string>
+    <string name="applet_add_server">Add server</string>
+    <string name="applet_server_name">Server name</string>
+    <string name="applet_server_config">Input server config</string>
+    <string name="applet_server_save_config">Save config</string>
+
+    <string name="applet_mini_app_helper">Mini program helper</string>
+    <string name="applet_common_use_app">Common app</string>
+    <string name="applet_no_ava_mini_app">No applets available</string>
+
+    <string name="applet_mini_app_list">applet list</string>
+    <string name="applet_mini_browser_test">browser test</string>
+    <string name="applet_auto_inject_jssdk">Whether to automatically inject jssdk</string>
+    <string name="applet_base_split">Whether the base library is split</string>
+    <string name="applet_domain_intercept">Whether to block domain names</string>
+
+    <string name="applet_add_listen">Register event listener</string>
+    <string name="applet_listen_callback">Listen to event callback data</string>
+    <string name="applet_property_name">attribute name</string>
+    <string name="applet_property_value">attribute value</string>
+    <string name="applet_get_property">attribute acquisition</string>
+    <string name="applet_set_property">property setting</string>
+    <string name="applet_debug_info">debug information</string>
+    <string name="applet_search_result">search results</string>
+    <string name="applet_search">search</string>
+    <string name="applet_cancel">cancel</string>
+    <string name="applet_input_to_search">Enter content search applet</string>
+    <string name="applet_choose_below_or_select_rightr">Please select from the list below or add in the upper right corner</string>
+    <string name="applet_tmf_public_cloud">TMF public cloud</string>
+    <string name="applet_input_appid">input APPID</string>
+    <string name="applet_tmf_confirm">confirm</string>
+    <string name="applet_tmf_cancel">cancel</string>
+    <string name="applet_develop_version">develop version</string>
+
+    <string name="applet_config_server">config server</string>
+    <string name="applet_input_username_yy">Please enter the operating platform user name</string>
+    <string name="applet_input_pwd_yy">Please enter the operating platform password</string>
+    <string name="applet_input_open_username">Please enter the open platform username</string>
+    <string name="applet_input_open_pwd">Please enter the open platform passsoword</string>
+    <string name="applet_login">login</string>
+    <string name="applet_login_app">APP login</string>
+    <string name="applet_skip_login">skip login</string>
+    <string name="applet_current_yy">Currently operating account</string>
+    <string name="applet_switch_company_account">Switch to enterprise account login</string>
+
+    <string name="applet_content_can_not_be_empty">the content can not be blank</string>
+    <string name="applet_server_name_must_be">server name requires 2~10 character</string>
+    <string name="applet_config_already_exists">config file exist: %s</string>
+    <string name="applet_config_must_be_json">content must be JSON </string>
+
+    <string name="applet_base_clean">clear the applet base library </string>
+    <string name="applet_base_click_to_clean">click to clear the downloaded applet base library </string>
+    <string name="applet_base_mini_test">applet test </string>
+    <string name="applet_base_click_to_test_page">click to enter applet test </string>
+    <!--    loginActivty-->
+    <string name="applet_login_act_skip_login">skip login</string>
+    <string name="applet_login_act_skip_login_tips">You can only experience the official version (already on the shelf) of the applet\nThe development and preview version of the applet cannot be experienced</string>
+    <string name="applet_login_act_skip_login_confirm">confirm</string>
+    <string name="applet_login_act_skip_login_cancel">cancel</string>
+    <string name="applet_login_act_toast_input_open">Please enter the open platform account and password</string>
+    <string name="applet_login_act_skip_input_yy">Please enter the operating platform account and password</string>
+    <string name="applet_login_act_logining">logining</string>
+    <string name="applet_login_act_tips">notice</string>
+    <string name="applet_login_act_tips_detail">"account description(The QR code is the development version of the applet in IDE)\n"
+                                        "Operating account： support（formal、preview)\n"
+                                        "Open platform account： support（formal、preview、develop)\n"</string>
+    <string name="applet_login_remind_known">Please kept informed</string>
+    <string name="applet_login_remind_login_failed">login failed :%s</string>
+
+    <string name="applet_login_platform">Platform account login</string>
+    <string name="applet_login_platform_id">Please enter the developer/experimenter user ID</string>
+
+    <string name="applet_login_app_account">APP account login</string>
+    <string name="applet_login_open_name_account">Please enter the open platform username</string>
+
+    <string name="applet_login_current_company">Currently an enterprise account</string>
+    <string name="applet_login_current_yy">Currently operating account</string>
+    <string name="applet_login_switch_yy">Switch to an operating account to log in</string>
+    <string name="applet_login_swith_company">Switch to enterprise account login</string>
+    <string name="applet_search_no_ava_mini">No available applet found</string>
+    <string name="applet_inner_app_config">APP built-in configuration</string>
+    <string name="applet_save_success">Successfully saved</string>
+    <string name="applet_restart_to_take_effective">Need to restart the APP to take effect</string>
+    <string name="applet_restart_to_take_effective_delete">delete</string>
+    <string name="applet_restart_to_take_effective_delete_config">Whether to delete the configuration file</string>
+    <!--mainActivity-->
+    <string name="applet_main_act_delete">delete</string>
+    <string name="applet_main_act_delete_msg">Whether to delete the applet %1$s \n %2$s</string>
+    <string name="applet_main_act_delete_msg_confirm">confirm</string>
+    <string name="applet_main_act_delete_msg_cancal">cancel</string>
+
+    <string-array name="applet_menu_item">
+        <item>Scan it</item>
+        <item>Search AppId</item>
+        <item>Setting</item>
+        <item>Logout</item>
+    </string-array>
+
+
+    <string name="applet_mini_proxy_impl_other1">Other1</string>
+    <string name="applet_mini_proxy_impl_other2">CustomShare</string>
+    <string name="applet_mini_proxy_impl_float_app">Float</string>
+    <string name="applet_mini_proxy_impl_out_of_effect">Id out of [100,200]</string>
+    <string name="applet_mini_proxy_impl_cancel_top">Cancel top</string>
+    <string name="applet_mini_proxy_impl_add_to_desktop">Add to desktop</string>
+    <string name="applet_mini_proxy_impl_Qzone">Qzone</string>
+    <string name="applet_mini_proxy_impl_wechat_friend">Friend</string>
+    <string name="applet_mini_proxy_impl_wechat_group">Group</string>
+    <string name="applet_mini_proxy_impl_restart">Restart</string>
+    <string name="applet_mini_proxy_impl_about">About</string>
+    <string name="applet_mini_proxy_impl_complain_and_report">Report</string>
+    <string name="applet_mini_proxy_impl_deung">Denug</string>
+    <string name="applet_mini_proxy_impl_export_log">Log</string>
+    <string name="applet_mini_proxy_impl_performance">Performance</string>
+    <string name="applet_mini_proxy_impl_move_top">Top</string>
+
+    <string name="applet_mini_data_country">China</string>
+    <string name="applet_mini_proxy_province">Beijing</string>
+    <string name="applet_mini_proxy_city">Beijing</string>
+</resources>

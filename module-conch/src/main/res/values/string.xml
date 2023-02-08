@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conch_activity_input_id">输入云指令id</string>
+    <string name="conch_activity_pull_conch">拉取指令</string>
+    <string name="conch_activity_conch_list">指令列表</string>
+    <string name="conch_activity_conch_title">云指令</string>
+    <string name="conch_activity_conch_registed">已注册的云指令:\n\n\n</string>
+    <string name="conch_activity_conch_input_correct">请输入正确的云指令ID</string>
+    <string name="conch_activity_conch_input_not_found">无法找到云指令服务</string>
+    <string name="conch_activity_conch_input_result">云指令的结果:\n</string>
+</resources>

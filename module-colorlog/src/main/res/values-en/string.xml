@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="color_log_info_pre">Staining Log</string>
+    <string name="color_log_info_mid">Upload result code=</string>
+</resources>

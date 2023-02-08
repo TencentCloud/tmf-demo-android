@@ -1,0 +1,120 @@
+android {
+    compileSdkVersion rootProject.ext.TMFDemo_version.compileSdkVersion
+    buildToolsVersion rootProject.ext.TMFDemo_version.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.TMFDemo_version.minSdkVersion
+        targetSdkVersion rootProject.ext.TMFDemo_version.targetSdkVersion
+        versionCode rootProject.ext.TMFDemo_version.versionCode
+        versionName rootProject.ext.TMFDemo_version.versionName
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    def gitShortRev = {
+        String gitCommit = ""
+        def proc = "git rev-parse --short HEAD".execute()
+        proc.in.eachLine { line -> gitCommit = line }
+        proc.err.eachLine { line -> println line }
+        proc.waitFor()
+        return gitCommit
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'consumer-rules.pro'
+            if(project.ext.mavenConfigFile.exists()){
+                String KEEP_LOG = project.ext.isWithlog ? "true" : "false"
+                println "buildTypes KEEP_LOG=${KEEP_LOG}"
+                if(KEEP_LOG?.trim()){
+                    buildConfigField "boolean", "KEEP_LOG", "${KEEP_LOG}"
+                }else{
+                    buildConfigField "boolean", "KEEP_LOG", "false"
+                }
+            }else {
+                buildConfigField "boolean", "KEEP_LOG", "false"
+            }
+            buildConfigField "String", "CREATE_TIME", releaseTime()
+            buildConfigField "String", "GIT_REV", "\"" + gitShortRev() + "\""
+            //SDK_VERSION只是为了用于动态加载源码编译，在TMFDemo中没有实际意义
+            def versionInt = version2Int(rootProject.ext.TMFDemo_version.versionName);
+            buildConfigField "String", "SDK_VERSION", "\"" + rootProject.ext.TMFDemo_version.versionName + "\""
+//            buildConfigField "long", "SDK_VERSION_INT", "${versionInt}"
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'consumer-rules.pro'
+            buildConfigField "boolean", "KEEP_LOG", "true"
+            buildConfigField "String", "CREATE_TIME", releaseTime()
+            buildConfigField "String", "GIT_REV", "\"" + gitShortRev() + "\""
+            //SDK_VERSION只是为了用于动态加载源码编译，在TMFDemo中没有实际意义
+            def versionInt = version2Int(rootProject.ext.TMFDemo_version.versionName);
+            buildConfigField "String", "SDK_VERSION", "\"" + rootProject.ext.TMFDemo_version.versionName + "\""
+//            buildConfigField "long", "SDK_VERSION_INT", "${versionInt}"
+        }
+    }
+    productFlavors {
+        flavorDimensions "tmf"
+        tmfMain { //demo配置
+            dimension "tmf"
+        }
+        tmfhotpatch { // POC热修复物料配置
+            dimension "tmf"
+        }
+        if (project.ext.moduleTestDir.exists() && isBuildTestModule) {
+            tmfTest { //测试配置
+                dimension "tmf"
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+//        exclude group:'com.tencent.tmf.android', module: 'shark'
+//        exclude group:'com.tencent.tmf.android', module: 'push'
+//        transitive = false
+        resolutionStrategy {
+            force rootProject.ext.TMF_components['shark']
+            force rootProject.ext.TMF_components['push']
+            force rootProject.ext.TMF_components['upload']
+            force rootProject.ext.TMF_components['base']
+            force rootProject.ext.TMF_components['profile']
+            force rootProject.ext.TMF_components['report']
+            force rootProject.ext.TMF_components['hotpatchcore']
+        }
+    }
+}
+
+def releaseTime() {
+    return "\"${new Date().format("yyyy-MM-dd HH:mm:ss", TimeZone.getTimeZone("GMT+08:00"))}\""
+}
+
+def version2Int(moduleVersion){
+    String[] splits = moduleVersion.split("\\.")
+    long ret = 0;
+    if (splits != null){
+        int len = splits.length;
+        long pow = Math.pow(100, len);
+
+        for (String part : splits){
+            if (isDigit(part)){
+                long vPart = Long.parseLong(part);
+                ret += vPart * pow;
+                pow /= 100;
+            }
+        }
+    }
+    return ret;
+}
+
+def isDigit(str){
+    for (int i = 0; i < str.length(); i++){
+        if (!Character.isDigit(str.charAt(i))){
+            return false;
+        }
+    }
+    return true;
+}

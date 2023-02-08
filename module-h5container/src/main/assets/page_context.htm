@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>TMF JS API Demo</title>
+    <link rel="stylesheet" href="common.css">
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="page_context.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript">
+        tmf_sample_onNavigationItemClick()
+        tmf_ready(function() {
+            tmf_showFinish()
+        })
+
+    </script>
+</head>
+<body>
+<div id="container">
+    <button class="jsapi-button" onclick="tmf_openContainer('https://www.qq.com/');">打开腾讯页面</button>
+    <button class="jsapi-button" onclick="tmf_closeContainer();">关闭当前页面</button>
+    <button class="jsapi-button" onclick="tmf_showContainerStack();">查看当前所有页面</button>
+    <button class="jsapi-button" onclick="tmf_getContainerStack();">关闭多个页面</button>
+    <button class="jsapi-button" onclick="tmf_isAppInstalled();">判断其他应用是否安装</button>
+    <button class="jsapi-button" onclick="tmf_openApp();">启动其他应用</button>
+</div>
+</body>
+</html>

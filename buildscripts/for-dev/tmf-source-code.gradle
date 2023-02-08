@@ -1,0 +1,317 @@
+//此文件用于配置加载TMF源码路径
+
+//源码工程root路径
+File rootFile = rootProject.projectDir.parentFile.parentFile.parentFile
+
+//H5容器、文档预览
+if (ext.isSourcePack && ext.isDebugH5) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-web-tob${File.separator}webview")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+
+//    moduleDir = new File(rootFile, "${File.separator}tmf-android-web-tob${File.separator}x5webview")
+//    if (moduleDir.exists()) {
+//        include ":${moduleDir.name}"
+//        project(":${moduleDir.name}").projectDir = moduleDir
+//    }
+
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-web-tob${File.separator}x5docpreview")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+if (ext.isSourcePack && ext.isDebugX5) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-x5${File.separator}tbscore")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//离线包
+if (ext.isSourcePack && ext.isDebugOffline) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-weboffline${File.separator}weboffline")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//安全键盘
+if (ext.isSourcePack && ext.isDebugKeyboard) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-keyboard${File.separator}keyboard")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//热修复
+if (ext.isSourcePack && ext.isDebugHotpatch) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-hotpatch${File.separator}hotpatch")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+
+     moduleDir = new File(rootFile, "${File.separator}tmd-android-hotpatch${File.separator}hotpatchcore")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//基础库
+if (ext.isSourcePack && ext.isDebugBase) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-base${File.separator}base")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//core
+if (ext.isSourcePack && ext.isDebugBaseCore) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-base${File.separator}base-core")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//downloader
+if (ext.isSourcePack && ext.isDebugDownloader) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-base${File.separator}downloader")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//report
+if (ext.isSourcePack && ext.isDebugReport) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-base${File.separator}report")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//qapm
+if (ext.isSourcePack && ext.isDebugQapm) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-performance${File.separator}performance")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//profile
+if (ext.isSourcePack && ext.isDebugProfile) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-profile${File.separator}profile")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//推送
+if (ext.isSourcePack && ext.isDebugPush) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-push${File.separator}push")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-push${File.separator}push-support-oppo")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//shark
+if (ext.isSourcePack && ext.isDebugShark) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-shark${File.separator}shark")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//shark
+if (ext.isSourcePack && ext.isDebugSharkService) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-sharkservice${File.separator}sharkservice")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//upload
+if (ext.isSourcePack && ext.isDebugUpload) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-uploader${File.separator}upload")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//KeyManager
+if (ext.isSourcePack && ext.isDebugKeyManager) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-keymanager${File.separator}keymanager")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//Cipher
+if (ext.isSourcePack && ext.isDebugCipher) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-cipher${File.separator}cipher")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//Qrcode
+if (ext.isSourcePack && ext.isDebugQrcode) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-scan${File.separator}qrcode")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//Share
+if (ext.isSourcePack && ext.isDebugShare) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-share${File.separator}share")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//Conch
+if (ext.isSourcePack && ext.isDebugConch) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-conch${File.separator}conch")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//Upgrade
+if (ext.isSourcePack && ext.isDebugUpgrade) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-upgrade${File.separator}upgrade")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//ColorLog
+if (ext.isSourcePack && ext.isDebugColorLog) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-colorlog${File.separator}colorlog")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//Portal
+if (ext.isSourcePack && ext.isDebugPortal) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-portal${File.separator}portal-core")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-portal${File.separator}portal-annotations")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-portal${File.separator}portal-processor")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-portal${File.separator}portal-gradle-plugin")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//ToolKit
+if (ext.isSourcePack && ext.isDebugToolKit) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-toolkit${File.separator}toolkit")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-toolkit${File.separator}toolkit-colorlog")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-toolkit${File.separator}toolkit-conch")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-toolkit${File.separator}toolkit-offline")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-toolkit${File.separator}toolkit-push")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-toolkit${File.separator}toolkit-shark")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+    moduleDir = new File(rootFile, "${File.separator}tmf-android-toolkit${File.separator}toolkit-webview")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//hybrid
+if (ext.isSourcePack && ext.isDebugHyBrid) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-hybrid${File.separator}hybrid")
+//    File moduleDir = new File(rootFile, "${File.separator}tmd-android-weboffline${File.separator}hybrid")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//Storage
+if (ext.isSourcePack && ext.isDebugStorage) {
+    File moduleDir = new File(rootFile, "${File.separator}tmd-android-storage${File.separator}storage")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}
+
+//analyse
+if (ext.isSourcePack && ext.isDebugAnalyse) {
+    File moduleDir = new File(rootFile, "${File.separator}tmf-android-analyse${File.separator}analyse")
+//    File moduleDir = new File(rootFile, "${File.separator}tmd-android-weboffline${File.separator}hybrid")
+    if (moduleDir.exists()) {
+        include ":${moduleDir.name}"
+        project(":${moduleDir.name}").projectDir = moduleDir
+    }
+}

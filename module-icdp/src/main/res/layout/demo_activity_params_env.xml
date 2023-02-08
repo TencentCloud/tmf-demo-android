@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="15dp"
+        >
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:layout_gravity="center_vertical"
+            android:text="@string/module_icdp_16"/>
+        <Spinner
+            android:id="@+id/item_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <include android:id="@+id/item_params_env_server" layout="@layout/title_value_item"></include>
+    <include android:id="@+id/item_params_env_uid" layout="@layout/title_value_item"></include>
+
+    <TextView
+        android:id="@+id/save_params"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_submit"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/module_icdp_15"
+        android:textColor="#fff"
+        android:textSize="16sp"></TextView>
+
+</LinearLayout>

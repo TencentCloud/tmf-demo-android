@@ -1,0 +1,5 @@
+<resources>
+    <string name="module_portal_dynamic">Dynamic Module Page</string>
+    <string name="moduel_portal_0">this module is dynamic load</string>
+
+</resources>

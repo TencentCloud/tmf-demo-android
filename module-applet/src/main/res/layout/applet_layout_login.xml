@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/config_server_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/applet_config_server"
+            android:textColor="@color/applet_c_828282" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="LOGO"
+            android:textSize="40sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/operate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--          <EditText
+                              android:id="@+id/operate_user_name_edit"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:hint="请输入运营平台用户名"
+                              android:text="shanlianmeng" />-->
+
+                <AutoCompleteTextView
+                    android:id="@+id/operate_user_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:dropDownHorizontalOffset="0dp"
+                    android:hint="@string/applet_input_username_yy"
+                    android:text="shanlianmeng" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/operate_password_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/applet_input_pwd_yy"
+                        android:inputType="textPassword"
+                        android:paddingEnd="40dp"
+                        android:text="tmf123" />
+
+                    <ImageView
+                        android:id="@+id/operate_password_eye"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@mipmap/applet_eye_invisible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/open_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <AutoCompleteTextView
+                    android:id="@+id/open_user_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:dropDownHorizontalOffset="0dp"
+                    android:hint="@string/applet_input_open_username"
+                    android:text="mdev05301" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/open_password_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/applet_input_open_pwd"
+                        android:inputType="textPassword"
+                        android:text="tmf123"
+                        android:paddingEnd="40dp"/>
+
+                    <ImageView
+                        android:id="@+id/open_password_eye"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@mipmap/applet_eye_invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/applet_login" />
+
+        <TextView
+            android:id="@+id/other_login_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="end"
+            android:paddingEnd="20dp"
+            android:text="@string/applet_login_app"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/skip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:text="@string/applet_skip_login"
+        android:textColor="@color/applet_c_828282" />
+
+    <TextView
+        android:id="@+id/account_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/change_account_text"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:paddingEnd="20dp"
+        android:text="@string/applet_current_yy"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/change_account_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:paddingEnd="20dp"
+        android:text="@string/applet_switch_company_account"
+        android:textColor="@color/applet_color_primary" />
+</RelativeLayout>

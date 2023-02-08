@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_scan_0">Scan QR</string>
+    <string name="module_scan_1">cancel</string>
+    <string name="module_scan_2">Enter the code scanning page</string>
+    <string name="module_scan_3">Automatically turn on the flash when the light is insufficient</string>
+    <string name="module_scan_4">Please enter the filter keyword</string>
+    <string name="module_scan_5">add to</string>
+</resources>

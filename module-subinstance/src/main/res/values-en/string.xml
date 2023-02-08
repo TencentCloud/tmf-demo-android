@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_subinstance_0">Multiple instances</string>
+    <string name="module_subinstance_1">\n [Content of request]</string>
+    <string name="module_subinstance_2">[Returned content]</string>
+    <string name="module_subinstance_3">[Abnormal decoding]</string>
+    <string name="module_subinstance_4">[Failure] seqNo:</string>
+    <string name="module_subinstance_5">Gateway test</string>
+    <string name="module_subinstance_6">Profile test</string>
+    <string name="module_subinstance_7">Get GUID</string>
+    <string name="module_subinstance_8">Multiple instances test</string>
+
+</resources>

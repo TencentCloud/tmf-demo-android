@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="offline_activity_check_update_tip_0">检查更新结果：无更新</string>
+    <string name="offline_activity_check_update_tip_1">不要频繁更新</string>
+    <string name="offline_activity_check_update_tip_2">签名错误，请确认客户端的公钥与管理后台的上传的私钥是否一致!</string>
+    <string name="offline_activity_check_update_tip_3">提示</string>
+    <string name="offline_activity_check_update_tip_4">离线包</string>
+    <string name="offline_activity_check_update_tip_5">bid不能为空</string>
+    <string name="offline_activity_check_update_tip_6">配置信息：</string>
+    <string name="offline_activity_check_update_tip_7">版本：</string>
+    <string name="offline_activity_check_update_tip_8">上次更新时间：</string>
+    <string name="offline_activity_check_update_tip_9">清除</string>
+    <string name="offline_activity_check_update_tip_10">成功</string>
+    <string name="offline_activity_check_update_tip_11">失败</string>
+    <string name="offline_activity_check_update_tip_12">本地离线包:</string>
+    <string name="offline_activity_check_update_tip_13">请输入公钥:</string>
+    <string name="offline_activity_check_update_tip_14">保存成功</string>
+    <string name="offline_activity_check_update_tip_15">需要重启APP才能生效</string>
+    <string name="offline_activity_check_update_tip_16">请选择公钥</string>
+    <string name="offline_activity_check_update_tip_17">拦截请求并使用本地资源</string>
+    <string name="offline_activity_check_update_tip_18">资源限额</string>
+
+    <string name="offline_xml_1">单离线包检查更新</string>
+    <string name="offline_xml_2">打开单离线包</string>
+    <string name="offline_xml_3">多离线包检查更新</string>
+    <string name="offline_xml_4">打开多离线包</string>
+    <string name="offline_xml_5">检查所有更新</string>
+    <string name="offline_xml_6">上次更新离线包的时间</string>
+    <string name="offline_xml_7">获取离线包配置信息</string>
+    <string name="offline_xml_8">查看指定离线包版本</string>
+    <string name="offline_xml_9">查看本地所有离线包版本</string>
+    <string name="offline_xml_10">删除指定离线包缓存</string>
+    <string name="offline_xml_11">清除所有离线包缓存</string>
+    <string name="offline_xml_12">清除日志</string>
+    <string name="offline_xml_13">离线包重复下载测试</string>
+    <string name="offline_xml_14">请输入公钥，可以选择也可以手动输入</string>
+    <string name="offline_xml_15">保存公钥</string>
+</resources>

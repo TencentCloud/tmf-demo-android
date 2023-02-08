@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Tencent is pleased to support the open source community by making QMUI_Android available.
+
+ Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.
+
+ Licensed under the MIT License (the "License"); you may not use this file except in
+ compliance with the License. You may obtain a copy of the License at
+
+ http://opensource.org/licenses/MIT
+
+ Unless required by applicable law or agreed to in writing, software distributed under the License is
+ distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ either express or implied. See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/qmui_topbar_height"
+        android:background="@color/qmui_config_color_white"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/qmui_content_spacing_horizontal"
+            android:paddingRight="@dimen/qmui_content_spacing_horizontal">
+
+            <RelativeLayout style="@style/button_wrapper_style">
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/qmui_xml_0"
+                    app:qmui_isRadiusAdjustBounds="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/button_wrapper_style">
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/qmui_xml_1"
+                    app:qmui_radius="4dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/button_wrapper_style">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="@string/qmui_xml_2"
+                        app:qmui_radiusTopLeft="8dp"/>
+
+                    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="64dp"
+                        android:gravity="center"
+                        android:text="@string/qmui_xml_3"
+                        app:qmui_radiusTopRight="8dp"/>
+
+                    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="64dp"
+                        android:gravity="center"
+                        android:text="@string/qmui_xml_4"
+                        app:qmui_radiusBottomLeft="8dp"/>
+
+                    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginTop="64dp"
+                        android:gravity="center"
+                        android:text="@string/qmui_xml_5"
+                        app:qmui_radiusBottomRight="8dp"/>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout style="@style/button_wrapper_style"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QDCommonTitle"
+                    android:text="@string/qmui_xml_6" />
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/qmui_xml_7"
+                    android:textColor="@color/s_app_color_blue_to_red"
+                    app:qmui_backgroundColor="@color/s_app_color_blue_3"
+                    app:qmui_borderColor="@color/s_app_color_blue_to_red"
+                    app:qmui_borderWidth="1px" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/button_wrapper_style"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QDCommonTitle"
+                    android:text="@string/qmui_xml_8" />
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/alpha_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="changeAlphaWhenPressed"
+                    android:textColor="@color/app_color_blue"
+                    app:qmui_backgroundColor="@color/app_color_blue_3"
+                    app:qmui_borderColor="@color/app_color_blue"
+                    app:qmui_borderWidth="1px" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"/>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

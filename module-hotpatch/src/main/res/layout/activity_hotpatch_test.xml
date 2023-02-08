@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/patch_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/qmui_config_color_white">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_test_java"
+        android:text="@string/module_hotpatch_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_test_java"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_test_res"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+
+    <TextView
+        android:layout_below="@id/iv_test_res"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_test_so"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/tv_test_so"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_test_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:layout_above="@id/btn_reset_app"
+        android:id="@+id/btn_pull_hotfix"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:text="@string/module_hotpatch_12"
+        app:qmui_radius="4dp" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_reset_app"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:text="@string/module_hotpatch_13"
+        app:qmui_radius="4dp" />
+
+
+</RelativeLayout>

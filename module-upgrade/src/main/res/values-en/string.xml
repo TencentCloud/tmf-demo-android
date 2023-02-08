@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_upgrade_0">App current version: 0.0.0</string>
+    <string name="module_upgrade_1">Detect Updates</string>
+    <string name="module_upgrade_2">Start listening</string>
+    <string name="module_upgrade_3">Local upgrade check</string>
+    <string name="module_upgrade_4">Installation package download progress:</string>
+    <string name="module_upgrade_5">Download progress:</string>
+    <string name="module_upgrade_6">APP release management</string>
+    <string name="module_upgrade_7">Apply current version:</string>
+    <string name="module_upgrade_8">I got it!</string>
+    <string name="module_upgrade_9">Downloading updates（</string>
+    <string name="module_upgrade_10">cancel</string>
+    <string name="module_upgrade_11">Download Updates</string>
+    <string name="module_upgrade_12">Download failed, please try again later</string>
+    <string name="module_upgrade_13">New version release</string>
+    <string name="module_upgrade_14">Do you want to download the new version?</string>
+    <string name="module_upgrade_15">New version detected</string>
+    <string name="module_upgrade_16">Start to automatically monitor the upgrade order</string>
+    <string name="module_upgrade_17">No valid update order locally</string>
+    <string name="module_upgrade_18">Interval limit</string>
+    <string name="module_upgrade_19">Manual check update</string>
+    <string name="module_upgrade_20">Auto check update</string>
+</resources>

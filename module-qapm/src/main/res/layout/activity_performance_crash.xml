@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/qmui_config_color_white">
+
+    <LinearLayout
+        style="@style/button_wrapper_style"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_java_runtime"
+            style="@style/stat_btn"
+            android:text="@string/performance_test_crash_java"
+            app:qmui_backgroundColor="@color/app_color_blue_3"
+            app:qmui_borderColor="@color/app_color_blue"
+            app:qmui_borderWidth="1px"
+            app:qmui_radius="4dp"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_native_crash"
+            style="@style/stat_btn"
+            android:text="@string/performance_test_crash_native"
+            app:qmui_backgroundColor="@color/app_color_blue_3"
+            app:qmui_borderColor="@color/app_color_blue"
+            app:qmui_borderWidth="1px"
+            app:qmui_radius="4dp"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_null_pointer"
+            style="@style/stat_btn"
+            android:text="@string/performance_test_crash_null"
+            app:qmui_backgroundColor="@color/app_color_blue_3"
+            app:qmui_borderColor="@color/app_color_blue"
+            app:qmui_borderWidth="1px"
+            app:qmui_radius="4dp"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_oom"
+            style="@style/stat_btn"
+            android:text="@string/performance_test_crash_oom"
+            app:qmui_backgroundColor="@color/app_color_blue_3"
+            app:qmui_borderColor="@color/app_color_blue"
+            app:qmui_borderWidth="1px"
+            app:qmui_radius="4dp"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_load_library"
+            style="@style/stat_btn"
+            android:text="@string/performance_test_crash_so"
+            app:qmui_backgroundColor="@color/app_color_blue_3"
+            app:qmui_borderColor="@color/app_color_blue"
+            app:qmui_borderWidth="1px"
+            app:qmui_radius="4dp"/>
+    </LinearLayout>
+</ScrollView>
