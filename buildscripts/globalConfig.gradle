@@ -27,7 +27,7 @@ ext {
             //是否使用新版协议：
             // 1. 公有云必须改为true。
             // 2. 私有云默认使用false即可，如需改为true需确认服务版本是否支持新协议。
-            protoTypeShark   : isCI() ? System.env.protoTypeShark : false,
+            protoTypeShark   : isCI() ? System.env.protoTypeShark : true,
     ]
 
     println "build_hotpatch=${System.env.build_hotpatch}"
@@ -65,7 +65,7 @@ ext {
             //云指令
             conch               : "com.tencent.tmf.android:conch:3.0.1.0",
             //应用更新
-            upgrade             : "com.tencent.tmf.android:upgrade:3.0.2.1",
+            upgrade             : "com.tencent.tmf.android:upgrade:3.0.2.2",
             //push
             profile             : "com.tencent.tmf.android:profile:3.0.1.1",
             push                : "com.tencent.tmf.android:push:3.0.2.1",
@@ -112,7 +112,7 @@ ext {
             tinyapp             : "com.tencent.tmf.android:tinyapp:2.0.0.0",
             //热修复
             hotpatchcore        : "com.tencent.tmf.android:hotpatchcore:3.0.2.0",
-            hotpatch            : "com.tencent.tmf.android:hotpatch:3.0.2.1",
+            hotpatch            : "com.tencent.tmf.android:hotpatch:3.0.2.2",
             //安全键盘
             keyboard            : "com.tencent.tmf.android:keyboard:3.0.1.0",
             //qamp移动监控

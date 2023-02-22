@@ -1,23 +1,23 @@
 {
-    "customId": "T1672917413LKUEEO",
-    "productId": 1514,
+    "customId": "T1673668283LCIVNB",
+    "productId": "5607",
     "packageName": "com.tencent.tmf.demo",
     "bundleId": "",
-    "material": "01TovGzylyfoAZJFFspjCoawZ3oXdfZlZZbwWg1mof74RufuuH6wSDGFMFaI9BWTM2N3QE9gM+4StUMZh9Xe6ZCOFnllDRnczSygPmrl8LckQvbd9ROlCu4laf2gFemAPx6MrZ4Ork64Q8Z9t8IUhgE0yPwQ1oaqppqD7qEa44PLJzV7P0Lrvx3uJJdTIiOT4e8cHn9WayQUkiLtWURT7JNFTEs1LlLfG08pU8uKG87Rffl7B5NmFpc92rRXPk31cMGFOn3hrPGMY3aL5ccheTd6hvGL/CrOirUiksk2KakXtK1ZwJxvdgClkhfJby4IKZkxF4NFfcUAsKuFLQrKiINtIRbF2lQRqQNvExttAsR4bOeSf1vSgqiSTZi1vmC1Xyz+A2duDm1X0S5iTbM5CaSY3Q8fXTiLBCNm3e2UAV6kHjkrZkRWt+UibqSXeNHmzK9WPACt4iOgm9Eunl2jORzE7prewQMfzF1I6QIxjzjt33ovysoDQvURzXYfQqfzNeT02fFeleolzDGh2PCNEGXOAseTTHeTPmNHHUG/Igbbvkcu1oB7GIpWJwf3BChSYsPAWEPUlwV6vJAwq8rZoNCL6eH7uqefEK0g4Z/rVBEoc06MhLSa68zRw6TfyGpbQvTwLXRMlXNxK8dA7rx8S3eKFsjFeHYgfKa20cvzEJV+dLd3fe7CsmH7prALMg5SXpFLyZxtFc+m2C2fj1/L/U5TDDTEMVrB79ynF15STrkis=92aa30fbd5b57512",
+    "material": "01ZPCoyc9A418R9NjxzwSpSJF8nHhj6giEsCnEVYMDa73ww5sXITh9dInZCeHmXdKjT1pA3NIQU/8JrjtpaOv9TOSdfh9/gTqw3NNKsg7DDBGueF43sKLz9QbH9kcYctC8VYq8K/yO6mvqf/HZ+xVDFcUNf/XfudcZkm0OasIUF2qCkOJ9mUsnaR9ps2j6+JS8sfO9hh/c4Qvhy6JiCgHvkN/sB+1V52YIHy7iRHNFh6wR4YkcmDOviIn7KHE7Z8uPv2kxEWzacaU4R5PvYl8nTS7nz9sFji0aCu6WJHPNx9sGO45gLkCwo/5O+cbCDUrwNioUTo/XNBEliWHqnnKjHIHcTaRoCU51fwO6kq9vEzaLJIWe2DgEjXBIUYQe3dnFqkAeGIMxG10ar0RMr7Lm0kRqdlvOuquLEzE9tRB6DbZbV9eOzZMIEo5J1kvGqQlYslDZ7pqa7/L3xb08FEziYGG5LIAJfSApnTtIE82EcL9wNhy3U0jtCR8CSQfTOUBnHHoXmyp0Pu+hT402WtIw12BHF+SkTK6WebG3kIZY+VY1mxPgWCVmfFX8HeSQ5tx7G/3RkEF3jjqpuxNTzACn3QDMZf+x7GPgAATlSMV77/RN5VEG5aV/6HQZ4dGeK/6D7sKnGQ3EahrzZ0GWKHph/8fZlLobam7WKAI1Hw37LDeuM89n4V1Z19CjHvZ9TW4w7IQ5Gx3ZsUsh2jNRi4V+6uoKMSkzSKXkQA3c7LaY2Ms=f145e2a32991ea96",
     "shark": {
-        "httpUrl": "https://api.staging.tmfcloud.com:30013",
-        "tcpHost": "81.69.216.157",
+        "httpUrl": "https://api.tmfcloud.com:30013",
+        "tcpHost": "api.tmfcloud.com",
         "tcpPort": 30014,
-        "appKey": "app-1000000038",
+        "appKey": "app-1000000120",
         "symEnc": 2,
         "asymEnc": 1
     },
     "qapm": {
-        "appKey": "app-1000000038",
+        "appKey": "app-1000000120",
         "url": "http://xx.com"
     },
     "icdp": {
-        "appKey": "app-1000000038",
+        "appKey": "app-1000000120",
         "httpUrl": ""
     }
 }

@@ -20,31 +20,15 @@
 ├── app                       //主module
 ├── buildscripts              //编译脚本目录
 ├── commonlib                 //公共库module, 为了方便管理，所有组件依赖都在本module中配置
-├── module-applet             //小程序【私有化】
 ├── module-base               //基础库
-├── module-colorlog           //染色日志【私有化】
 ├── module-conch              //数据同步【私有化】
-├── module-gm                 //国密算法【私有化】
-├── module-h5container        //H5容器【私有化】
 ├── module-hotpatch           //热修复
 ├── module-hybrid             //Hybrid
-├── module-icdp               //智慧投放【私有化】
-├── module-keyboard           //安全键盘【私有化】
-├── module-location           //定位【私有化】
 ├── module-main               //主界面
 ├── module-offline            //离线包
-├── module-portal             //组件化【私有化】
-├── module-portal-dynamic     //组件化【私有化】
 ├── module-push               //推送
-├── module-qapm               //qapm【私有化】
-├── module-qmui               //qmui【私有化】
-├── module-scan               //扫一扫【私有化】
-├── module-share              //分享【私有化】
-├── module-shark              //移动网关【私有化】
-├── module-storage            //统一存储【私有化】
-├── module-subinstance        //移动网关多实例【私有化】
-├── module-upgrade            //应用发布
-└── module-upload             //文件上传【私有化】
+├── module-qmui               //QMUI【私有化】
+├── module-upgrad             //应用发布
 ```
 
 ## 公有云开放组件说明

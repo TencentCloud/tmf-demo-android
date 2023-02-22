@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="module_scan_0">扫二维码</string>
-    <string name="module_scan_1">取消</string>
-    <string name="module_scan_2">进入扫码页面</string>
-    <string name="module_scan_3">光线不足时自动开启闪光灯</string>
-    <string name="module_scan_4">请输入过滤关键字</string>
-    <string name="module_scan_5">添加</string>
-</resources>
