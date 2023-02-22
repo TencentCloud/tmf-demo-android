@@ -9,14 +9,7 @@ buildscript {
     repositories {
         maven { url "https://mirrors.tencent.com/nexus/repository/maven-public/" }
         maven {
-            url 'https://t.pinpad.qq.com/fHKFBbEjd/repository/maven-public/'
-            credentials {
-                username 'tmf_read'
-                password 'psnBSt@BVMva6#&^'
-            }
-            authentication {
-                basic(BasicAuthentication)
-            }
+            url 'https://tmf-work-maven.pkg.coding.net/repository/tmf/android/'
         }
 
         google()
@@ -40,14 +33,7 @@ allprojects {
     repositories {
         maven { url "https://mirrors.tencent.com/nexus/repository/maven-public/" }
         maven {
-            url 'https://t.pinpad.qq.com/fHKFBbEjd/repository/maven-public/'
-            credentials {
-                username 'tmf_read'
-                password 'psnBSt@BVMva6#&^'
-            }
-            authentication {
-                basic(BasicAuthentication)
-            }
+            url 'https://tmf-work-maven.pkg.coding.net/repository/tmf/android/'
         }
 
         google()
