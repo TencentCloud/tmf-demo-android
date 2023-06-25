@@ -1,5 +1,5 @@
 apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}app.gradle"
-apply plugin: 'com.tencent.tmf.android.portal'
+//apply plugin: 'com.tencent.tmf.android.portal'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.huawei.agconnect'
 
@@ -8,6 +8,7 @@ def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystoreFile))
 
 android {
+    namespace 'com.tencent.tmf.demo'
     defaultConfig {
         applicationId "com.tencent.tmf.demo"
         multiDexEnabled true
@@ -76,6 +77,7 @@ android {
 //        这里统一不优化so库，若要优化其他模块so库，也可单独对某个so库配置
         doNotStrip "**/*.so"
     }
+    namespace 'com.tencent.tmf.demo'
 
     applicationVariants.all { variant ->
         variant.assemble.doLast {

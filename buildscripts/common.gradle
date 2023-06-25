@@ -2,6 +2,7 @@ android {
     compileSdkVersion rootProject.ext.TMFDemo_version.compileSdkVersion
     buildToolsVersion rootProject.ext.TMFDemo_version.buildToolsVersion
 
+    namespace 'com.tencent.tmf.module.' + getModelName(model.getName())
     defaultConfig {
         minSdkVersion rootProject.ext.TMFDemo_version.minSdkVersion
         targetSdkVersion rootProject.ext.TMFDemo_version.targetSdkVersion
@@ -9,6 +10,8 @@ android {
         versionName rootProject.ext.TMFDemo_version.versionName
         consumerProguardFiles 'consumer-rules.pro'
     }
+
+
 
     def gitShortRev = {
         String gitCommit = ""
@@ -68,8 +71,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     configurations.all {
@@ -85,6 +88,14 @@ android {
             force rootProject.ext.TMF_components['report']
             force rootProject.ext.TMF_components['hotpatchcore']
         }
+    }
+}
+
+def getModelName(String modelName){
+    if (modelName.startsWith("module-")){
+        return modelName.substring("module-".length())
+    }else{
+        return modelName
     }
 }
 

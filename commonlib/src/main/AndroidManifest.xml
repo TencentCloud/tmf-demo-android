@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.tencent.tmf.common">
+    xmlns:tools="http://schemas.android.com/tools">
     <application>
         <!--动态配置加载相关start-->
         <activity

@@ -21,6 +21,7 @@ android {
         // 热修复
         buildConfigField "String", "TINKER_ID", "\"" + rootProject.ext.TMFDemo_tinker.tinkerId + "\""
     }
+    namespace 'com.tencent.tmf.common'
 }
 
 repositories {

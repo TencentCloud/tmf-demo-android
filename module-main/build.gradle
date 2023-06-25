@@ -1,6 +1,7 @@
 apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}module.gradle"
 
 android {
+    namespace 'com.tencent.tmf.demo.main'
     kapt {
         arguments {
             arg("portalModuleName", "module-main")

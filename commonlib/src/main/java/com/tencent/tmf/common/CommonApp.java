@@ -59,6 +59,15 @@ public class CommonApp {
         Portal.init(application, new String[]{
                 "module-portal-dynamic"
         }, param);
+        Portal.attachModule("module-base");
+        Portal.attachModule("module-main");
+        Portal.attachModule("module-conch");
+        Portal.attachModule("module-hotpatch");
+        Portal.attachModule("module-offline");
+        Portal.attachModule("module-hybrid");
+        Portal.attachModule("module-push");
+        Portal.attachModule("module-qmui");
+        Portal.attachModule("module-upgrade");
     }
 
     /**

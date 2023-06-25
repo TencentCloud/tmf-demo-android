@@ -2,12 +2,12 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.4.32'
+        kotlin_version = '1.8.22'
     }
     apply from: 'buildscripts/globalConfig.gradle'
     apply from: 'buildscripts/for-dev/tmf-aar-output-rename.gradle'
     repositories {
-        maven { url "https://mirrors.tencent.com/nexus/repository/maven-public/" }
+        mavenCentral()
         maven {
             url 'https://tmf-work-maven.pkg.coding.net/repository/tmf/android/'
         }
@@ -16,14 +16,12 @@ buildscript {
 //        jcenter()
         // huawei maven
         maven { url 'https://developer.huawei.com/repo/' }
-        maven { url "http://maven.oa.com/nexus/content/repositories/thirdparty/" }
     }
 
     dependencies {
         classpath rootProject.ext.buildTools['android-gradle-plugin']
         classpath rootProject.ext.buildTools['kotlin-gradle-plugin']
-        classpath rootProject.ext.TMF_components['portalGradlePlugin']
-        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.google.gms:google-services:4.3.14'
         classpath 'com.huawei.agconnect:agcp:1.4.1.300'
     }
 }

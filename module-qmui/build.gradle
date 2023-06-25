@@ -1,5 +1,9 @@
 apply from: "${rootProject.projectDir.absolutePath}${File.separator}buildscripts${File.separator}common-lib.gradle"
 
+android {
+    namespace 'com.tencent.tmf.demo.qmui'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
